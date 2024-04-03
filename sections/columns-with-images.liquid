@@ -1,14 +1,16 @@
 {{ 'columns-with-images.css' | asset_url | stylesheet_tag }}
 
-<div class="columns-with-images-section">
-  <div class="columns-with-images">
-    {% for block in section.blocks %}
-      <div class="column-with-image">
-        <img src="{{ block.settings.image | img_url: 'medium' }}" width="" height="" alt="{{ block.settings.image.alt }}">
-        <h3>{{ block.settings.title }}</h3>
-        <p>{{ block.settings.text }}</p>
-      </div>
-    {% endfor %}
+<div class="page-width">
+  <div class="columns-with-images-section">
+    <div class="columns-with-images">
+      {% for block in section.blocks %}
+        <div class="column-with-image">
+          <img src="{{ block.settings.image | img_url: 'medium' }}" width="" height="" alt="{{ block.settings.image.alt }}">
+          <h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
 
