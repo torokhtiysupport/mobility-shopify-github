@@ -1,3 +1,4 @@
 .columns-with-images {
   display: flex;
+  align-items: space-between;
 }
