@@ -26,6 +26,7 @@
 .column-with-image_text-block img {
   width: 276px;
   height: 220px;
+  object-fit: cover;
 }
 
 .column-with-image_text-block h3 {
