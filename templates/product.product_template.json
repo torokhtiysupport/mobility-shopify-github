@@ -119,7 +119,7 @@
             "link": "",
             "button_style": "solid",
             "card_color_text": "#121212",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#f8fafc",
             "card_color_background_gradient": ""
@@ -135,7 +135,7 @@
             "link": "",
             "button_style": "solid",
             "card_color_text": "#166534",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#effdf4",
             "card_color_background_gradient": ""
@@ -151,7 +151,7 @@
             "link": "",
             "button_style": "solid",
             "card_color_text": "#a06207",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#fefce8",
             "card_color_background_gradient": ""
@@ -167,7 +167,7 @@
             "link": "",
             "button_style": "solid",
             "card_color_text": "#981c1b",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#fef2f2",
             "card_color_background_gradient": ""
@@ -195,7 +195,7 @@
         "column_alignment": "left",
         "enable_shadow": true,
         "background_transparent": false,
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "enable_section_box_layout": false,
         "color_scheme": "background-1",
@@ -210,44 +210,6 @@
         "text_boxes_radius": 10,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5": {
-      "type": "main-product-tabs",
-      "blocks": {
-        "1638dd10-8e33-4e82-b01c-2eb71d6362ba": {
-          "type": "description",
-          "settings": {
-            "title": "TEST",
-            "truncate_description": 0,
-            "read_more_button": "Read more"
-          }
-        },
-        "8274ef04-23c0-4245-a55b-07501c2bd206": {
-          "type": "page_content",
-          "settings": {
-            "title": "Page content tab",
-            "page": ""
-          }
-        },
-        "cbb96b5f-f683-42e5-b865-6ac18e11645e": {
-          "type": "page_content",
-          "settings": {
-            "title": "Page content tab",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "1638dd10-8e33-4e82-b01c-2eb71d6362ba",
-        "8274ef04-23c0-4245-a55b-07501c2bd206",
-        "cbb96b5f-f683-42e5-b865-6ac18e11645e"
-      ],
-      "settings": {
-        "grid_layout": "grid",
-        "color_scheme": "background-1",
-        "padding_top": 40,
-        "padding_bottom": 40
       }
     },
     "b861113b-71fc-41c9-bf1f-80084a7d6f04": {
@@ -910,7 +872,6 @@
   "order": [
     "main",
     "multicolumn_t3EQeB",
-    "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
     "b861113b-71fc-41c9-bf1f-80084a7d6f04",
     "9fea5ba7-31d4-4140-849f-3a727ceb4e8f",
     "6524c6b3-5b0c-4c1f-bffa-e9ea1819e293",
