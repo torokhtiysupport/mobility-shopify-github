@@ -23,6 +23,11 @@
   gap: 8px;
 }
 
+.column-with-image_text-block img {
+  width: 276px;
+  height: 220px;
+}
+
 .column-with-image_text-block h3 {
   align-self: stretch;
   color: #FFF;
