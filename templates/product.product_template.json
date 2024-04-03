@@ -884,11 +884,27 @@
             "title": "",
             "text": ""
           }
+        },
+        "column_RmqzdC": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "column_Jx4JYX": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
         }
       },
       "block_order": [
         "column_Ga6ciw",
-        "column_cPNTfm"
+        "column_cPNTfm",
+        "column_RmqzdC",
+        "column_Jx4JYX"
       ],
       "settings": {
       }

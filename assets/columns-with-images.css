@@ -1,4 +1,4 @@
 .columns-with-images {
   display: flex;
-  align-items: space-between;
+  justify-content: space-between;
 }
