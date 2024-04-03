@@ -23,3 +23,15 @@
   gap: 8px;
 }
 
+.column-with-image_text-block h3 {
+  align-self: stretch;
+  color: #FFF;
+  text-align: center;
+  font-family: Weight;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+
