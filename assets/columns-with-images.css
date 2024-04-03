@@ -23,7 +23,7 @@
   gap: 8px;
 }
 
-.column-with-image_text-block img {
+.column-with-image img {
   width: 276px;
   height: 220px;
   object-fit: cover;
