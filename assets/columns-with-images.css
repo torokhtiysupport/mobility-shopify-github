@@ -8,6 +8,7 @@
 }
 
 .column-with-image {
+  overflow:hidden;
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
