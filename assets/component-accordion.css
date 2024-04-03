@@ -1,0 +1,43 @@
+.accordion {
+  margin: 0;
+}
+.accordion + .accordion {
+  position: relative;
+}
+
+.accordion + .accordion:before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  border-top: 1px solid rgb(var(--color-foreground), 0.1);
+}
+
+.accordion .icon-accordion {
+  align-self: center;
+  margin-inline-end: calc(var(--font-heading-scale) * 1rem);
+}
+
+.accordion summary {
+  padding: var(--accordion-distance) 0;
+}
+.accordion__content {
+  word-break: break-word;
+  overflow-x: auto;
+  padding: 0 var(--accordion-distance) var(--accordion-distance) calc((var(--font-heading-scale) * 1rem) + 2rem);
+}
+.accordion:last-child .accordion__content {
+  padding-bottom: 0;
+}
+
+.accordion__content--no-icon {
+  padding-inline-start: 0;
+}
+
+.accordion__content--empty {
+  min-height: 5rem;
+}
+
+.accordion__content img {
+  max-width: 100%;
+}

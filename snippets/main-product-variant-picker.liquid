@@ -1,0 +1,255 @@
+{% comment %}
+    Renders product options on the product page or featured product section.
+
+    Accepts:
+    - product: {Object} Product object
+    - block: {Object} Block object when browse section.blocks array.
+    - product_form_id: {String} the HTML ID of the product form.
+    - prefix_variant: {String} used to render a custom elements which extends from the variant-radios or variant-selects elements
+
+    Usage:
+    {% render 'main-product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+{% endcomment %}
+{%- unless product.has_only_default_variant -%}
+  {%- liquid
+    assign current_variant = product.selected_or_first_available_variant
+    assign first_selected_variant = current_variant | default: product.variants[0]
+  -%}
+  {%- if block.settings.picker_type == 'button' -%}
+    {%- if block.settings.enable_color_swatches -%}
+      <link rel="stylesheet" href="{{ 'component-tooltip.css' | asset_url }}" media="print" onload="this.media='all'">
+      <noscript>{{ 'component-tooltip.css' | asset_url | stylesheet_tag }}</noscript>
+    {%- endif -%}  
+    {%- liquid
+      assign color_name = settings.color_name | downcase
+      unless settings.hide_unavailable_options
+        assign instock_variants = product.variants | where: 'available'
+      endunless
+    -%}
+    <{{ prefix_variant }}variant-radios
+      class="no-js-hidden variant-picker-primary-{{ section.id }} db"
+      data-section="{{ section.id }}"
+      data-url="{{ product_url | default: product.url }}"
+      {% if settings.hide_unavailable_options %}
+        data-hide-unavailable-options="true"
+      {% endif %}
+    >
+      {%- for option in product.options_with_values -%}
+        {%- liquid
+          assign option_name_downcase = option.name | downcase
+          assign is_color_swatches = false
+          assign attribute = 'option' | append: forloop.index
+          if option_name_downcase == color_name and block.settings.enable_color_swatches
+            assign is_color_swatches = true
+          endif
+
+          assign available_variants = product.variants
+          unless settings.hide_unavailable_options
+            assign instock_option_values = instock_variants
+            assign position_checking = option.position | minus: 1
+            for i in (1..position_checking)
+              assign option_index = 'option' | append: i
+              assign current_option_value = current_variant[option_index]
+              assign instock_option_values = instock_option_values | where: option_index, current_option_value
+            endfor
+            assign instock_option_values = instock_option_values | map: attribute
+            for available_option in product.options
+              if option.position != forloop.index
+                assign filter_index = 'option' | append: forloop.index
+                assign filter_value = first_selected_variant[filter_index]
+                assign available_variants = available_variants | where: filter_index, filter_value
+              endif
+            endfor
+          else
+            if option.position > 1
+              assign end_compare_index = option.position | minus: 1
+              for i in (1..end_compare_index)
+                assign filter_index = 'option' | append: i
+                assign filter_value = first_selected_variant[filter_index]
+                assign available_variants = available_variants | where: filter_index, filter_value
+              endfor
+            endif
+            assign instock_option_values = available_variants | where: 'available' | map: attribute
+          endunless
+          assign indexOption = 'option' | append: option.position
+          assign available_option_values = available_variants | map: indexOption
+          assign is_first_option = forloop.first
+        -%}
+        <fieldset class="js product-form__input product-form__input--fieldset flex flex-column{% if block.settings.size_chart_enable and size_name == option_name_downcase and block.settings.size_chart_link_label != blank %} por{% endif %}{% unless forloop.first %} element-small-margin-top{% endunless %}">
+          <legend class="product-form__input__form-label text-small margin-bottom-1rem">
+            {{ option.name }}:
+            <span class="product-form__input__option-value font-body-bold">{{ option.selected_value }}</span>
+          </legend>
+          <ul class="list-unstyled flex flex-wrap product-form__input__radio-list{% if is_color_swatches %} product-form__input__radio-list--color{% endif %}">
+            {%- for value in option.values -%}
+              <li
+                {% unless is_first_option %}
+                  class="dynamic-option{% if settings.hide_unavailable_options %}{% unless available_option_values contains value %} hidden{% endunless %}{% endif %}"
+                {% endunless %}
+              >
+                {%- if is_color_swatches and block.settings.color_swatches_style == 'variant' -%}
+                  {%- assign variant_color = product.variants
+                    | where: attribute, value
+                    | where: 'featured_image'
+                    | first
+                  -%}
+                {%- endif -%}
+                <input
+                  type="radio"
+                  id="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                  name="{{ option.name }}{% if section_id %}-{{ section_id }}{% endif %}"
+                  class="product-form__input__radio{% unless settings.hide_unavailable_options %}{% unless available_option_values contains value %} disabled{% endunless %}{% endunless %}"
+                  value="{{ value | escape }}"
+                  form="{{ product_form_id }}"
+                  {% if option.selected_value == value %}
+                    checked="checked"
+                  {% endif %}
+                >
+                <label
+                  for="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                  class="product-form__input__radio-label flex justify-center align-center por {% if is_color_swatches %}product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if block.settings.color_swatches_style == 'variant' and variant_color != null %} color-swatch-own-image{% endif %}{% else %} product-form__input__radio-label--pill font-body-semi-bold text-small{% endif %}{% if settings.hide_unavailable_options %}{% unless instock_option_values contains value %} soldout{% endunless %}{% elsif available_option_values contains value %}{% unless instock_option_values contains value %} soldout{% endunless %}{% endif %}"
+                  {% if is_color_swatches %}
+                    data-color="{{ value | handleize }}"
+                    {%- if block.settings.color_swatches_style == 'variant' and variant_color != null %}
+                      style="--background-image: url({{ variant_color.featured_image | image_url: width: 160, height: 200, crop: 'center' }})"
+                    {%- endif -%}
+                  {% endif %}
+                >
+                  {%- if block.settings.color_swatches_style == 'variant' and variant_color != null -%}
+                    <span
+                      class="db color-swatches-variant{% if settings.color_swatches_shape == 'circle' %} color-swatches-variant--circle{% endif %}"
+                    ></span>
+                  {%- endif -%}
+                  {%- unless is_color_swatches -%}
+                    {{ value }}
+                  {%- else -%}
+                    <span class="bt-tooltip__inner bt-tooltip__inner--top">{{ value }}</span>
+                    {%- render 'icon-checkmark' -%}  
+                  {%- endunless -%}  
+                </label>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </fieldset>
+      {%- endfor -%}
+      <script type="application/json">
+        {{ product.variants | json }}
+      </script>
+    </{{ prefix_variant }}variant-radios>
+  {%- else -%}
+    <{{ prefix_variant }}variant-selects
+      class="no-js-hidden variant-picker-primary-{{ section.id }} db"
+      data-section="{{ section.id }}"
+      data-url="{{ product_url | default: product.url }}"
+      {% if settings.hide_unavailable_options %}
+        data-hide-unavailable-options="true"
+      {% endif %}
+    >
+      {%- for option in product.options_with_values -%}
+        {%-liquid
+          assign option_name_downcase = option.name | downcase 
+          assign is_first_option = forloop.first
+        -%}
+        <div class="product-form__input product-form__input--dropdown{% unless forloop.first %} element-small-margin-top{% endunless %}">
+          <label
+            class="form__label product-form__input__form-label"
+            for="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}"
+          >
+            {{ option.name }}
+          </label>
+          <div class="select">
+            <select
+              id="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}"
+              class="select__select{% unless is_first_option %} dynamic-option{% endunless %}"
+              name="options[{{ option.name | escape }}]"
+              form="{{ product_form_id }}"
+            >
+              {%-liquid
+                assign available_variants = product.variants
+                unless settings.hide_unavailable_options
+                  for available_option in product.options
+                    if option.position != forloop.index
+                      assign filter_index = 'option' | append: forloop.index
+                      assign filter_value = first_selected_variant[filter_index]
+                      assign available_variants = available_variants | where: filter_index, filter_value
+                    endif
+                  endfor
+                else
+                  if option.position > 1
+                    assign end_compare_index = option.position | minus: 1
+                    for i in (1..end_compare_index)
+                      assign filter_index = 'option' | append: i
+                      assign filter_value = first_selected_variant[filter_index]
+                      assign available_variants = available_variants | where: filter_index, filter_value
+                    endfor
+                  endif  
+                endunless 
+                assign indexOption = 'option' | append: option.position
+                assign available_option_values = available_variants | map: indexOption
+              -%}
+              {%- for value in option.values -%}
+                <option
+                  value="{{ value | escape }}"
+                  {% if option.selected_value == value %}
+                    selected="selected"
+                  {% endif -%}
+                  {% if settings.hide_unavailable_options and is_first_option == false %}
+                    {%- unless available_option_values contains value %} class="hidden"{% endunless -%}
+                  {% endif %}
+                >
+                  {%- unless settings.hide_unavailable_options -%}
+                    {%- if available_option_values contains value -%}
+                      {{- value -}}
+                    {%- else -%}
+                      {{- 'products.product.value_unavailable' | t: option_value: value -}}
+                    {%- endif -%}
+                  {%- else -%}  
+                    {{- value -}}
+                  {%- endunless -%}
+                </option>
+              {%- endfor -%}
+            </select>
+            {% render 'icon-caret' %}
+          </div>
+        </div>
+      {%- endfor -%}
+
+      <script type="application/json">
+        {{ product.variants | json }}
+      </script>
+    </{{ prefix_variant }}variant-selects>
+  {%- endif -%}
+{%- endunless -%}
+
+<noscript class="product-form__noscript-wrapper-{{ section_id | default: section.id }}">
+  <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
+    <label class="form__label" for="Variants-{{ section_id | default: section.id }}">
+      {{- 'products.product.product_variants' | t -}}
+    </label>
+    <div class="select">
+      <select
+        name="id"
+        id="Variants-{{ section_id | default: section.id }}"
+        class="select__select"
+        form="{{ product_form_id }}"
+      >
+        {%- for variant in product.variants -%}
+          <option
+            value="{{ variant.id }}"
+            {% if variant == product.selected_or_first_available_variant %}
+              selected="selected"
+            {% endif -%}
+            {% if variant.available == false %}
+              disabled
+            {% endif %}
+          >
+            {{ variant.title }}
+            {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+            - {{ variant.price | money | strip_html }}
+          </option>
+        {%- endfor -%}
+      </select>
+      {% render 'icon-caret' %}
+    </div>
+  </div>
+</noscript>

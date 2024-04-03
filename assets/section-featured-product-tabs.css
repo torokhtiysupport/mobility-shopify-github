@@ -1,0 +1,42 @@
+.fpt__tab-title-list {
+  gap: 1.2rem;
+}
+
+.button.fpt__tab-item-label {
+  padding: 1.2rem 1.4rem;
+  letter-spacing: -0.42px;
+  opacity: 0.3;
+  transition: opacity 300ms ease;
+  width: max-content;
+}
+
+.button.fpt__tab-item-label:hover {
+  opacity: 1;
+}
+
+.tabs__title-list__content {
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  column-gap: 2.5rem;
+}
+
+.tabs__tab-content {
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  inset-inline: 0;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.fpt__bottom-actions {
+  gap: 1.5rem;
+  margin-top: 1.8rem;
+}
+
+@media (min-width: 750px) {
+  .fpt__bottom-actions {
+    margin-top: 3rem;
+  }
+}

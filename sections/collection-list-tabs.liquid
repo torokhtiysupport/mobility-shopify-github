@@ -1,0 +1,446 @@
+<link rel="stylesheet" href="{{ 'component-tabs.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-tabs.css' | asset_url | stylesheet_tag }}</noscript>
+<link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-price.css' | asset_url | stylesheet_tag }}</noscript>
+
+{{ 'section-featured-product-tabs.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign columns_mobile_int = section.settings.columns_mobile | plus: 0
+  assign columns_tablet_int = section.settings.columns_tablet | plus: 0
+  assign show_desktop_slider = false
+  assign small_title_mobile = false
+  assign small_title_tablet = false
+  assign small_title_desktop = false
+  if columns_mobile_int > 1
+    assign small_title_mobile = true
+  endif
+  if columns_tablet_int > 2
+    assign small_title_tablet = true
+  endif
+  if section.settings.columns_desktop > 4
+    assign small_title_desktop = true
+  endif
+-%}
+
+<div class="section-{{ section.id }}-padding {% unless section.settings.enable_section_box_layout %}color-{{ section.settings.color_scheme }} gradient{% else %}isolate page-width{% if section.settings.full_width %}--full{% endif %}{% endunless %}">
+  {%- if section.settings.enable_section_box_layout -%}
+    <div class="section__box{% if section.settings.enable_section_box_layout %} color-{{ section.settings.color_scheme }} gradient{% endif %}">
+  {%- endif -%}
+  <div class="collection-list-tabs tabs fpt">
+    {%- liquid
+      assign active_tab_label_selector = ''
+      assign focus_tab_label_selector = ''
+      assign active_tab_content_selector = ''
+      assign available_tab_ids = ''
+      assign has_first_tab = false
+    -%}
+
+    {%- for block in section.blocks -%}
+      {%- if block.settings.collection_list != blank or request.design_mode or section.settings.hide_when_empty_content == false -%}
+        {%- liquid
+          assign suffix = section.id | append: '-' | append: block.id
+          assign active_tab_label_selector = active_tab_label_selector | append: '#tab-item-input-' | append: suffix | append: ':checked ~ .fpt__heading .fpt__tab-title-list label[for="tab-item-input-' | append: suffix | append: '"],'
+          assign focus_tab_label_selector = focus_tab_label_selector | append: '#tab-item-input-' | append: suffix | append: ':focus-visible ~ .fpt__heading .fpt__tab-title-list label[for="tab-item-input-' | append: suffix | append: '"],'
+          assign active_tab_content_selector = active_tab_content_selector | append: '#tab-item-input-' | append: suffix | append: ':checked ~ .tabs__content .tabs__content-list .tabs__tab-content--' | append: suffix | append: ','
+          assign available_tab_ids = available_tab_ids | append: block.id | append: ','
+        -%}  
+        <input type="radio" name="tab-item-input-{{ section.id }}" class="tabs__item-input visually-hidden small-hide" id="tab-item-input-{{ suffix }}"{% unless has_first_tab %} checked{% endunless %}>
+        {%- assign has_first_tab = true -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- if has_first_tab -%}
+      <div class="fpt__heading{% unless section.settings.enable_section_box_layout %} page-width{% endunless %}">
+        {%- if section.settings.title != blank -%}
+          <div class="title">
+            <div class="flex justify-space-between w100 align-center title__gap por flex-wrap">
+              {%- unless section.settings.subtitle != blank -%}
+                <h2 class="title__heading h{{ section.settings.heading_size | replace: 'h', '' | plus: 1 }} font-heading-extra-bold margin0 lh1 title__heading--before-line">{{ section.settings.title | escape }}</h2>	
+                <hr class="title__line flex-grow-1 margin0">
+              {%- else -%}
+                <div class="flex flex-column justify-right align-start">
+                  <h2 class="title__heading title__back title__back--{{ section.settings.heading_size }} font-heading-bold margin0 lh1">{{ section.settings.title | escape }}</h2>
+                  <h3 class="title__subtitle margin0 title__front {% if section.settings.heading_size != 'h2' %}h{{ section.settings.heading_size | replace: 'h', '' | plus: 1 }}{% else %}title__front--small{% endif %} lh1">{{ section.settings.subtitle }}</h3>
+                </div>
+              {%- endunless -%}	
+              {%- if section.blocks.size > 0 -%}
+                <div class="title__buttons title__buttons--{{ section.id }}{% if section.settings.enable_desktop_slider or section.settings.swipe_on_mobile %} flex title__gap justify-space-between align-center{% endif %}">
+                  <ul class="fpt__tab-title-list list-unstyled margin0 flex fpt__tab-title-list--{{ section.id }}">
+                    {%- for block in section.blocks -%}
+                      {%- if available_tab_ids contains block.id -%}
+                        {%- assign suffix = section.id | append: '-' | append: block.id -%}
+                        <li>
+                          <label for="tab-item-input-{{ suffix }}" class="fpt__tab-item-label button button--secondary ignore-effect fpt__tab-item-label--{{ section.id }}" {{ block.shopify_attributes }}>{{ block.settings.title }}</label>
+                        </li>
+                      {%- endif -%}  
+                    {%- endfor -%}  
+                  </ul>
+                </div>  
+              {%- endif -%}  
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+      <div class="tabs__content">
+        <div class="fpt__content-list fpt__content-list--{{ section.id }} tabs__content-list tabs__content-list--{{ section.id }} element-small-margin-top por">
+          {%- for block in section.blocks -%}
+            {%- if available_tab_ids contains block.id -%}
+              {%- liquid
+                assign item_count = 8
+                if block.settings.collection_list != blank
+                  assign item_count = block.settings.collection_list.count
+                endif
+                assign show_mobile_slider = false
+                if section.settings.swipe_on_mobile and item_count > columns_mobile_int
+                  assign show_mobile_slider = true
+                endif
+              
+                assign columns_tablet_int = section.settings.columns_tablet | plus: 0
+                assign show_tablet_slider = false
+                if section.settings.swipe_on_mobile and item_count > columns_tablet_int
+                  assign show_tablet_slider = true
+                endif
+              
+                assign show_desktop_slider = false
+                if section.settings.enable_desktop_slider and item_count > section.settings.columns_desktop
+                  assign show_desktop_slider = true
+                endif
+                assign suffix = section.id | append: '-' | append: block.id
+              -%}
+              <div class="tabs__tab-content tabs__tab-content--{{ section.id }} tabs__tab-content--{{ suffix }} w100" data-suffix="{{ suffix }}" {{ block.shopify_attributes }}>
+                <slider-component class="por slider-mobile-gutter{% unless section.settings.enable_section_box_layout %} page-width{% if section.settings.full_width %}--full{% if show_desktop_slider or show_tablet_slider or show_mobile_slider %} slider-component-full-width{% endif %}{% endif %}{% endunless %}{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if show_tablet_slider %} slider-component-tablet{% endif %}{% if show_mobile_slider %} slider-component-mobile{% endif %}">
+                  <ul class="collection-list contains-card contains-card--collection grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_tablet }}-col-tablet grid--{{ section.settings.columns_mobile }}-col{% if show_mobile_slider or show_tablet_slider or show_desktop_slider %} slider{% if section.settings.full_width %} grid--peek{% endif %}{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_tablet_slider %} slider--tablet{% endif %}{% if show_mobile_slider %} slider--mobile{% if section.settings.full_width %} grid--peek{% endif %}{% endif %}{% endif %} collection-list--{{ section.blocks.size }}-items"
+                    id="Slider-{{ section.id }}-{{ block.id }}"
+                    role="list"
+                  >
+                    {%- if block.settings.collection_list != blank -%}
+                      {%- for card_collection in block.settings.collection_list -%}
+                        <li id="Slide-{{ section.id }}-{{ block.id }}-{{ forloop.index }}" class="collection-list__item grid__item{% if show_mobile_slider or show_tablet_slider or show_desktop_slider %} slider__slide{% endif %}">
+                          {%- render 'card-collection',
+                            card_collection: card_collection,
+                            media_aspect_ratio: section.settings.image_ratio,
+                            columns: columns_tablet_int,
+                            columns_mobile: section.settings.columns_mobile,
+                            show_products_count: section.settings.show_products_count,
+                            show_title: section.settings.collection_card_show_title,
+                            small_title_mobile: small_title_mobile,
+                            small_title_tablet: small_title_tablet,
+                            small_title_desktop: small_title_desktop
+                          -%}
+                        </li>
+                      {%- endfor -%}
+                    {%- else -%}
+                      {%- for i in (1..item_count) -%}
+                        {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
+                        {%- assign placeholder_image = 'collection-apparel-' | append: placeholder_image_index -%}
+                        <li id="Slide-{{ section.id }}-{{ block.id }}-{{ forloop.index }}" class="collection-list__item grid__item{% if show_mobile_slider or show_tablet_slider or show_desktop_slider %} slider__slide{% endif %}">
+                          {%- render 'card-collection',
+                            media_aspect_ratio: section.settings.image_ratio,
+                            columns: columns_tablet_int,
+                            columns_mobile: section.settings.columns_mobile,
+                            show_products_count: section.settings.show_products_count,
+                            placeholder_image: placeholder_image,
+                            show_title: section.settings.collection_card_show_title,
+                            small_title_mobile: small_title_mobile,
+                            small_title_tablet: small_title_tablet,
+                            small_title_desktop: small_title_desktop 
+                          -%}
+                        </li>
+                      {%- endfor -%}    
+                    {%- endif -%}  
+                  </ul>
+                  {%- if show_mobile_slider or show_tablet_slider or show_desktop_slider -%}
+                    {%- render 'slider-controls', suffix_id: suffix, wrapper_classes: 'small-margin-top slider-buttons--box' -%}
+                  {%- endif -%}
+                </slider-component>
+              </div>
+            {%- endif-%}  
+          {%- endfor -%}  
+        </div>  
+      </div>
+    {%- endif -%}
+  </div>
+    
+  {%- if section.settings.enable_section_box_layout -%}
+    </div>
+  {%- endif -%}
+</div>
+
+{%- style -%}
+  {%- if has_first_tab -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px; 
+    }
+
+    {%- if section.blocks.size > 0 -%}
+      {{ active_tab_label_selector | split: ',' | compact | join: ',' }} {
+        opacity: 1;
+      }
+      {{ focus_tab_label_selector | split: ',' | compact | join: ',' }} {
+        outline: 0.1rem solid rgba(var(--color-foreground));
+        outline-offset: -0.1rem;
+      }
+      {{ active_tab_content_selector | split: ',' | compact | join: ',' }} {
+        visibility: visible;
+        pointer-events: auto;
+        position: static;
+        max-height: none;
+        overflow: inherit;
+      }
+      @media screen and (max-width: 1365px) {
+        .title__buttons--{{ section.id }} {
+          width: 100%;
+        }
+        .fpt__tab-title-list--{{ section.id }} {
+          overflow-x: auto;
+          width: 100%;
+          white-space: nowrap;
+        }
+      }
+    {%- endif -%}
+
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+    {%- render 'section-heading-styles' -%}
+  {%- else -%}
+    #shopify-section-{{ section.id }} {
+      display: none;
+    }
+  {%- endif -%}
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "t:sections.collection-list-tabs.name",
+  "tag": "section",
+  "class": "section section-collection-list-tabs",
+  "max_blocks": 5,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Collection list tabs",
+      "label": "t:sections.collection-list.settings.title.label"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "t:sections.collection-list.settings.subtitle.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "t:sections.all.image_ratio.label",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.all.image_ratio.option_1.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.all.image_ratio.option_2.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.all.image_ratio.option_3.label"
+        },
+        {
+          "value": "landscape",
+          "label": "t:sections.all.image_ratio.option_4.label"
+        }
+      ],
+      "info": "t:sections.collection-list.settings.image_ratio.info"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 4,
+      "label": "t:sections.collection-list.settings.columns_desktop.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "t:sections.collection-list.settings.full_width.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_section_box_layout",
+      "label": "t:sections.all.enable_section_box_layout.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_desktop_slider",
+      "label": "t:sections.collection-list.settings.enable_desktop_slider.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_when_empty_content",
+      "label": "t:sections.collection-list-tabs.settings.hide_when_empty_content.label",
+      "info": "t:sections.collection-list-tabs.settings.hide_when_empty_content.info",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "default": false,
+      "label": "t:sections.collection-list.settings.show_view_all.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "collection_card_show_title",
+      "label": "t:sections.all.collection_card_show_title.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_products_count",
+      "default": false,
+      "label": "t:sections.collection-list.settings.show_products_count.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.collection-list.settings.header_mobile.content"
+    },
+    {
+      "type": "select",
+      "id": "columns_tablet",
+      "label": "t:sections.all.columns_tablet.label",
+      "options": [
+        {
+          "value": "2",
+          "label": "t:sections.all.columns_tablet.options__1.label"
+        },
+        {
+          "value": "3",
+          "label": "t:sections.all.columns_tablet.options__2.label"
+        },
+        {
+          "value": "4",
+          "label": "t:sections.all.columns_tablet.options__3.label"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "t:sections.collection-list.settings.columns_mobile.options__1.label"
+        },
+        {
+          "value": "2",
+          "label": "t:sections.collection-list.settings.columns_mobile.options__2.label"
+        }
+      ],
+      "default": "1",
+      "label": "t:sections.collection-list.settings.columns_mobile.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "swipe_on_mobile",
+      "default": false,
+      "label": "t:sections.all.swipe_on_tablet_mobile.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection_list",
+      "name": "t:sections.collection-list-tabs.blocks.collection_list.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.collection-list-tabs.blocks.collection_list.settings.title.label",
+          "default": "Tab title"
+        },
+        {
+          "type": "collection_list",
+          "id": "collection_list",
+          "label": "t:sections.collection-list-tabs.blocks.collection_list.settings.list.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.collection-list-tabs.presets.name",
+      "blocks": [
+        {
+          "type": "collection_list"
+        },
+        {
+          "type": "collection_list"
+        },
+        {
+          "type": "collection_list"
+        },
+        {
+          "type": "collection_list"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,27 @@
+{%- if product.description != blank -%}
+  <div{% unless no_shopify_attributes %} {{ block.shopify_attributes }}{% endunless %}> 
+    <truncate-text class="db product__description" {% if block.settings.truncate_description > 0 %}style="--truncate-text-length:{{ block.settings.truncate_description }}px;"{% else %}data-ignore="true"{% endif %}>
+      <div class="truncate-text__content-wrapper">  
+        <div class="truncate-text__content rte">
+          {{ product.description }}
+        </div>
+      </div>
+      {%- if block.settings.truncate_description > 0 -%}
+        <div class="center truncate-text__button-wrapper element-small-margin-top por flex justify-center hidden overflow-hidden">
+          <button class="button button--medium button--truncate-text ignore-effect {% if section.settings.use_background_input %}button--truncate-background-input{% else %}button--truncate-background-page{% endif %}" type="button">
+            {%- if block.settings.read_more_button != blank -%}
+              <span>{{ block.settings.read_more_button }}</span>
+            {%- endif -%}
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+              <path d="M10.25 4.875L6.5 8.625L2.75 4.875" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      {%- endif -%}
+      </truncate-text>
+    {%- if block.settings.truncate_description > 0 and request.design_mode == false -%}
+      <script src="{{ 'truncate-text.js' | asset_url }}" defer="defer"></script>
+      {{ 'component-truncate-text.css' | asset_url | stylesheet_tag }}
+    {%- endif -%}
+  </div>
+{%- endif -%}

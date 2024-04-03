@@ -1,0 +1,469 @@
+{{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
+{{ 'component-virtual-checkbox.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  {%- render 'section-heading-styles' -%}
+{%- endstyle -%}
+
+{%-liquid
+  if page and request.page_type == 'page' and template.suffix == 'contact'
+    assign heading_tag = 1
+  else
+    assign heading_tag = 2
+  endif  
+  assign addresses = section.blocks | where: 'type', 'address'
+  assign opening_hours = section.blocks | where: 'type', 'opening_hour'
+  assign additional_fields = section.blocks | where: 'type', 'additional_field'
+  assign social_media_icons = section.blocks | where: 'type', 'social_media_icons'
+  assign custom_texts = section.blocks | where: 'type', 'custom_text'
+  assign has_sidebar = false
+  if addresses.size > 0 or opening_hours.size > 0 or custom_texts.size > 0 or social_media_icons
+    assign has_sidebar = true
+  endif
+-%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="contact page-width{% unless has_sidebar %} page-width--narrow{% endunless %} section-{{ section.id }}-padding">
+    <div class="grid grid--1-col{% if has_sidebar %} grid--3-col-desktop{% endif %}">
+      <div class="grid__item flex-grow-1{% if has_sidebar %} contact__form-with-address{% endif %}">
+        {%- if section.settings.title != blank -%}
+          <div class="title">
+            <div class="flex justify-space-between w100 align-center title__gap por">
+              {%- unless section.settings.subtitle != blank -%}
+                <h{{ heading_tag }} class="title__heading h{{ section.settings.heading_size | replace: 'h', '' | plus: 1 }} font-heading-extra-bold margin0 lh1 title__heading--before-line">{{ section.settings.title | escape }}</h{{ heading_tag }}>	
+                <hr class="title__line flex-grow-1 margin0">
+              {%- else -%}
+                <div class="flex flex-column justify-right align-start">
+                  <h{{ heading_tag }} class="title__heading title__back title__back--{{ section.settings.heading_size }} font-heading-bold margin0 lh1">{{ section.settings.title | escape }}</h{{ heading_tag }}>
+                  <h{{ heading_tag | plus: 1 }} class="title__subtitle margin0 title__front {% if section.settings.heading_size != 'h2' %}h{{ section.settings.heading_size | replace: 'h', '' | plus: 1 }}{% else %}title__front--small{% endif %} lh1">{{ section.settings.subtitle }}</h{{ heading_tag | plus: 1 }}>
+                </div>
+              {%- endunless -%}	
+            </div>
+          </div>
+        {%- endif -%}  
+        {%- form 'contact', id: 'ContactForm', class: 'isolate' -%}
+          {%- if form.posted_successfully? -%}
+            <h2 class="form__message alert alert--success alert--small small-margin-bottom" tabindex="-1" autofocus>{% render 'icon-success' %} {{ 'templates.contact.form.post_success' | t }}</h2>
+          {%- elsif form.errors -%}
+            <div class="alert alert--error aler--small small-margin-bottom">
+              <div class="form__message">
+                <h2 class="form-status text-small text-body" role="alert" tabindex="-1" autofocus>{% render 'icon-error' %} {{ 'templates.contact.form.error_heading' | t }}</h2>
+              </div>
+              <ul class="form-status-list text-small" role="list">
+                <li>
+                  <a href="#ContactForm-email" class="link underlined-link">
+                    {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}
+                  </a>
+                </li>
+              </ul>
+            </div>
+          {%- endif -%}
+          <div class="contact__fields{% if has_sidebar %} contact__fields--with-address{% endif %}">
+            <div class="field">
+              <label class="field__label text-small font-body-semi-bold uppercase" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
+              <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'templates.contact.form.name' | t }}">
+            </div>
+            <div class="field field--with-error">
+              <label class="field__label text-small font-body-semi-bold uppercase" for="ContactForm-email">{{ 'templates.contact.form.email' | t }} <span aria-hidden="true">*</span></label>
+              <input
+                autocomplete="email"
+                type="email"
+                id="ContactForm-email"
+                class="field__input"
+                name="contact[email]"
+                spellcheck="false"
+                autocapitalize="off"
+                value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                aria-required="true"
+                {% if form.errors contains 'email' %}
+                  aria-invalid="true"
+                  aria-describedby="ContactForm-email-error"
+                {% endif %}
+                placeholder="{{ 'templates.contact.form.email' | t }}"
+                required="required"
+              >
+              {%- if form.errors contains 'email' -%}
+                <small class="contact__field-error alert alert--error alert--small flex margin-top-1rem" id="ContactForm-email-error">
+                  <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+                  <span class="form__message">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</span>
+                </small>
+              {%- endif -%}
+            </div>
+            <div class="field">
+              <label class="field__label text-small font-body-semi-bold uppercase" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
+              <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="contact[{{ 'templates.contact.form.phone' | t }}]" pattern="[0-9\-]*" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" placeholder="{{ 'templates.contact.form.phone' | t }}">
+            </div>
+            <div class="field field--full">
+              <label class="field__label text-small font-body-semi-bold uppercase" for="ContactForm-body">{{ 'templates.contact.form.comment' | t }}</label>
+              <textarea
+                rows="10"
+                id="ContactForm-body"
+                class="text-area field__input"
+                name="contact[{{ 'templates.contact.form.comment' | t }}]"
+                placeholder="{{ 'templates.contact.form.comment' | t }}"
+              >
+                {{- form.body -}}
+              </textarea>
+            </div>
+            {%- if additional_fields.size > 0 -%}
+              {%- for field in additional_fields -%}
+                {%- assign information_id = field.settings.information_id | default: field.settings.title -%}
+                {%- if information_id != blank -%}
+                  <div class="field{% if field.settings.type == 'textarea' %} field--full{% endif %}">
+                    {%- if field.settings.title != blank -%}
+                      {%- if field.settings.type != 'checkboxes' or field.settings.type == 'checkboxes' and field.settings.options != blank -%}
+                        <label class="field__label text-small font-body-semi-bold uppercase" for="ContactForm-field-{{ field.id }}">{{ field.settings.title }}{% if field.settings.required %} <span aria-hidden="true">*</span>{% endif %}</label>
+                      {%- endif -%}
+                    {%- endif -%}
+                    {%- case field.settings.type -%}
+                    {%- when 'text' -%}
+                      <input type="text" id="ContactForm-field-{{ field.id }}" name="contact[{{ information_id | escape }}]" class="field__input"{% if field.settings.required %} aria-required="true" required="required"{% endif %}/>
+                    {%- when 'textarea' -%}
+                      <textarea id="ContactForm-field-{{ field.id }}" name="contact[{{ information_id | escape }}]" class="text-area field__input" rows="10"{% if field.settings.required %} aria-required="true" required="required"{% endif %}></textarea>    
+                    {%- when 'checkboxes' -%}
+                      {%- if field.settings.options != blank -%}
+                        {%- assign options = field.settings.options | split: ';' -%}
+                        <ul class="list-unstyled contact__list-option flex flex-wrap">
+                          {%- for option in options -%}
+                            <li>
+                              <div class="por flex virtual-checkbox">
+                                <input type="checkbox" name="contact[{{ information_id | escape }}{% if options.size > 1 %}_{{ forloop.index }}{% endif %}]" id="contact-field-{{ field.id }}-option-{{ forloop.index }}" value="{{ option | strip | escape }}"{% if field.settings.required and options.size == 1 %} aria-required="true" required="required"{% endif %} class="virtual-checkbox__checkbox margin0"/>
+                                <label for="contact-field-{{ field.id }}-option-{{ forloop.index }}"class="virtual-checkbox__label db {% unless field.settings.title != blank %}contact__checkbox-large-label{% else %}text-small{% endunless %}">
+                                  <svg class="virtual-checkbox__icon-checkmark icon icon-checkmark" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.5 4.00002L3.83333 6.33335L8.5 1.66669" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                  <span class="first-letter-uppercase db">{{ option }}{% if field.settings.title == blank and field.settings.required and options.size == 1 %} <span aria-hidden="true">*</span>{% endif %}</span>
+                                </label>
+                              </div>  
+                            </li>
+                          {%- endfor -%}  
+                        </ul>
+                      {%- else -%}
+                        <div class="por flex virtual-checkbox">
+                          <input type="checkbox" name="contact[{{ information_id | escape }}]" id="contact-field-{{ field.id }}-option-{{ forloop.index }}" value="Yes"{% if field.settings.required %} aria-required="true" required="required"{% endif %} class="virtual-checkbox__checkbox margin0"/>
+                          <label for="contact-field-{{ field.id }}-option-{{ forloop.index }}" class="virtual-checkbox__label db contact__checkbox-large-label">
+                            <svg class="virtual-checkbox__icon-checkmark icon icon-checkmark" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1.5 4.00002L3.83333 6.33335L8.5 1.66669" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span class="first-letter-uppercase db">{{ field.settings.title | default: field.settings.information_id }}{% if field.settings.required %} <span aria-hidden="true">*</span>{% endif %}</span>
+                          </label>
+                        </div> 
+                      {%- endif -%}
+                    {%- else -%}
+                      {%- assign options = field.settings.options | split: ';' -%}
+                      <div class="select">
+                        <select id="ContactForm-field-{{ field.id }}" name="contact[{{ information_id | escape }}]" class="select__select"{% if field.settings.required %} aria-required="true" required="required"{% endif %}>
+                          {%- for option in options -%}
+                            <option value="{{ option | strip | escape }}">{{ option }}</option>
+                          {%- endfor -%}  
+                        </select>
+                        {%- render 'icon-caret' -%}
+                      </div>
+                    {%- endcase -%}  
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}  
+            {%- endif -%}    
+          </div>
+          <div class="contact__button left">
+            <button type="submit" class="button">
+              <span>{{ 'templates.contact.form.send' | t }}</span>
+            </button>
+          </div>
+        {%- endform -%}
+      </div>
+      {%- if has_sidebar -%}
+        <div class="grid__item contact__address-wrapper background-input flex flex-column align-start">
+          {%- if addresses.size > 0 -%}
+            <div class="flex justify-space-between w100 align-center title__gap por contact__address-wrapper__title">
+              <h{{ heading_tag | plus: 1 }} class="h3 font-heading-bold margin0 title__heading--before-line">{{ 'templates.contact.address.heading' | t }}</h{{ heading_tag | plus: 1 }}>
+              <hr class="title__line flex-grow-1 margin0">
+            </div>  
+            <ul class="list-unstyled contact__address-list flex flex-column align-start w100">
+              {%- for block in addresses -%}
+                {%- unless forloop.first -%}
+                  <li class="w100"><hr class="contact__address-list__line"></li>
+                {%- endunless -%}  
+                <li class="flex flex-column contact__address-item">
+                  <h{{ heading_tag | plus: 2 }} class="h5 font-heading-bold margin0 w100">
+                    {{ block.settings.name }}
+                  </h{{ heading_tag | plus: 2 }}>
+                  {%- if block.settings.phone != blank -%}
+                    <a href="tel:{{ block.settings.phone | escape }}" class="link link--text font-body-large-bold w100 lh1">{{ block.settings.phone }}</a>
+                  {%- endif -%}
+                  {%- if block.settings.direction != blank -%}
+                    <p class="margin0 w100">{{ block.settings.direction }}</p>
+                  {%- endif -%}
+                  {%- if block.settings.email != blank -%}
+                    <a href="mailto:{{ block.settings.email | escape }}" class="db highlight link w100">{{ block.settings.email }}</a>
+                  {%- endif -%} 
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+          {%- if opening_hours.size > 0 -%}
+            <div class="flex justify-space-between w100 align-center title__gap por w100 contact__address-wrapper__title">
+              <h{{ heading_tag | plus: 1 }} class="h3 font-heading-bold margin0 title__heading--before-line">{{ 'templates.contact.opening_hour.heading' | t }}</h{{ heading_tag | plus: 1 }}>
+              <hr class="title__line flex-grow-1 margin0">
+            </div>  
+            <ul class="list-unstyled w100">
+              {%- for block in opening_hours -%}
+                <li class="flex w100 contact__opening-hour__item">
+                  <span class="font-body-large-bold">{{ block.settings.weekdays }}:</span>
+                  <span>{{ block.settings.working_hour }}</span>
+                </li>
+              {%- endfor -%}  
+            </ul>
+          {%- endif -%}
+          {%- if custom_texts.size > 0 -%}
+            {%- for block in custom_texts -%}
+              <div class="flex justify-space-between w100 align-center title__gap por w100 contact__address-wrapper__title">
+                <h{{ heading_tag | plus: 1 }} class="h3 font-heading-bold margin0 title__heading--before-line">{{ block.settings.title }}</h{{ heading_tag | plus: 1 }}>
+                <hr class="title__line flex-grow-1 margin0">
+              </div>  
+              <div class="rte">
+                {{ block.settings.content }}
+              </div>
+            {%- endfor -%} 
+          {%- endif -%}
+          {%- if social_media_icons.size > 0 -%}
+            {%- assign social_media_icons_block = social_media_icons | first -%}
+            {%- if social_media_icons_block.settings.title != blank -%}
+              <div class="flex justify-space-between w100 align-center title__gap por w100 contact__address-wrapper__title">
+                <h{{ heading_tag | plus: 1 }} class="h3 font-heading-bold margin0 title__heading--before-line">{{ social_media_icons_block.settings.title }}</h{{ heading_tag | plus: 1 }}>
+                <hr class="title__line flex-grow-1 margin0">
+              </div>
+              {%- render 'social-media-icons', icon_width: 24 -%}
+            {%- endif -%}  
+          {%- endif -%}  
+        </div>
+      {%- endif -%}  
+    </div>
+
+    {%- if page and request.page_type == 'page' and template.suffix == 'contact' and page.content != blank -%}
+      <div class="rte element-margin-top">
+        {{ page.content }}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.contact-form.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.contact-form.settings.title.label",
+      "default": "Contact form"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "t:sections.contact-form.settings.subtitle.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "address",
+      "name": "t:sections.contact-form.blocks.address.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "t:sections.contact-form.blocks.address.settings.name.label"
+        },
+        {
+          "type": "text",
+          "id": "phone",
+          "label": "t:sections.contact-form.blocks.address.settings.phone.label"
+        },
+        {
+          "type": "text",
+          "id": "direction",
+          "label": "t:sections.contact-form.blocks.address.settings.direction.label"
+        },
+        {
+          "type": "text",
+          "id": "email",
+          "label": "t:sections.contact-form.blocks.address.settings.email.label"
+        }
+      ]
+    },
+    {
+      "type": "opening_hour",
+      "name": "t:sections.contact-form.blocks.opening_hour.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "weekdays",
+          "label": "t:sections.contact-form.blocks.opening_hour.settings.weekdays.label"
+        },
+        {
+          "type": "text",
+          "id": "working_hour",
+          "label": "t:sections.contact-form.blocks.opening_hour.settings.working_hour.label"
+        }
+      ]
+    },
+    {
+      "type": "additional_field",
+      "name": "t:sections.contact-form.blocks.additional_field.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.contact-form.blocks.additional_field.settings.label.label",
+          "default": "Field label"
+        },
+        {
+          "type": "text",
+          "id": "information_id",
+          "label": "t:sections.contact-form.blocks.additional_field.settings.information_id.label",
+          "info": "t:sections.contact-form.blocks.additional_field.settings.information_id.info"
+        },
+        {
+          "type": "select",
+          "id": "type",
+          "label": "t:sections.contact-form.blocks.additional_field.settings.type.label",
+          "options": [
+            {
+              "value": "text",
+              "label": "t:sections.contact-form.blocks.additional_field.settings.type.options__1.label"
+            },
+            {
+              "value": "textarea",
+              "label": "t:sections.contact-form.blocks.additional_field.settings.type.options__2.label"
+            },
+            {
+              "value": "checkboxes",
+              "label": "t:sections.contact-form.blocks.additional_field.settings.type.options__3.label"
+            },
+            {
+              "value": "dropdown",
+              "label": "t:sections.contact-form.blocks.additional_field.settings.type.options__4.label"
+            }
+          ],
+          "default": "text"
+        },
+        {
+          "type": "text",
+          "id": "options",
+          "label": "t:sections.contact-form.blocks.additional_field.settings.options.label",
+          "info": "t:sections.contact-form.blocks.additional_field.settings.options.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "required",
+          "label": "t:sections.contact-form.blocks.additional_field.settings.required.label",
+          "info": "t:sections.contact-form.blocks.additional_field.settings.required.info",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "custom_text",
+      "name": "t:sections.contact-form.blocks.custom_text.name",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.contact-form.blocks.custom_text.settings.title.label"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "t:sections.contact-form.blocks.custom_text.settings.content.label"
+        }
+      ]
+    },
+    {
+      "type": "social_media_icons",
+      "name": "t:sections.contact-form.blocks.social_media_icons.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "t:sections.contact-form.blocks.social_media_icons.settings.instruction.content"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.contact-form.blocks.social_media_icons.settings.title.label",
+          "default": "Follow us"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.contact-form.presets.name"
+    }
+  ]
+}
+{% endschema %}

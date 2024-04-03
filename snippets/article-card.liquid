@@ -1,0 +1,89 @@
+{% comment %}
+    Renders an article card for a given blog with settings to either show the image or not.
+
+    Accepts:
+    - blog: {Object} Blog object
+    - article: {Object} Article object
+    - media_aspect_ratio: {String} The setting changes the aspect ratio of the article image, if shown
+    - media_height: {String} The setting changes the height of the article image. Overrides media_aspect_ratio.
+    - show_image: {String} The setting either show the article image or not. If it's not included it will show the image by default
+    - show_date: {String} The setting either show the article date or not. If it's not included it will not show the image by default
+    - show_author: {String} The setting either show the article author or not. If it's not included it will not show the author by default
+    - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+
+    Usage:
+    {% render 'article-card' blog: blog, article: article, show_image: section.settings.show_image %}
+{% endcomment %}
+
+{%- if article and article != empty -%}
+  {%- assign has_image = false -%}
+  <div class="card-wrapper w100 h100 por article-card-radius overflow-hidden">
+    {% comment %} <article aria-labelledby="Article-{{ article.id }}"> {% endcomment %}
+    <div class="card article-card card--article{% if show_image and article.image %} color-{{ section.settings.blog_card_color_scheme }}{% endif %}
+      {% if media_height and media_height != 'adapt' %} article-card__image--{{ media_height }}{% endif %}
+      {% if article.image and show_image %} card--media{% else %} card--text{% endif %}"
+    >
+      {%- if show_image and article.image -%}
+        {%- assign has_image = true -%}
+        <a href="{{ article.url }}" class="article-card__image-wrapper card__media full-unstyled-link db full-link w100" aria-label="{{ article.title | escape }}">
+          <{% if settings.enable_appear_effect %}use-animate{% else %}div{% endif %} class="article-card__image media media--transparent media--hover-effect w100 ratio article-card-radius"{% if media_height == 'adapt' %} style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"{% endif %}>
+            {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+            <img
+              srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+                {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+                {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+                {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {{ article.image.src | image_url }} {{ article.image.src.width }}w"
+              src="{{ article.image.src | image_url: width: 533 }}"
+              sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+              alt="{{ article.image.src.alt | escape }}"
+              class="motion-reduce"
+              {% unless lazy_load == false %}loading="lazy"{% endunless %}
+              width="{{ article.image.width }}"
+              height="{{ article.image.height }}"
+            >
+            {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
+          </{% if settings.enable_appear_effect %}use-animate{% else %}div{% endif %}>
+        </a>
+      {%- endif -%}
+      <div class="card__content-article">
+        <h3 class="font-heading-extra-bold margin0 h4">
+          {%- if has_image -%}
+            {{ article.title | truncate: 50 | escape }}
+          {%- else -%}  
+            <a href="{{ article.url }}" class="full-unstyled-link full-link">
+              {{ article.title | truncate: 50 | escape }}
+            </a>
+          {%- endif -%}
+        </h3>
+      
+        {%- if show_date or show_author or article.comments_count > 0 and blog.comments_enabled? -%}
+          <hr class="article-card__line margin-top-1rem margin-bottom-1rem">
+      
+          <div class="article-card__footer caption-large w100 flex align-center">
+            {%- if show_date -%}
+              <div class="flex align-center article-card__footer__item">
+                {%- render 'icon-picker', icon: 'calendar', add_classes: 'article-card__footer__icon' -%}
+                <span>{{ article.published_at | time_tag: format: 'date' }}</span>
+              </div>  
+            {%- endif -%}
+            {%- if show_author -%}
+              <div class="flex align-center article-card__footer__item">
+                {%- render 'icon-picker', icon: 'user', add_classes: 'article-card__footer__icon' -%}
+                <span>{{ article.author }}</span>
+              </div>
+            {%- endif -%}
+            {%- if article.comments_count > 0 and blog.comments_enabled? -%}
+              <div class="flex align-center article-card__footer__item">
+                {%- render 'icon-picker', icon: 'chat', add_classes: 'article-card__footer__icon' -%}
+                <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}  
+      </div>
+    </div>
+  </div>
+{%- endif -%}

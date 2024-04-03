@@ -1,0 +1,50 @@
+{%-liquid
+  assign hide_block = false
+  if section.settings.hide_when_empty_content
+    unless request.design_mode
+      assign hide_block = true
+      if block.type == 'icon' or block.settings.title != blank or block.settings.image != blank
+        assign hide_block = false
+      endif
+    endunless
+  endif
+-%}
+{%- unless hide_block -%}
+  <li{% if has_block_attributes %} {{ block.shopify_attributes }}{% endif %}>
+  {%- if block.type contains 'text' -%}
+    <{% unless block.settings.link != blank %}span{% else %}a href="{{ block.settings.link }}"{% endunless %} class="scrolling-text__item scrolling-text__item--{{ section.id }} scrolling-text__item--{{ section.id }}-{{ block.id }}
+      {% if block.type == 'extra_bold_heading_text' %} heading-font{% endif %}
+      {% if block.type == 'extra_bold_heading_text' %} font-heading-extra-bold{% endif %}
+      {% if block.settings.use_outline_text %} scrolling-text__item--outline{% endif %}
+      {% if block.settings.gradient_color != blank %} scrolling-text__item--gradient{% endif %}
+      {% if block.settings.link != blank %} full-link full-unstyled-link por{% endif %}">
+      {{ block.settings.title }}
+    </{% unless block.settings.link != blank %}span{% else %}a{% endunless %}>
+  {%- elsif block.type == 'icon' -%}
+    <div class="flex align-center scrolling-text__item scrolling-text__item--{{ section.id }}-{{ block.id }}">{%- render 'icon-picker', icon: block.settings.icon, icon_width: 35, add_classes: 'color-foreground' -%}</div>
+  {%- else -%}
+    <div class="flex align-center scrolling-text__item scrolling-text__item--thumbnail scrolling-text__item--{{ section.id }}-{{ block.id }}">
+      {%- liquid
+        assign ratio = 1
+        if section.settings.thumbnail_ratio == 'adapt' and block.settings.image != blank
+          assign ratio = block.settings.image.aspect_ratio
+          if ratio == 0 or ratio == null
+            assign ratio = 1
+          endif
+        endif
+      -%}
+      <div class="media w100 media--{{ section.settings.thumbnail_ratio }}{% if section.settings.thumbnail_ratio == 'adapt' %} ratio{% endif %}{% unless section.settings.thumbnail_ratio == 'circle' %} card-radius{% endunless %}"{% if section.settings.thumbnail_ratio == 'adapt' and block.settings.image != blank %} style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"{% endif %}>       
+        {%- if block.settings.image != blank -%}
+          {{ block.settings.image | image_url: width: 1420 | image_tag:
+            loading: 'lazy',
+            sizes: "(min-width: 990px) 12rem, 10rem",
+            widths: '100, 275'
+          }}
+        {%- else -%}  
+          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg w100 h100' }}
+        {%- endif -%}  
+      </div>
+    </div>
+  {%- endif -%}  
+  </li>
+{%- endunless -%}

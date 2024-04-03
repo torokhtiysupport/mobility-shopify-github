@@ -1,0 +1,145 @@
+{%- if section.settings.enable_sticky_cart -%}
+  <script src="{{ 'sticky-cart.js' | asset_url }}" defer="defer"></script>
+  <link rel="stylesheet" href="{{ 'component-sticky-cart.css' | asset_url }}" media="print" onload="this.media='all'">
+  <noscript>{{ 'component-sticky-cart.css' | asset_url | stylesheet_tag }}</noscript>
+  {%- unless product.has_only_default_variant -%}
+    <link rel="stylesheet" href="{{ 'disclosure.css' | asset_url }}" media="print" onload="this.media='all'">
+    <noscript>{{ 'disclosure.css' | asset_url | stylesheet_tag }}</noscript>
+  {%- endunless -%}  
+  <sticky-cart data-form="{{ product_form_id }}" class="sticky-cart-{{ section.id }} no-js-hidden">
+    <div class="flex sticky-cart__inner justify-space-between flex-wrap gradient{% unless product.has_only_default_variant %} sticky-cart__inner--has-variants{% endunless %}">  
+      <div class="sticky-cart__price-media flex align-center">
+        <div class="sticky-cart__media small-hide">
+          {%- if featured_media -%}
+            {%- assign sticky_media_id = 'sticky-media-' | append: section.id -%}
+            {{ featured_media.preview_image | image_url: width: 150 | image_tag: loading: 'lazy', id: sticky_media_id }}
+          {%- endif -%}
+        </div>
+        {%- liquid
+          assign target = product.selected_or_first_available_variant | default: product
+          assign available = target.available | default: false
+        -%}
+        <div class="price{% if available == false %} price--sold-out{% endif %} price--sticky" id="sticky-price-{{ section.id }}">
+          {%- render 'price', product: product, use_variant: true, show_badges: false, show_in_card: true -%}
+        </div>
+      </div>
+      {%- unless product.has_only_default_variant -%}
+        <sticky-variants-mobile id="variant-picker-mobile-{{ section.id }}" class="sticky-cart__variant-select-mobile medium-hide large-up-hide flex align-ver" data-variant-picker="sticky-variant-select-{{ section.id }}">
+          <details-disclosure class="db w100" data-ignore-hover="true">
+            <details class="disclosure w100 h100">
+              <summary class="w100 disclosure__button h100 stick-cart__variant-select-mobile__button flex justify-space-between align-center" aria-expanded="false" aria-controls="VariantList">
+                <span>{{ product.selected_or_first_available_variant.title }}</span>
+                {% render 'icon-caret' %}
+              </summary>
+              <div class="disclosure__list-wrapper disclosure__list-wrapper--top disclosure__list-wrapper--sticky-variant-mobile">
+                <ul id="VariantList" role="list" class="disclosure__list list-unstyled">
+                  {%- for variant in product.variants -%}
+                    <li class="disclosure__item" tabindex="-1">
+                      <a class="link link--text disclosure__link sticky-cart__variant-select-mobile__link caption-large focus-inset" href="#"{% if variant.selected %} aria-current="true"{% endif %} data-value="{{ variant.id }}">
+                        {{- variant.title -}}
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </div>
+            </details>
+          </details-disclosure>
+        </sticky-variants-mobile>
+      {%- endunless -%}
+      <div class="sticky-cart__form flex align-center">
+        {%- assign product_form_id_sticky = product_form_id | append: '-sticky' -%}
+        {%- unless product.has_only_default_variant -%}
+          {%- liquid
+            assign current_variant = product.selected_or_first_available_variant
+            assign first_selected_variant = current_variant | default: product.variants[0]
+          -%}
+          <sticky-variant-selects id="sticky-variant-select-{{ section.id }}" class="no-js-hidden small-hide sticky-cart__variant-selects justify-right" data-section="{{ section.id }}" data-url="{{ product.url }}" data-primary-picker=".variant-picker-primary-{{ section.id }}" data-mobile-picker="variant-picker-mobile-{{ section.id }}"{% if settings.hide_unavailable_options %} data-hide-unavailable-options="true"{% endif %}>
+            {%- for option in product.options_with_values -%}
+              {%-liquid
+                assign available_variants = product.variants
+                unless settings.hide_unavailable_options
+                  for available_option in product.options
+                    if option.position != forloop.index
+                      assign filter_index = 'option' | append: forloop.index
+                      assign filter_value = first_selected_variant[filter_index]
+                      assign available_variants = available_variants | where: filter_index, filter_value
+                    endif
+                  endfor
+                else
+                  if option.position > 1
+                    assign end_compare_index = option.position | minus: 1
+                    for i in (1..end_compare_index)
+                      assign filter_index = 'option' | append: i
+                      assign filter_value = first_selected_variant[filter_index]
+                      assign available_variants = available_variants | where: filter_index, filter_value
+                    endfor
+                  endif  
+                endunless 
+                assign indexOption = 'option' | append: option.position
+                assign available_option_values = available_variants | map: indexOption
+                assign is_first_option = forloop.first
+              -%}
+              <div class="product-form__input product-form__input--dropdown flex-grow-1">
+                <label class="form__label product-form__input__form-label visually-hidden" for="Option-{{ section.id }}-{{ forloop.index0 }}-sticky">
+                  {{ option.name }}
+                </label>
+                <div class="select">
+                  <select id="Option-{{ section.id }}-{{ forloop.index0 }}-sticky"
+                    class="select__select{% if is_first_option %} last-option{% endif %}"
+                    name="options[{{ option.name | escape }}]"
+                    form="{{ product_form_id_sticky }}"
+                  >
+                    {%- for value in option.values -%}
+                      <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}{% if settings.hide_unavailable_options and is_first_option == false %}{% unless available_option_values contains value %} class="hidden"{% endunless %}{% endif %}>
+                        {%- unless settings.hide_unavailable_options -%}
+                          {% if available_option_values contains value -%}
+                            {{- value -}}
+                          {%- else -%}
+                            {{- 'products.product.value_unavailable' | t: option_value: value -}}
+                          {%- endif %}
+                        {%- else -%}
+                          {{- value -}}  
+                        {%- endunless -%}
+                      </option>
+                    {%- endfor -%}
+                  </select>
+                  {% render 'icon-caret' %}
+                </div>
+              </div>
+            {%- endfor -%}
+            <script type="application/json">
+              {{ product.variants | json }}
+            </script>
+          </sticky-variant-selects>
+        {%- endunless -%}
+        <product-form class="product-form flex">
+          {%- form 'product', product, id: product_form_id_sticky, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
+            <input class="quantity__input" type="hidden" name="quantity" min="1" value="1">
+            <div class="product-form__buttons">
+              <button
+                type="submit"
+                name="add"
+                class="sticky-cart__submit product-form__submit button flex w100 button--primary button--medium"
+              {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+              aria-labelledby="card-submit-button-{{ section.id }}"
+              >
+                <span class="small-hide">
+                  {%- if product.selected_or_first_available_variant.available -%}
+                    {{ 'products.product.add_to_cart' | t }}
+                  {%- else -%}
+                    {{ 'products.product.sold_out' | t }}
+                  {%- endif -%}
+                </span>
+                {%- render 'icon-cart', add_classes: 'medium-hide large-up-hide' -%}
+                <div class="loading-overlay__spinner hidden">
+                  {%- render 'icon-cart-loading' -%}
+                </div>
+              </button>
+            </div>
+          {%- endform -%}
+        </product-form>
+      </div>
+    </div>
+  </sticky-cart>
+{%- endif -%}  

@@ -1,0 +1,37 @@
+{% comment %}
+    Renders an article card placeholder with settings to either show the image or not.
+
+    Accepts:
+    - media_height: {String} The setting changes the height of the article image.
+    - show_image: {String} The setting either show the article image or not. If it's not included it will show the image by default
+    - placeholder_image: {String} The placeholder image to use when no blog post exists. Default: 'blog-apparel-1' (optional)
+    Usage:
+    {% render 'article-card-placeholder', section.settings.show_image %}
+{% endcomment %}
+
+<div class="card-wrapper w100 h100 por card-radius overflow-hidden">
+  {% comment %} <article aria-labelledby="Article-{{ article.id }}"> {% endcomment %}
+  <div class="card article-card card--article{% if show_image %} color-{{ section.settings.blog_card_color_scheme }}{% endif %}
+    {% if media_height and media_height != 'adapt' %} article-card__image--{{ media_height }}{% endif %}
+    {% if show_image %} card--media{% else %} card--text{% endif %}"
+  >
+    {%- if show_image -%}
+      <a href="{{ article.url }}" class="article-card__image-wrapper card__media full-unstyled-link db full-link w100">
+        <div class="article-card__image media media--transparent media--hover-effect w100 ratio">
+          {{ placeholder_image | default: 'blog-apparel-1' | placeholder_svg_tag: 'placeholder-svg w100 h100' }}
+        </div>
+      </a>
+    {%- endif -%}
+    <div class="card__content-article">
+      <h3 class="font-heading-bold margin0 h4">
+        {%- if show_image -%}
+          {{ 'sections.featured_blog.onboarding_title' | t }}
+        {%- else -%}  
+          <a href="#" class="full-unstyled-link full-link">
+            {{ 'sections.featured_blog.onboarding_title' | t }}
+          </a>
+        {%- endif -%}
+      </h3>  
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="card-wrapper card-wrapper--product por h100">
+	<div class="card card--product"
+	>
+		<div class="card__inner w100">
+			<div class="media{% if media_aspect_ratio == 'adapt' %} media--square{% else %} media--{{ media_aspect_ratio | default: 'square' }}{% endif %} skeleton-box">
+				<span></span>
+			</div>
+		</div>
+		<div class="card__content card__content--product">
+			<div class="card__information">
+				{%- if show_vendor -%}
+					<span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+					<div class="caption light card__vendor">{{ 'products.product.vendor' | t }}</div>
+				{%- endif -%}
+				<h3 class="card__heading card__heading--product font-heading-bold h4">
+					<a role="link" aria-disabled="true" class="full-unstyled-link">
+						{{ 'onboarding.product_title' | t }}
+					</a>
+				</h3>
+				<div class="card-information w100">
+					{% render 'price', show_in_card: true %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,70 @@
+<div id="product-compare-featured-image">
+  {%- capture sizes -%}
+    (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)
+  {%- endcapture -%}
+  {%- liquid
+    assign srcset = ''
+    assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media
+    if featured_media.width >= 165
+      assign product_image_url = featured_media | image_url: width: 165
+      assign srcset = srcset | append: product_image_url | append: ' 165w,'
+    endif
+    if featured_media.width >= 360
+      assign product_image_url = featured_media | image_url: width: 360
+      assign srcset = srcset | append: product_image_url | append: ' 360w,'
+    endif
+    if featured_media.width >= 430
+      assign product_image_url = featured_media | image_url: width: 450
+      assign srcset = srcset | append: product_image_url | append: ' 450w,'
+    endif
+    if featured_media.width >= 533
+      assign product_image_url = featured_media | image_url: width: 533
+      assign srcset = srcset | append: product_image_url | append: ' 533w,'
+    endif
+    if featured_media.width >= 720
+      assign product_image_url = featured_media | image_url: width: 720
+      assign srcset = srcset | append: product_image_url | append: ' 720w,'
+    endif
+    if featured_media.width >= 940
+      assign product_image_url = featured_media | image_url: width: 940
+      assign srcset = srcset | append: product_image_url | append: ' 940w,'
+    endif
+    if featured_media.width >= 1066
+      assign product_image_url = featured_media | image_url: width: 1066
+      assign srcset = srcset | append: product_image_url | append: ' 1066w,'
+    endif
+    assign product_image_url = featured_media | image_url
+    assign srcset = srcset | append: product_image_url | append: ' ' | append: featured_media.width | append: 'w'
+  -%}
+  {{ featured_media | image_url: width: 300 | image_tag: sizes: sizes, srcset: srcset, width: featured_media.width, height: featured_media.height, class: 'motion-reduce', loading: 'lazy' }}
+</div>
+<div id="product-compare-price">
+  {%- render 'price', product: product, use_variant: true, show_badges: false, price_class: 'price--large flex align-center', show_in_card: false -%}
+</div>
+<div id="product-compare-inventory">
+  {%- liquid
+    if product.selected_or_first_available_variant.inventory_management == 'shopify'
+      if product.selected_or_first_available_variant.inventory_quantity > 0
+        if product.selected_or_first_available_variant.inventory_quantity <= settings.inventory_threshold_product_compare
+          if settings.show_inventory_quantity_product_compare
+            echo 'products.product.inventory_low_stock_show_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity
+          else
+            echo 'products.product.inventory_low_stock' | t
+          endif
+        else
+          if settings.show_inventory_quantity_product_compare
+            echo 'products.product.inventory_in_stock_show_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity
+          else
+            echo 'products.product.inventory_in_stock' | t
+          endif
+        endif
+      else
+        if product.selected_or_first_available_variant.inventory_policy == 'continue'
+          echo 'products.product.inventory_out_of_stock_continue_selling' | t
+        else
+          echo 'products.product.inventory_out_of_stock' | t
+        endif
+      endif
+    endif
+  -%}
+</div>

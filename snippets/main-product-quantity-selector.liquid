@@ -1,0 +1,31 @@
+{%- if block.settings.quantity_selector_enable -%}
+  <div class="product-form__input product-form__quantity">
+    <label class="form__label visually-hidden" for="Quantity-{{ section.id }}">
+      {{ 'products.product.quantity.label' | t }}
+    </label>
+
+    <quantity-input class="quantity flex align-center color-foreground por">
+      <input class="quantity__input flex-grow-1 center background-input"
+          type="number"
+          name="quantity"
+          id="Quantity-{{ section.id }}"
+          min="1"
+          value="1"
+        >
+      <div class="quantity__buttons flex flex-column flex-grow-1">    
+        <button class="quantity__button flex justify-center align-center no-js-hidden w100 color-foreground" name="plus" type="button">
+          <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
+          <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.6666 5.33331L5.99992 0.666646L1.33325 5.33331" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="quantity__button flex justify-center align-center no-js-hidden w100 color-foreground" name="minus" type="button">
+          <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+          <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.6666 1.16663L5.99992 5.83329L1.33325 1.16663" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </quantity-input>
+  </div>
+{%- endif -%}

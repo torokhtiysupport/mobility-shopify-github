@@ -1,0 +1,90 @@
+.template-popup {
+  overflow: hidden;
+}
+
+.compare-modal__results {
+  overflow: auto;
+}
+
+.compare-popup {
+  margin: 0.3rem;
+}
+
+.compare-popup table {
+  table-layout: fixed;
+  min-width: 100%;
+}
+
+.compare-popup table th, .compare-popup table td {
+  text-align: start;
+  white-space: normal;
+}
+
+.compare-popup th {
+  min-width: 15rem;
+}
+
+.compare-popup th, .compare-popup td {
+  max-width: 25rem;
+}
+
+.compare-popup td {
+  min-width: 25rem;
+  vertical-align: top;
+}
+
+.compare-popup__media-wrapper {
+  max-width: 25rem;
+  margin: 0 auto;
+}
+
+.compare-popup .price__sale {
+  flex-direction: column;
+}
+
+.compare-popup .product-form__buttons {
+  grid-template-columns: auto 1fr;
+}
+
+.compare-popup .product-form__submit {
+  max-width: 7rem;
+}
+
+.compare-popup__description {
+  max-height: 20rem;
+  overflow-y: auto;
+}
+
+.compare-modal__message {
+  display: none;
+  margin-bottom: auto;
+}
+
+compare-popup.empty .compare-modal__empty, compare-popup.warning .compare-modal__warning {
+  display: block;
+}
+
+div.compare-modal__loading {
+  display: none;
+  width: 5rem;
+  position: absolute;
+  inset-inline-start: 50%;
+  top: 50%;
+  transform: translate(calc(var(--transform-direction) * 50%), -50%);
+}
+
+.compare-modal__loading {
+  display: none;
+}
+
+.compare-modal__content-info.loading .compare-modal__results, .compare-modal__content-info.loading .compare-modal__empty, compare-popup.empty .compare-modal__results {
+  display: none;
+}
+
+.compare-modal__content-info.loading .compare-modal__loading {
+  display: block;
+}
+
+.compare-popup__remove-link {
+  min-height: 4.4rem;
+}

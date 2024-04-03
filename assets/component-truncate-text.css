@@ -1,0 +1,37 @@
+.truncate-text__content-wrapper:not(.expand) {
+  overflow: hidden;
+  max-height: var(--truncate-text-length);
+}
+
+.truncate-text__button-wrapper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid rgb(var(--color-foreground), 0.05);
+}
+
+.button--truncate-text {
+  --color-button-text: var(--color-foreground);
+  border: 1px solid rgb(var(--color-foreground), 0.05);
+  border-top: none;
+  border-radius: 0px 0px 8px 8px;
+  box-shadow: none;
+  padding-top: 0;
+  z-index: 1;
+  font-size: calc(var(--font-button-scale) * 1.2rem);
+  min-width: 5rem;
+}
+
+.button--truncate-text > * {
+  opacity: 0.5;
+}
+
+.button--truncate-background-input {
+  --color-button: var(--color-background-input);
+}
+
+.button--truncate-background-page {
+  --color-button: var(--color-background);
+}

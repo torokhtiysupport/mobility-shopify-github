@@ -1,0 +1,18 @@
+.collection-grid-promo {
+  border-radius: var(--product-card-border-radius);
+}
+
+.collection-grid-promo__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1.5rem;
+}
+
+.collection-grid-promo__content--has-overlay {
+  background: linear-gradient(180deg, rgb(var(--color-overlay), 0.10) 51%, rgb(var(--color-overlay), 0.70) 100%);
+}
+
+.collection-grid-promo__content__button {
+  z-index: 1;
+}

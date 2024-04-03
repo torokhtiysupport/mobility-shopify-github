@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="{{ 'component-transparent-header.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- style -%}
+.section-header:not(.shopify-section-header-sticky) .header {
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  border-bottom: none;
+  margin-top: 0;
+}
+
+.section-header .header__inline-menu, .section-header .header__icon {
+  --color-foreground: {{ text_color_transparent.red }}, {{ text_color_transparent.green }}, {{ text_color_transparent.blue }};
+  --color-link: var(--color-foreground);
+  --color-price-foreground: var(--color-foreground);
+}
+
+.header-top {
+  border: none;
+}
+
+.hide-in-transparent {
+  display: none;
+}
+
+.section-header sticky-header {
+  min-height: auto;
+  width: 100%;
+} 
+{%- endstyle -%}

@@ -1,0 +1,43 @@
+.quick-add__main-info {
+  display: grid;
+	grid-template-columns: 30% 1fr;
+	gap: 1.5rem;
+}
+
+.quick-add-main-product .product-form__input__radio-label--color.color-swatches-variant {
+	width: 4rem;
+	height: 4rem;
+}
+
+.quick-add__information > * + * {
+	margin-top: 0.5rem;
+}
+
+.quick-add__information > .product__tax {
+	margin-top: 0;
+}
+
+.quick-add-drawer .product__slider-button {
+	position: static;
+	transform: none;
+}
+
+.quick-add-drawer .slider-buttons {
+	column-gap: 1.5rem;
+}
+
+.quick-add-drawer .drawer__inner {
+	background: rgb(var(--color-background-input));
+}
+
+.quick-add__actions {
+	padding: 1.5rem;
+}
+
+.quick-add__product-form-buttons {
+	gap: 1rem 0.6rem;
+}
+
+.quick-add__product-form-buttons .product-form__submit + .shopify-payment-button {
+	width: 100%;
+}

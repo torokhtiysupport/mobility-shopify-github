@@ -1,0 +1,166 @@
+{%- liquid
+  assign first_column = ''
+  assign last_column = ''
+  assign first_column_size = 0
+  assign last_column_size = 0
+  assign available_for_first_column = 0
+  assign available_columns = 4
+  assign last_level_group_size = 0
+  assign use_mega_linklist = false
+  if link.links != blank
+    assign available_columns = 3
+    for childlink in link.links
+      if childlink.links != blank
+        assign last_level_group_size = last_level_group_size | plus: 1
+      endif
+    endfor
+  endif
+  if blocks_str contains compare_index
+    assign blocks_index = blocks_str | split: compare_index | last | split: ';' | first
+    assign blocks = blocks_index | split: ','
+    for block_index in blocks
+      assign block_index_number = block_index | plus: 0
+      assign block = section.blocks[block_index_number]
+      capture block_html
+        if block.type == 'mega_menu_promotion'
+          render 'header-megamenu-promotion-block' with block: block
+        elsif block.type == 'mega_menu_product_brand'
+          render 'header-megamenu-product-brand-block' with block: block
+        elsif block.type == 'mega_menu_product_type'
+          render 'header-megamenu-product-type-block' with block: block  
+        endif
+      endcapture
+      case block.settings.position
+        when 'first'
+          assign first_column = first_column | append: block_html
+          assign first_column_size = first_column_size | plus: 1
+        when 'last'
+          assign last_column = last_column | append: block_html
+          assign last_column_size = last_column_size | plus: 1
+      endcase
+    endfor
+  endif
+  if last_level_group_size >= 4 and last_level_group_size <= 12
+    assign use_mega_linklist = true
+  endif    
+  if last_level_group_size >= 2
+    assign available_columns = 4 | minus: last_level_group_size
+  endif
+-%}
+{%- if first_column != '' or last_column != '' or use_mega_linklist -%}
+  <div id="MegaMenu-Content-{{ index }}" class="mega-menu__content gradient motion-reduce global-settings-popup{% if section.settings.show_go_to_link and link.url != blank %} mega-menu__content--has-go-to-link{% endif %}" tabindex="-1">
+    <div class="page-width flex mega-menu__content__inner flex-wrap">
+      {%- if first_column != '' -%}
+        {%- liquid
+          assign last_column_size_demand = last_column_size | at_most: 2
+          assign available_for_first_column = available_columns | minus: last_column_size_demand | at_least: 1
+          if available_for_first_column > first_column_size
+            if first_column_size == 1
+              assign available_for_first_column = 2
+            else
+              assign available_for_first_column = first_column_size
+            endif  
+          endif
+        -%}
+        <div class="mega-menu__column mega-menu__column--first mega-menu__column--span{{ available_for_first_column }}{% if available_for_first_column <= 2 and first_column_size == 1 %} mega-menu__column--allow-full{% endif %}">
+          {{ first_column }}
+        </div>
+      {%- endif -%}
+      {%- if last_column != '' -%}
+        {%- assign available_for_last_column = available_columns | minus: available_for_first_column | at_least: 1 -%}
+      {%- endif -%}
+      {%- if link.links != blank -%}
+        <ul class="mega-menu__list{% if link.levels == 1 %} mega-menu__list--condensed{% endif %} mega-menu__list--center mega-menu__column--span{{ 4 | minus: available_for_first_column | minus: available_for_last_column | at_least: 1 }}{% if first_column == '' and last_column == '' and last_level_group_size > 8 %} {% if last_level_group_size <= 10 %}mega-menu__column--span5{% else %}mega-menu__column--span6{% endif %}{% endif %}" role="list">
+          {%- for childlink in link.links -%}
+            <li>
+              <a href="{{ childlink.url }}" class="mega-menu__link link font-heading-bold mega-menu__link--title h4"{% if childlink.current %} aria-current="page"{% endif %}>
+                <span class="{% if childlink.current %}underlined-link{% else %}link-effect-no-underline{% endif %}">{{ childlink.title }}</span>
+              </a>
+              {%- if childlink.links != blank -%}
+                <ul class="list-unstyled" role="list">
+                  {%- for grandchildlink in childlink.links -%}
+                    <li>
+                      <a href="{{ grandchildlink.url }}" class="mega-menu__link link header-menu__link-sub font-body-semi-bold text-small"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                        <span class="{% if grandchildlink.current %}underlined-link{% else %}link-effect-no-underline{% endif %}">{{ grandchildlink.title }}</span>
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+      {%- if last_column != '' -%}
+        <div class="mega-menu__column mega-menu__column--last mega-menu__column--span{{ available_for_last_column }}{% if available_for_last_column <= 2 and last_column_size == 1 %} mega-menu__column--allow-full{% endif %}">
+          {{ last_column }}
+        </div>
+      {%- endif -%}
+    </div>
+    {%- if section.settings.show_go_to_link and link.url != blank -%}
+      <div class="header__goto-link center margin-top-1rem">
+        <a href="{{ link.url }}" class="link link-effect-no-underline align-center justify-center font-body-semi-bold">
+          {{ 'sections.header.go_to_link' | t: title: link.title }}{%- render 'icon-picker', icon: 'external_link', icon_width: 16 -%}
+        </a>
+      </div>
+    {%- endif -%}  
+  </div>
+{%- elsif link.links != blank -%}
+  {%-liquid
+    assign columns = 1
+    if link.links.size > 10
+      assign columns = link.links.size | divided_by: 10 | ceil | at_most: 6
+    endif
+  -%}
+  {%- if columns > 2 -%}
+    <div id="MegaMenu-Content-{{ index }}" class="mega-menu__content gradient motion-reduce global-settings-popup{% if section.settings.show_go_to_link and link.url != blank %} mega-menu__content--has-go-to-link{% endif %}" tabindex="-1">
+      <div class="page-width flex mega-menu__content__inner flex-wrap">
+  {%- endif -%}
+  <ul id="HeaderMenu-MenuList-{{ index }}" class="{% if columns > 1 %}mega-menu__list mega-menu__column--span{{ columns }}{% endif %}{% if columns <= 2 %} header__submenu list-menu list-menu--disclosure global-settings-popup{% endif %} gradient caption-large motion-reduce{% if section.settings.show_go_to_link and link.url != blank %} header__submenu--has-go-to-link{% endif %}" role="list" tabindex="-1">
+    {%- for childlink in link.links -%}
+      <li>
+        {%- if childlink.links == blank -%}
+          <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link focus-inset caption-large w100 font-body-semi-bold list-menu__item--level2{% if childlink.active %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+            <span class="{% if childlink.active %}underlined-link{% else %}link-effect-no-underline{% endif %}">{{ childlink.title }}</span>
+          </a>
+        {%- else -%}
+          <header-menu>
+            <details id="Details-HeaderSubMenu-{{ index }}-{{ forloop.index }}" class="header__submenu__last">
+              <summary class="header__menu-item header__menu-item--has-last-sub flex justify-space-between align-center w100 link list-menu__item list-menu__item--level2 focus-inset caption-large w100 font-body-semi-bold{% if childlink.url != blank and childlink.url != '#' and childlink.url != '' and childlink.current == false %} header__menu-item--link{% endif %}" data-href="{{ childlink.url }}">
+                <span class="{% if childlink.child_active or childlink.active %}underlined-link{% else %}link-effect-no-underline{% endif %}">{{ childlink.title }}</span>
+                {% render 'icon-caret' %}
+              </summary>
+              <ul id="HeaderMenu-SubMenuList-{{ index }}-{{ forloop.index }}" class="header__submenu list-menu motion-reduce header__submenu--last-level global-settings-popup{% if section.settings.show_go_to_link and childlink.url != blank %} header__submenu--has-go-to-link{% endif %}">
+                {%- for grandchildlink in childlink.links -%}
+                  <li>
+                    <a href="{{ grandchildlink.url }}" class="header__menu-item list-menu__item link focus-inset caption-large w100 font-body-semi-bold{% if grandchildlink.active %} list-menu__item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                      <span class="{% if grandchildlink.current %}underlined-link{% else %}link-effect-no-underline{% endif %}">{{ grandchildlink.title }}</span>
+                    </a>
+                  </li>
+                {%- endfor -%}
+                {%- if section.settings.show_go_to_link and childlink.url != blank -%}
+                  <li class="header__goto-link center margin-top-1rem">
+                    <a href="{{ childlink.url }}" class="link link-effect-no-underline align-center justify-center font-body-semi-bold">
+                      {{ 'sections.header.go_to_link' | t: title: childlink.title }}{%- render 'icon-picker', icon: 'external_link', icon_width: 16 -%}
+                    </a>
+                  </li>
+                {%- endif -%}
+              </ul>
+            </details>
+          </header-menu>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+    {%- if section.settings.show_go_to_link and link.url != blank -%}
+      <li class="header__goto-link center margin-top-1rem">
+        <a href="{{ link.url }}" class="link link-effect-no-underline align-center justify-center font-body-semi-bold">
+          {{ 'sections.header.go_to_link' | t: title: link.title }}{%- render 'icon-picker', icon: 'external_link', icon_width: 16 -%}
+        </a>
+      </li>
+    {%- endif -%}
+  </ul>  
+  {%- if columns > 2 -%}
+      </div>
+    </div>
+  {%- endif -%}
+{%- endif -%}
