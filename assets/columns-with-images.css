@@ -46,7 +46,7 @@
 }
 
 .column-with-image_text-block p {
-  color: var(--v-1-secondary, #EBEBEB);
+  color: #EBEBEB;
   text-align: center;
   font-family: Roboto;
   font-size: 14px;
