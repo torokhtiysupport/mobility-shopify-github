@@ -1,7 +1,11 @@
-<div class="product-section">
-  <div class="product-columns">
+<style>
+  
+</style>
+
+<div class="columns-section">
+  <div class="columns">
     {% for block in section.blocks %}
-      <div class="product-column">
+      <div class="column">
         <img src="{{ block.settings.image | img_url: 'medium' }}" width="" height="" alt="{{ block.settings.image.alt }}">
         <h3>{{ block.settings.title }}</h3>
         <p>{{ block.settings.text }}</p>
