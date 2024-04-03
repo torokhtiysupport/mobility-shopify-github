@@ -35,4 +35,12 @@
   line-height: 32px;
 }
 
-
+.column-with-image_text-block p {
+  color: var(--v-1-secondary, #EBEBEB);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
