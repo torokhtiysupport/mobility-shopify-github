@@ -1,3 +1,7 @@
+.columns-with-images h3, .columns-with-images p {
+  margin: 0;
+}
+
 .columns-with-images {
   display: flex;
   justify-content: space-between;
