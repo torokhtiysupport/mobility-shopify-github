@@ -22,6 +22,13 @@
             "title_size": "h1"
           }
         },
+        "description_XTdzmE": {
+          "type": "description",
+          "settings": {
+            "truncate_description": 0,
+            "read_more_button": "Read more"
+          }
+        },
         "e592d434-8377-4309-b179-f98d4b3742a2": {
           "type": "sale_box",
           "settings": {
@@ -70,6 +77,7 @@
         "custom_liquid_HF9kbY",
         "2525f94e-add4-418e-b362-bd2bb35545fa",
         "title",
+        "description_XTdzmE",
         "e592d434-8377-4309-b179-f98d4b3742a2",
         "price",
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7",
