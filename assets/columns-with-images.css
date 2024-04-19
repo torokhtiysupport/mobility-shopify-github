@@ -39,7 +39,6 @@
   color: #FFF;
   text-align: center;
   text-transform: uppercase;
-  font-family: 'Weight';
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -49,7 +48,6 @@
 .column-with-image_text-block p {
   color: #EBEBEB;
   text-align: center;
-  font-family: 'Roboto';
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
