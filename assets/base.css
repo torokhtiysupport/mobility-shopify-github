@@ -1438,6 +1438,11 @@ h1, h2, h3, h4 {
   margin-bottom: 0;
   vertical-align: middle;
   display: inline-block;
+
+  border-radius: 16px;
+  border: 1px solid rgba(235, 235, 235, 0.20);
+  background: rgba(235, 235, 235, 0.20);
+  backdrop-filter: blur(20px);
 }
 
 p.rating-count {
