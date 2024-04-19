@@ -4,9 +4,9 @@
 
 .section-content {
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: space-between;
-  padding-right: 50px;
+  padding-right: 100px;
 }
 
 .columns-with-images {
