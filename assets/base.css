@@ -1412,4 +1412,5 @@ back-to-top .icon {
 
 h1, h2, h3, h4 {
   text-transform: uppercase;
+  font-weight: 400;
 }
