@@ -1427,6 +1427,8 @@ h1, h2, h3, h4 {
 
 .rating.rating--in-main {
   flex-direction: column;
+  align-items: left;
+  margin-left: 28px;
 }
 
 .rating-wrapper {
@@ -1448,5 +1450,5 @@ p.rating-count {
 
 .rating__info__text {
   font-size: 20px;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
