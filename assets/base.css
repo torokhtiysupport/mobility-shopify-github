@@ -1436,3 +1436,7 @@ h1, h2, h3, h4 {
   vertical-align: middle;
   display: inline-block;
 }
+
+.rating-count {
+  display: none;
+}
