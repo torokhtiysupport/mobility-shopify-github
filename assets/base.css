@@ -1414,3 +1414,24 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
   font-weight: 500;
 }
+
+.about-author {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.about-author > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.rating.rating-in-main {
+  flex-direction: column;
+}
+
+.rating-wrapper {
+  margin-top: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+  display: inline-block;
+}
