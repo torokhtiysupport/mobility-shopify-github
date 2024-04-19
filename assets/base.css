@@ -1407,3 +1407,9 @@ back-to-top .icon {
 .shipping-calculator__date {
   margin-inline-start: 0.5rem;
 }
+
+/* Custom styles */
+
+h1, h2, h3, h4 {
+  text-transform: uppercase;
+}
