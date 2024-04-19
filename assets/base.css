@@ -1416,22 +1416,22 @@ h1, h2, h3, h4 {
 }
 
 .about-author {
-  vertical-align: middle;
-  display: inline-block;
+  vertical-align: middle!important;
+  display: inline-block!important;
 }
 
 .about-author > div {
-  display: inline-block;
-  vertical-align: middle;
+  display: inline-block!important;
+  vertical-align: middle!important;
 }
 
 .rating.rating-in-main {
-  flex-direction: column;
+  flex-direction: column!important;
 }
 
 .rating-wrapper {
-  margin-top: 0;
-  margin-bottom: 0;
-  vertical-align: middle;
-  display: inline-block;
+  margin-top: 0!important;
+  margin-bottom: 0!important;
+  vertical-align: middle!important;
+  display: inline-block!important;
 }
