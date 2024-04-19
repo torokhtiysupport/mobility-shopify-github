@@ -1440,3 +1440,8 @@ h1, h2, h3, h4 {
 p.rating-count {
   display: none;
 }
+
+.rating__info {
+  padding: 0;
+  border: none;
+}
