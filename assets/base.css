@@ -1444,6 +1444,8 @@ p.rating-count {
 .rating__info {
   padding: 0;
   border: none;
+}
 
+.rating__info__text {
   font-size: 16px;
 }
