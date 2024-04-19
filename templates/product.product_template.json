@@ -120,22 +120,25 @@
         "column_cPNTfm": {
           "type": "column",
           "settings": {
-            "title": "",
-            "text": ""
+            "image": "shopify:\/\/shop_images\/6c43ceab7ca4e5f9505a1018b9dae634.jpg",
+            "title": "Shoulder Pain & Discomfort",
+            "text": "Feel discomfort, tightness or instability during the lifts"
           }
         },
         "column_RmqzdC": {
           "type": "column",
           "settings": {
-            "title": "",
-            "text": ""
+            "image": "shopify:\/\/shop_images\/c51a6df44c659c2adcbac9a1b51aa39a.jpg",
+            "title": "Recurrent Injuries",
+            "text": "Repetitive shoulder injuries such as strains, impingements, or tears, crucial for long-term joint health"
           }
         },
         "column_Jx4JYX": {
           "type": "column",
           "settings": {
-            "title": "",
-            "text": ""
+            "image": "shopify:\/\/shop_images\/713eac5d1c088a9c665ac2f21a47b7e2.jpg",
+            "title": "Performance Plateaus",
+            "text": "Poor overhead mobility is blocking potential for increased strength and athletic achievements"
           }
         }
       },
