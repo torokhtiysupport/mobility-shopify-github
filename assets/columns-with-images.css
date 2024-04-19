@@ -4,9 +4,8 @@
 
 .section-content {
   display: flex;
-  align-items: space-between;
-  justify-content: center;
-  text-align: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .columns-with-images {
