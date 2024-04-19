@@ -1453,3 +1453,7 @@ p.rating-count {
   font-size: 20px;
   letter-spacing: 1px;
 }
+
+.rating-star {
+  color: #C6F33F;
+}
