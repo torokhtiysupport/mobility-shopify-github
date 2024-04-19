@@ -77,7 +77,7 @@
       ],
       "custom_css": [
         "media-gallery {display: none !important;}",
-        "h1 {font-size: 60px;}",
+        "h1 {font-size: 80px;}",
         "button.cart-submit-button {--color-border: #c6f33f; background-color: #c6f33f; color: #0b0b0b; text-transform: uppercase; font-weight: bold;}",
         ".product-form__buttons {display: flex; flex-direction: column;}",
         ".money {font-weight: bold; font-size: 35px;}",
