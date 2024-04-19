@@ -2,6 +2,11 @@
   margin: 0;
 }
 
+.section-content {
+  display: flex;
+  align-items: space-between;
+}
+
 .columns-with-images {
   display: flex;
   justify-content: space-between;
