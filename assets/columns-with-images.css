@@ -9,6 +9,12 @@
   padding-right: 100px;
 }
 
+.section-content p {
+  font-size: 16px;
+  line-height: 24px;
+  opacity: 80%;
+}
+
 .columns-with-images {
   display: flex;
   justify-content: space-between;
@@ -60,4 +66,5 @@
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+  opacity: 80%;
 }
