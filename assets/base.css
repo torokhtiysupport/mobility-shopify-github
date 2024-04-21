@@ -1462,3 +1462,8 @@ p.rating-count {
 .rating-star {
   color: #C6F33F;
 }
+
+.rating-star svg:last-of-type {
+  color: none;
+  background: linear-gradient(to right, #C6F33F calc((1 - (var(--remain-stars))) * 100)%, transparent 0%);
+}
