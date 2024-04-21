@@ -1463,10 +1463,10 @@ p.rating-count {
   color: #C6F33F;
 }
 
-.rating-star svg:last-of-type {
+/* .rating-star svg:last-of-type {
   color: linear-gradient(to right, #C6F33F calc((1 - (var(--remain-stars))) * 100%), transparent 0%);
 }
 
 .rating-star:before {
   display: none;
-}
+} */
