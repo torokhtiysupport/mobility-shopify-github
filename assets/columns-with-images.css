@@ -97,6 +97,7 @@
   color: #000;
   border-radius: 50%;
   background-color: #C6F33F;
+  transition: border 0.5s ease-in-out;
 }
 
 .columns-with-images .column-with-image_wrapper:first-of-type:before {
@@ -144,4 +145,9 @@
 .column-with-image:hover .column-with-image_hidden-text, .column-with-image:focus .column-with-image_hidden-text {  
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
+}
+
+.column-with-image:hover .column-with-image_wrapper:before, .column-with-image:focus .column-with-image_wrapper:before {
+  border: 2px solid #000;
+  transition: border 0.5s ease-in-out;
 }
