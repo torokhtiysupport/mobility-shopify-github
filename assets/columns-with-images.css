@@ -80,6 +80,24 @@
   position: relative;
 }
 
+.columns-with-images .column-with-image_wrapper:before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  z-index: 10;
+  position: absolute;
+  left: 130px;
+  top: -22px;
+  font-family: var(--font-heading-family);
+  font-weight: 500;
+  font-size: 20px;
+  color: #000;
+  border-radius: 50%;
+  background-color: #C6F33F;
+}
+
 .columns-with-images .column-with-image_wrapper:first-of-type:before {
   content: '01';
   display: flex;
@@ -97,4 +115,9 @@
   color: #000;
   border-radius: 50%;
   background-color: #C6F33F;
+}
+
+.columns-with-images .column-with-image_wrapper:nth-of-type(2):before {
+  content: '02';
+  position: absolute;
 }
