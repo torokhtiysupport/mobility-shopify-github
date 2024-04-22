@@ -130,4 +130,5 @@
   flex-direction: column;
   align-items: center;
   position: absolute;
+  gap: 8px;
 }
