@@ -81,13 +81,14 @@
 
 .columns-with-images .column-with-image_wrapper:first-of-type:before {
   content: '01';
+  width: 48px;
+  height: 48px;
   z-index: 10;
   position: absolute;
   left: 50%;
   top: -20px;
   font-family: var(--font-heading-family);
   font-weight: 500;
-  padding: 14px;
   color: #000;
   border-radius: 50%;
   background-color: #C6F33F;
