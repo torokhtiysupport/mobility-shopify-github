@@ -74,3 +74,17 @@
   position: relative;
 }
 
+.columns-with-images .column-with-image {
+  position: relative;
+}
+
+.columns-with-images .column-with-image:first-of-type:before {
+  content: '01';
+  left: 50%;
+  top: -20px;
+  font-family: var(--font-heading-family);
+  padding: 14px;
+  color: #000;
+  border-radius: 50%;
+  background-color: #C6F33F;
+}
