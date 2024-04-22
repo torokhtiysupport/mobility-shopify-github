@@ -115,14 +115,12 @@
   content: '04';
 }
 
-.column-with-image_hidden-text p, .column-with-image_hidden-text h3 {
-  display: inline-block;
-}
 
 .column-with-image_hidden-text {
   display: none;
   width: 100%;
   height: 100%;
+  padding: 16px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
