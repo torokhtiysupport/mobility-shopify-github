@@ -170,6 +170,6 @@
     width: 100%;
   }
   .column-with-image img {
-    widthL auto;
+    width: auto;
   }
 }
