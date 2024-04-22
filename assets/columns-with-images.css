@@ -84,8 +84,10 @@
   z-index: 10;
   position: absolute;
   left: 50%;
+  right: 50%;
   top: -20px;
   font-family: var(--font-heading-family);
+  font-weight: 500;
   padding: 14px;
   color: #000;
   border-radius: 50%;
