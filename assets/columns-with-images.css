@@ -175,7 +175,7 @@
 
   .section-content {
     flex-direction: column;
-    padding-right: 0;
+    padding: 0;
     align-items: start;
   }
   .section-content h2 {
