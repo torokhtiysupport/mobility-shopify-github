@@ -1541,3 +1541,8 @@ p.rating-count {
   90%  { top: 100%; left: 59%; }
   100% { top: 46%; left: 58%; }
 }
+
+.custom-section__container {
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
