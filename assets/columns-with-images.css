@@ -127,7 +127,7 @@
   align-items: center;
   position: absolute;
   gap: 8px;
-  transition: visibility 0.5s ease-in-out;
+  transition: visibility 1s ease-in-out;
 }
 
 .column-with-image_hidden-text p {
@@ -141,5 +141,5 @@
 
 .column-with-image:hover .column-with-image_hidden-text, .column-with-image:focus .column-with-image_hidden-text {  
   visibility: visible;
-  transition: visibility 0.5s ease-in-out;
+  transition: visibility 1s ease-in-out;
 }
