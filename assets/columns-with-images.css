@@ -172,4 +172,9 @@
   .column-with-image img {
     width: auto;
   }
+
+  .section-content {
+    flex-direction: column;
+    padding-right: 0;
+  }
 }
