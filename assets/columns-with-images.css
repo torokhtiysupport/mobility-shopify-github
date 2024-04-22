@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: space-between;
   padding-right: 100px;
-  margin-bottom: 80px;
+  padding-bottom: 40px;
 }
 
 .section-content p {
@@ -19,6 +19,7 @@
 .columns-with-images {
   display: flex;
   justify-content: space-between;
+  padding-top: 40px;
 }
 
 .column-with-image {
