@@ -1,24 +1,26 @@
 {{ 'columns-with-images.css' | asset_url | stylesheet_tag }}
 
 <div class="page-width">
-  <div class="circle circle1"></div>
-  <div class="circle circle2"></div>
-  <div class="circle circle3"></div>
-  <div class="columns-with-images-section">
-    <div class="section-content">
-      <h2>{{ section.settings.section_title }}</h2>
-      <p>{{ section.settings.section_text }}</p>
-    </div>
-    <div class="columns-with-images">
-      {% for block in section.blocks %}
-        <div class="column-with-image">
-          <img src="{{ block.settings.image | img_url: 'medium' }}" width="" height="" alt="{{ block.settings.image.alt }}">
-          <div class="column-with-image_text-block">
-          <h3>{{ block.settings.title }}</h3>
-          <p>{{ block.settings.text }}</p>
+  <div class="custom-section__container">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    <div class="columns-with-images-section">
+      <div class="section-content">
+        <h2>{{ section.settings.section_title }}</h2>
+        <p>{{ section.settings.section_text }}</p>
+      </div>
+      <div class="columns-with-images">
+        {% for block in section.blocks %}
+          <div class="column-with-image">
+            <img src="{{ block.settings.image | img_url: 'medium' }}" width="" height="" alt="{{ block.settings.image.alt }}">
+            <div class="column-with-image_text-block">
+            <h3>{{ block.settings.title }}</h3>
+            <p>{{ block.settings.text }}</p>
+            </div>
           </div>
-        </div>
-      {% endfor %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
