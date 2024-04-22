@@ -80,6 +80,7 @@
 
 .columns-with-images .column-with-image:first-of-type:before {
   content: '01';
+  position: absolute;
   left: 50%;
   top: -20px;
   font-family: var(--font-heading-family);
