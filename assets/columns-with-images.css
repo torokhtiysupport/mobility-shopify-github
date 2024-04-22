@@ -163,4 +163,10 @@
   .columns-with-images {
     flex-direction: column;
   }
+  .column-with-image {
+    width: 100%;
+  }
+  .column-with-image img {
+    widthL auto;
+  }
 }
