@@ -34,6 +34,8 @@
   border: 1px solid rgba(235, 235, 235, 0.20);
   background: rgba(235, 235, 235, 0.20);
   backdrop-filter: blur(20px);
+
+  transition: border 0.5s ease-in-out;
 }
 
 .column-with-image_text-block {
@@ -95,7 +97,7 @@
   font-weight: 500;
   font-size: 20px;
   color: #000;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   border-radius: 50%;
   background-color: #C6F33F;
   transition: border 0.5s ease-in-out;
@@ -148,7 +150,7 @@
   transition: opacity 0.5s ease-in-out;
 }
 
-.column-with-image_wrapper:hover:before, .column-with-image_wrapper:focus:before {
-  border: 2px solid #000;
+.column-with-image_wrapper:hover:before, .column-with-image_wrapper:focus:before, .column-with-image_wrapper:hover .column-with-image, .column-with-image_wrapper:focus .column-with-image {
+  border: 1px solid #000;
   transition: border 0.5s ease-in-out;
 }
