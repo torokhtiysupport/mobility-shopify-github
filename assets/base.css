@@ -1470,3 +1470,74 @@ p.rating-count {
   display: none;
 } */
 
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #C6F33F;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.circle1 {
+  display: block!important;
+  width: 18px;
+  height: 18px;
+  animation-name: move1;
+}
+
+.circle2 {
+  display: block!important;
+  width: 48px;
+  height: 48px;
+  animation-name: move2;
+}
+
+.circle3 {
+  display: block!important;
+  width: 74px;
+  height: 74px;
+  animation-name: move3;
+}
+
+@keyframes move1 {
+  0%   { top: 20%; left: 20%; }
+  10%  { top: 80%; left: 20%; }
+  20%  { top: 80%; left: 80%; }
+  30%  { top: 20%; left: 80%; }
+  40%  { top: 50%; left: 50%; }
+  50%  { top: 80%; left: 20%; }
+  60%  { top: 20%; left: 20%; }
+  70%  { top: 80%; left: 20%; }
+  80%  { top: 80%; left: 80%; }
+  90%  { top: 20%; left: 80%; }
+  100% { top: 20%; left: 20%; }
+}
+
+@keyframes move2 {
+  0%   { top: 50%; left: 20%; }
+  10%  { top: 20%; left: 80%; }
+  20%  { top: 80%; left: 80%; }
+  30%  { top: 20%; left: 80%; }
+  40%  { top: 80%; left: 50%; }
+  50%  { top: 50%; left: 20%; }
+  60%  { top: 50%; left: 20%; }
+  70%  { top: 20%; left: 80%; }
+  80%  { top: 80%; left: 80%; }
+  90%  { top: 20%; left: 80%; }
+  100% { top: 50%; left: 20%; }
+}
+
+@keyframes move3 {
+  0%   { top: 80%; left: 20%; }
+  10%  { top: 80%; left: 80%; }
+  20%  { top: 20%; left: 80%; }
+  30%  { top: 20%; left: 80%; }
+  40%  { top: 80%; left: 50%; }
+  50%  { top: 80%; left: 20%; }
+  60%  { top: 80%; left: 20%; }
+  70%  { top: 80%; left: 80%; }
+  80%  { top: 20%; left: 80%; }
+  90%  { top: 80%; left: 80%; }
+  100% { top: 80%; left: 20%; }
+}
