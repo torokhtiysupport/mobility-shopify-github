@@ -68,3 +68,7 @@
   line-height: 20px;
   opacity: 80%;
 }
+
+.page-width {
+  position: relative;
+}
