@@ -119,8 +119,6 @@
   display: none;
 }
 
-.column-with-image_text-block:hover, .column-with-image_text-block:focus {
-  .column-with-image_hidden-text {
+.column-with-image_text-block:hover .column-with-image_hidden-text, .column-with-image_text-block:focus .column-with-image_hidden-text {  
   display: block;
-}
 }
