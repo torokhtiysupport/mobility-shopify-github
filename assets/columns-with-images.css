@@ -176,5 +176,6 @@
   .section-content {
     flex-direction: column;
     padding-right: 0;
+    align-items: start;
   }
 }
