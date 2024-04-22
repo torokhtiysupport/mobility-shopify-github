@@ -122,7 +122,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/ab902448d23998bc83a745dde4fa830b.jpg",
             "title": "Overhead Lift Difficulties",
-            "text": "Struggle performing exercises like overhead presses, snatches and jerks due to limited range of motion"
+            "text": "Struggle performing exercises like overhead presses, snatches and jerks due to limited range of motion",
+            "hidden-text": "It doesn't matter if you are PRO or beginner in Olympic weightlifting or Functional Fitness"
           }
         },
         "column_cPNTfm": {
@@ -130,7 +131,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/6c43ceab7ca4e5f9505a1018b9dae634.jpg",
             "title": "Shoulder Pain & Discomfort",
-            "text": "Feel discomfort, tightness or instability during the lifts"
+            "text": "Feel discomfort, tightness or instability during the lifts",
+            "hidden-text": "It doesn't matter if you are PRO or beginner in Olympic weightlifting or Functional Fitness"
           }
         },
         "column_RmqzdC": {
@@ -138,7 +140,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/c51a6df44c659c2adcbac9a1b51aa39a.jpg",
             "title": "Recurrent Injuries",
-            "text": "Repetitive shoulder injuries such as strains, impingements, or tears, crucial for long-term joint health"
+            "text": "Repetitive shoulder injuries such as strains, impingements, or tears, crucial for long-term joint health",
+            "hidden-text": "It doesn't matter if you are PRO or beginner in Olympic weightlifting or Functional Fitness"
           }
         },
         "column_Jx4JYX": {
@@ -146,7 +149,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/713eac5d1c088a9c665ac2f21a47b7e2.jpg",
             "title": "Performance Plateaus",
-            "text": "Poor overhead mobility is blocking potential for increased strength and athletic achievements"
+            "text": "Poor overhead mobility is blocking potential for increased strength and athletic achievements",
+            "hidden-text": "It doesn't matter if you are PRO or beginner in Olympic weightlifting or Functional Fitness"
           }
         }
       },
