@@ -69,7 +69,7 @@
         "custom_liquid_LXFttN": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"weeks\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/1806\/0489\/files\/weeks.png?v=1710501784\" alt=\"6 weeks\">\n<\/div>\n\n<style>\n.weeks {\nposition: absolute;\ntop: -70px;\nright: -500px;\n}\n<\/style>"
+            "custom_liquid": "<div class=\"weeks\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/1806\/0489\/files\/weeks.png?v=1710501784\" alt=\"6 weeks\">\n<\/div>\n\n<style>\n.weeks {\nposition: absolute;\ntop: 10%;\nright: 10%;\n}\n<\/style>"
           }
         }
       },
