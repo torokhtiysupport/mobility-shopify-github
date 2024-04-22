@@ -117,12 +117,6 @@
 
 .column-with-image_hidden-text {
   display: none;
-  
-}
-
-.column-with-image:hover .column-with-image_hidden-text, .column-with-image:focus .column-with-image_hidden-text {  
-  display: block;
-  position: absolute;
   width: 100%;
   height: 100%;
   display: flex;
@@ -131,4 +125,9 @@
   justify-content: center;
   color: #000;
   background-color: #C6F33F;
+}
+
+.column-with-image:hover .column-with-image_hidden-text, .column-with-image:focus .column-with-image_hidden-text {  
+  display: block;
+  position: absolute;
 }
