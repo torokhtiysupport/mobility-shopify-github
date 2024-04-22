@@ -75,11 +75,11 @@
   position: relative;
 }
 
-.columns-with-images .column-with-image {
+.columns-with-images .column-with-image_wrapper {
   position: relative;
 }
 
-.columns-with-images .column-with-image:first-of-type:before {
+.columns-with-images .column-with-image_wrapper:first-of-type:before {
   content: '01';
   position: absolute;
   left: 50%;
