@@ -116,7 +116,7 @@
 }
 
 .column-with-image_hidden-text p, .column-with-image_hidden-text h3 {
-  display: block;
+  display: inline-block;
 }
 
 .column-with-image_hidden-text {
