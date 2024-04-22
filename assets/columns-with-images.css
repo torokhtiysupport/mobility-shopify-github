@@ -116,12 +116,17 @@
 }
 
 .column-with-image_hidden-text {
-  display: none;
+  visibility: hidden;
   width: 100%;
   height: 100%;
   padding: 16px 20px;
   justify-content: center;
   background-color: #C6F33F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  gap: 8px;
 }
 
 .column-with-image_hidden-text p {
@@ -134,9 +139,5 @@
 
 
 .column-with-image:hover .column-with-image_hidden-text, .column-with-image:focus .column-with-image_hidden-text {  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  gap: 8px;
+  visibility: visible;
 }
