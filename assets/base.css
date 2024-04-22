@@ -1542,6 +1542,10 @@ p.rating-count {
   100% { top: 46%; left: 58%; }
 }
 
+.product__info-wrapper {
+  position: unset!important;
+}
+
 .custom-section__container {
   padding-bottom: 80px;
   padding-top: 80px;
