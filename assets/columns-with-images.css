@@ -115,6 +115,10 @@
   content: '04';
 }
 
+.column-with-image_hidden-text p, .column-with-image_hidden-text h3 {
+  display: block;
+}
+
 .column-with-image_hidden-text {
   display: none;
   width: 100%;
