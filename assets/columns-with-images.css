@@ -9,7 +9,6 @@
 
 .section-content {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding-right: 100px;
@@ -158,4 +157,10 @@
 .column-with-image_wrapper:hover:before, .column-with-image_wrapper:focus:before, .column-with-image_wrapper:hover .column-with-image, .column-with-image_wrapper:focus .column-with-image {
   border: 1px solid #000;
   transition: border 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .columns-with-images {
+    flex-direction: column;
+  }
 }
