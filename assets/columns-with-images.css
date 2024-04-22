@@ -78,29 +78,29 @@
   z-index: 100;
   border-radius: 50%;
   background-color: #C6F33F;
-  animation-duration: 5s;
+  animation-duration: 15s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
 .circle1 {
   display: block!important;
-  width: 36px;
-  height: 36px;
+  width: 18px;
+  height: 18px;
   animation-name: move1;
 }
 
 .circle2 {
   display: block!important;
-  width: 96px;
-  height: 96px;
+  width: 48px;
+  height: 48px;
   animation-name: move2;
 }
 
 .circle3 {
   display: block!important;
-  width: 148px;
-  height: 148px;
+  width: 74px;
+  height: 74px;
   animation-name: move3;
 }
 
@@ -108,8 +108,8 @@
   0%   { top: 20%; left: 20%; }
   25%  { top: 50%; left: 80%; }
   50%  { top: 80%; left: 50%; }
-  75%  { top: 50%; left: 20%; }
-  100% { top: 20%; left: 80%; }
+  75%  { top: 50%; left: 30%; }
+  100% { top: 20%; left: 20%; }
 }
 
 @keyframes move2 {
@@ -124,6 +124,6 @@
   0%   { top: 80%; left: 20%; }
   25%  { top: 20%; left: 80%; }
   50%  { top: 80%; left: 50%; }
-  75%  { top: 20%; left: 20%; }
-  100% { top: 80%; left: 80%; }
+  75%  { top: 20%; left: 40%; }
+  100% { top: 80%; left: 20%; }
 }
