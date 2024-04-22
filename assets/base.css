@@ -1501,43 +1501,43 @@ p.rating-count {
 }
 
 @keyframes move1 {
-  0%   { top: 20%; left: 20%; }
-  10%  { top: 80%; left: 20%; }
-  20%  { top: 80%; left: 80%; }
-  30%  { top: 20%; left: 80%; }
-  40%  { top: 50%; left: 50%; }
-  50%  { top: 80%; left: 20%; }
-  60%  { top: 20%; left: 20%; }
-  70%  { top: 80%; left: 20%; }
-  80%  { top: 80%; left: 80%; }
-  90%  { top: 20%; left: 80%; }
-  100% { top: 20%; left: 20%; }
+  0%   { top: 20%; left: 28%; }
+  10%  { top: 100%; left: 13%; }
+  20%  { top: 0%; left: 87%; }
+  30%  { top: 100%; left: 30%; }
+  40%  { top: 0%; left: 50%; }
+  50%  { top: 100%; left: 15%; }
+  60%  { top: 0%; left: 33%; }
+  70%  { top: 100%; left: 76%; }
+  80%  { top: 0%; left: 93%; }
+  90%  { top: 100%; left: 67%; }
+  100% { top: 20%; left: 28%; }
 }
 
 @keyframes move2 {
   0%   { top: 50%; left: 20%; }
-  10%  { top: 20%; left: 80%; }
+  10%  { top: 20%; left: 90%; }
   20%  { top: 80%; left: 80%; }
-  30%  { top: 20%; left: 80%; }
+  30%  { top: 20%; left: 90%; }
   40%  { top: 80%; left: 50%; }
   50%  { top: 50%; left: 20%; }
-  60%  { top: 50%; left: 20%; }
-  70%  { top: 20%; left: 80%; }
-  80%  { top: 80%; left: 80%; }
-  90%  { top: 20%; left: 80%; }
+  60%  { top: 30%; left: 20%; }
+  70%  { top: 20%; left: 90%; }
+  80%  { top: 80%; left: 90%; }
+  90%  { top: 20%; left: 90%; }
   100% { top: 50%; left: 20%; }
 }
 
 @keyframes move3 {
   0%   { top: 80%; left: 20%; }
-  10%  { top: 80%; left: 80%; }
-  20%  { top: 20%; left: 80%; }
-  30%  { top: 20%; left: 80%; }
+  10%  { top: 80%; left: 90%; }
+  20%  { top: 20%; left: 90%; }
+  30%  { top: 20%; left: 90%; }
   40%  { top: 80%; left: 50%; }
   50%  { top: 80%; left: 20%; }
   60%  { top: 80%; left: 20%; }
-  70%  { top: 80%; left: 80%; }
-  80%  { top: 20%; left: 80%; }
-  90%  { top: 80%; left: 80%; }
+  70%  { top: 80%; left: 90%; }
+  80%  { top: 20%; left: 90%; }
+  90%  { top: 80%; left: 90%; }
   100% { top: 80%; left: 20%; }
 }
