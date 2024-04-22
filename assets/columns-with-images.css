@@ -164,7 +164,7 @@
     flex-direction: column;
   }
   .columns-with-images .column-with-image_wrapper:not(:last-of-type) {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   .column-with-image {
     width: 100%;
