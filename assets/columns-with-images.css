@@ -131,10 +131,12 @@
 }
 
 .column-with-image_hidden-text p {
+  text-align: center;
   color: #444445;
 }
 
 .column-with-image_hidden-text h3 {
+  text-align: center;
   color: #000;
 }
 
