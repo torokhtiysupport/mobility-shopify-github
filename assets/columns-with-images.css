@@ -121,9 +121,17 @@
   height: 100%;
   padding: 16px 20px;
   justify-content: center;
-  color: #000;
   background-color: #C6F33F;
 }
+
+.column-with-image_hidden-text p {
+  color: #444445;
+}
+
+.column-with-image_hidden-text h3 {
+  color: #000;
+}
+
 
 .column-with-image:hover .column-with-image_hidden-text, .column-with-image:focus .column-with-image_hidden-text {  
   display: flex;
