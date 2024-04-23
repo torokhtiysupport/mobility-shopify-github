@@ -179,7 +179,7 @@
   }
   
   .column-with-image img {
-    width: auto;
+    width: 100%;
   }
 
   .section-content {
