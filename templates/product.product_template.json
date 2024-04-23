@@ -89,7 +89,8 @@
         "button.cart-submit-button {--color-border: #c6f33f; background-color: #c6f33f; color: #0b0b0b; text-transform: uppercase; font-weight: bold;}",
         ".product-form__buttons {display: flex; flex-direction: column;}",
         ".money {font-weight: bold; font-size: 35px;}",
-        ".product__info-box {background: rgba(38, 38, 38, 0.9);}"
+        ".product__info-box {background: rgba(38, 38, 38, 0.9);}",
+        "@media screen and (max-width: 768px) {h1 {font-size: 40px; }}"
       ],
       "settings": {
         "section_width": "page-width",
