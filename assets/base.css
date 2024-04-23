@@ -1516,15 +1516,15 @@ p.rating-count {
 
 @keyframes move2 {
   0%   { top: 80%; left: 76%; }
-  10%  { top: 100%; left: 85%; }
+  10%  { top: 0%; left: 85%; }
   20%  { top: 34%; left: 100%; }
-  30%  { top: 100%; left: 92%; }
-  40%  { top: 0%; left: 67%; }
-  50%  { top: 100%; left: 31%; }
-  60%  { top: 0%; left: 65%; }
-  70%  { top: 100%; left: 88%; }
+  30%  { top: 0%; left: 92%; }
+  40%  { top: 100%; left: 67%; }
+  50%  { top: 0%; left: 31%; }
+  60%  { top: 100%; left: 65%; }
+  70%  { top: 0%; left: 88%; }
   80%  { top: 33%; left: 100%; }
-  90%  { top: 100%; left: 41%; }
+  90%  { top: 0%; left: 41%; }
   100% { top: 80%; left: 76%; }
 }
 
