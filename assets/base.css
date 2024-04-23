@@ -1462,6 +1462,10 @@ p.rating-count {
   .rating__info__text {
   font-size: 16px;
 }
+  .rating-wrapper {
+  margin-left: 0;
+  padding: 6px 8px;
+}
 }
 
 .rating-star {
