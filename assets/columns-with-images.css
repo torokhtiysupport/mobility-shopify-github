@@ -28,6 +28,9 @@
 
 .columns-with-images .column-with-image_wrapper:not(:last-of-type) {
   margin-rigt: 32px;
+}
+
+.column-with-image_wrapper {
   width: calc((100% - 96px)/4);
 }
 
@@ -170,6 +173,9 @@
   .columns-with-images .column-with-image_wrapper:not(:last-of-type) {
     margin-bottom: 30px;
     margin-rigt: 0;
+  }
+  .column-with-image_wrapper {
+  width: 100%;
   }
   .column-with-image {
     width: 100%;
