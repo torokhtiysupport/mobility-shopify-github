@@ -102,7 +102,7 @@
   height: 48px;
   z-index: 10;
   position: absolute;
-  left: 50% - 24px;
+  left: calc(50% - 24px)px;
   top: -22px;
   font-family: var(--font-heading-family);
   font-weight: 500;
