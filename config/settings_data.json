@@ -939,7 +939,7 @@
       ".price__sale {flex-direction: column-reverse;}",
       ".price__badge {display: none;}",
       "main > section:first-of-type {position: relative; padding-top: 60px; padding-bottom: 80px; background: linear-gradient(35deg, #000 52.97%, #c6f33f 53% 74.97%, #000 75%); background-size: 100%;}",
-      ".product-section {max-width: 95%; margin-left: auto; margin-right: auto; background: linear-gradient( 180deg, rgba(0, 0, 0, 0.24) 0%, rgba(11, 11, 11, 0.6) 100% ), url(\"https:\/\/cdn.shopify.com\/s\/files\/1\/0660\/3207\/4988\/files\/overhead-mobility-cycle-hero-banner.webp?v=1713853906\"); background-size: cover; background-repeat: no-repeat; border-radius: 32px;}",
+      ".product-section {max-width: 95%; margin-left: auto; margin-right: auto; background: linear-gradient( 180deg, rgba(0, 0, 0, 0.24) 0%, rgba(11, 11, 11, 0.6) 100% ), url(\"https:\/\/cdn.shopify.com\/s\/files\/1\/0660\/3207\/4988\/files\/overhead-mobility-cycle-hero-banner.webp?v=1713853906\"); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 32px;}",
       ".about-author__text p:first-of-type {font-family: var(--font-heading-family);}"
     ]
   }
