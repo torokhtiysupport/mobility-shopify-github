@@ -33,7 +33,7 @@
           "type": "sale_box",
           "settings": {
             "show_free_shipping_bar": false,
-            "enable_compare": true,
+            "enable_compare": false,
             "picker_type": "button",
             "enable_color_swatches": true,
             "color_swatches_style": "custom",
@@ -43,7 +43,7 @@
             "size_chart_page": "",
             "quantity_selector_enable": false,
             "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
+            "show_gift_card_recipient": false
           }
         },
         "price": {
