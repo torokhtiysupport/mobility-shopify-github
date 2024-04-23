@@ -1464,6 +1464,7 @@ p.rating-count {
 }
   .rating-wrapper {
   margin-right: 0;
+  margin-left: auto;
   padding: 6px 8px;
 }
 }
