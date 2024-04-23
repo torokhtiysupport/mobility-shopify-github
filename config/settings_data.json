@@ -935,7 +935,7 @@
       "div.shopify-cleanslate > div {background: transparent !important;}",
       ".product__sale-box {width: 40%; padding: 0; background: unset !important; box-shadow: none; display: inline-block; margin-right: 24px;}",
       "div[id*=\"price-top-template\"] {display: inline-block; vertical-align: top;}",
-      ".price-item--last {font-size: 48px; font-weight: 600px; font-family: var(--font-heading-family);}",
+      ".price-item--last {font-size: 48px; font-weight: 600px; font-family: var(--font-heading-family); color: #fff!important;}",
       "main > section:first-of-type {position: relative; padding-top: 60px; padding-bottom: 80px; background: linear-gradient(35deg, #000 52.97%, #c6f33f 53% 74.97%, #000 75%); background-size: 100%;}",
       ".product-section {max-width: 95%; margin-left: auto; margin-right: auto; background: linear-gradient( 180deg, rgba(0, 0, 0, 0.24) 0%, rgba(11, 11, 11, 0.6) 100% ), url(\"https:\/\/cdn.shopify.com\/s\/files\/1\/1806\/0489\/files\/main-background.webp?v=1710501760\"); background-size: 150%; background-position: left 20% top 0; border-radius: 32px;}",
       "@media screen and (max-width: 768px) {.product__sale-box {width: 100%; }}"
