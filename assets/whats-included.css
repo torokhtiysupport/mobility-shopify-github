@@ -200,6 +200,7 @@
   
   .whats-included-numbers-summary__text-title {
     font-size: 28px;
+    line-height: 1;
   }
 
   .whats-included-numbers-summary__text-desc {
