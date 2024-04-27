@@ -1,3 +1,58 @@
+{{ 'whats-included.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width">
+  <div class="whats-included">
+    <div>
+      <div class="whats-included-numbers">
+        <div class="whats-included-numbers-summary">
+          <img class="whats-included-numbers-summary__image" src="{{ block.settings.image | img_url: 'medium' }}" width="" height="" alt="{{ block.settings.image.alt }}">
+          <div class="whats-included-numbers-summary__text">
+            <p></p>
+            <p></p>
+          </div>
+          <div class="whats-included-numbers-summary__text">
+            <p></p>
+            <p></p>
+          </div>
+          <div class="whats-included-numbers-summary__text">
+            <p></p>
+            <p></p>
+          </div>
+        </div>
+        <div class="whats-included-numbers-details">
+          <div class="whats-included-numbers-details__item">
+            <img class="whats-included-numbers-details__item-img" src="" alt="">
+            <p class="whats-included-numbers-details__item-title"></p>
+            <p class="whats-included-numbers-details__item-text"></p>
+          </div>
+          <div class="whats-included-numbers-details__item">
+            <img class="whats-included-numbers-details__item-img" src="" alt="">
+            <p class="whats-included-numbers-details__item-title"></p>
+            <p class="whats-included-numbers-details__item-text"></p>
+          </div>
+          <div class="whats-included-numbers-details__item">
+            <img class="whats-included-numbers-details__item-img" src="" alt="">
+            <p class="whats-included-numbers-details__item-title"></p>
+            <p class="whats-included-numbers-details__item-text"></p>
+          </div>
+          <div class="whats-included-numbers-details__item">
+            <img class="whats-included-numbers-details__item-img" src="" alt="">
+            <p class="whats-included-numbers-details__item-title"></p>
+            <p class="whats-included-numbers-details__item-text"></p>
+          </div>
+        </div>
+      </div>
+      <div class="whats-included-info">
+        <div>
+          <h2 class="whats-included-info__title">{{ section.settings.section_title }}</h2>
+          <p class="whats-included-info__text">{{ section.settings.section_text }}</p>
+          <button class="whats-included-info__button" id="popupButton">Preview Program</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% schema %}
   {
     "name": "Section name",
