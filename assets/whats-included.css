@@ -8,9 +8,5 @@
 }
 
 .whats-included-numbers {
-  flex-grow: 1;
-}
-
-.whats-included-info {
-  flex-grow: 1;
+  width: 50%;
 }
