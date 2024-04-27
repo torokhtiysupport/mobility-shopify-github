@@ -37,7 +37,10 @@
   padding: 8px;
   border-radius: 16px;
   color: #000;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .whats-included-numbers-summary__text-title {
