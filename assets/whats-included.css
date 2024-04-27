@@ -183,4 +183,12 @@
   gap: 40px;
   padding: 30px 0;
   }
+
+  .whats-included-numbers {
+  width: 100%;
+  }
+
+  .whats-included-info {
+  width: 100%;
+  }
 }
