@@ -36,7 +36,15 @@
   position: absolute;
   padding: 8px;
   border-radius: 16px;
+  color: #000;
 }
+
+.whats-included-numbers-summary__text-title {
+  font-family: var(--font-heading-family);
+  font-size: 24px;
+}
+
+
 
 .whats-included-numbers-summary .whats-included-numbers-summary__text:nth-of-type(2) {
   top: 0px;
