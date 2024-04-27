@@ -7,15 +7,15 @@
           <div class="whats-included-numbers-summary__image-container">
             <img class="whats-included-numbers-summary__image" src="{{ section.settings.section_main-image | img_url: 'original' }}" width="" height="" alt="{{ section.settings.section_title }}">
           </div>
-          <div class="whats-included-numbers-summary__text">
+          <div class="whats-included-numbers-summary__text" style="background-color: {{ section.settings.main_color }}">
             <p class="whats-included-numbers-summary__text-title">{{ section.settings.numbers-summary__text-title-1 }}</p>
             <p class="whats-included-numbers-summary__text-desc">{{ section.settings.numbers-summary__text-desc-1 }}</p>
           </div>
-          <div class="whats-included-numbers-summary__text">
+          <div class="whats-included-numbers-summary__text" style="background-color: {{ section.settings.main_color }}">
             <p class="whats-included-numbers-summary__text-title">{{ section.settings.numbers-summary__text-title-2 }}</p>
             <p class="whats-included-numbers-summary__text-desc">{{ section.settings.numbers-summary__text-desc-2 }}</p>
           </div>
-          <div class="whats-included-numbers-summary__text">
+          <div class="whats-included-numbers-summary__text" style="background-color: {{ section.settings.main_color }}">
             <p class="whats-included-numbers-summary__text-title">{{ section.settings.numbers-summary__text-title-3 }}</p>
             <p class="whats-included-numbers-summary__text-desc">{{ section.settings.numbers-summary__text-desc-3 }}</p>
           </div>
@@ -71,6 +71,11 @@
   "class": "section",
   "tag": "section",
   "settings": [
+    {
+      "type": "color_background",
+      "id": "main_color",
+      "label": "Main Color"
+    },
     {
       "type": "text",
       "id": "section_title",
