@@ -166,6 +166,28 @@
         "section_text": "Struggling with SHOULDER Mobility?"
       }
     },
+    "whats_included_j3WGC6": {
+      "type": "whats-included",
+      "settings": {
+        "section_title": "what’s included",
+        "section_text": "Iaculis nunc sed augue lacus viverra vitae congue eu consequat. Gravida in fermentum et sollicitudin ac orci phasellus. Viverra ipsum nunc aliquet bibendum enim facilisis gravida. Massa eget egestas purus viverra accumsan in nisl nisi scelerisque. Feugiat pretium nibh ipsum consequat nisl vel pretium lectus quam.\nIaculis nunc sed augue lacus viverra vitae congue eu consequat. \n\nGravida in fermentum et sollicitudin ac orci phasellus. Viverra ipsum nunc aliquet bibendum enim facilisis gravida. Massa eget egestas purus viverra accumsan in nisl nisi scelerisque. Feugiat pretium nibh ipsum consequat nisl vel pretium lectus quam.",
+        "section_main-image": "shopify:\/\/shop_images\/whats-included-overhead-mobility.webp",
+        "numbers-summary__text-title-1": "",
+        "numbers-summary__text-title-2": "",
+        "numbers-summary__text-title-3": "",
+        "numbers-summary__text-desc-1": "",
+        "numbers-summary__text-desc-2": "",
+        "numbers-summary__text-desc-3": "",
+        "numbers-details__title-1": "",
+        "numbers-details__text-1": "",
+        "numbers-details__title-2": "",
+        "numbers-details__text-2": "",
+        "numbers-details__title-3": "",
+        "numbers-details__text-3": "",
+        "numbers-details__title-4": "",
+        "numbers-details__text-4": ""
+      }
+    },
     "multicolumn_t3EQeB": {
       "type": "multicolumn",
       "blocks": {
@@ -932,6 +954,7 @@
   "order": [
     "main",
     "columns_with_images_JadPUL",
+    "whats_included_j3WGC6",
     "multicolumn_t3EQeB",
     "b861113b-71fc-41c9-bf1f-80084a7d6f04",
     "9fea5ba7-31d4-4140-849f-3a727ceb4e8f",
