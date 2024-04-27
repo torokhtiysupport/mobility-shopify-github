@@ -38,17 +38,17 @@
   border-radius: 16px;
 }
 
-.whats-included-numbers-summary .whats-included-numbers-summary__text:first-of-type {
+.whats-included-numbers-summary .whats-included-numbers-summary__text:nth-of-type(2) {
   top: 0px;
   right: 10%;
 }
 
-.whats-included-numbers-summary .whats-included-numbers-summary__text:nth-of-type(2) {
+.whats-included-numbers-summary .whats-included-numbers-summary__text:nth-of-type(3) {
   top: 60%;
   right: 0;
 }
 
-.whats-included-numbers-summary .whats-included-numbers-summary__text:nth-of-type(3) {
+.whats-included-numbers-summary .whats-included-numbers-summary__text:nth-of-type(4) {
   top: 70%;
   left: 0;
 }
