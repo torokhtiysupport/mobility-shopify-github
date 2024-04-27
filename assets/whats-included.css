@@ -92,3 +92,7 @@
 .whats-included-numbers-details .whats-included-numbers-details__group:first-child {
   margin-bottom: 32px;
 }
+
+.whats-included-numbers-details__item {
+  display: flex;
+}
