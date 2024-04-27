@@ -234,4 +234,8 @@
     top: 52%;
     left: 0;
   }
+
+  .whats-included-numbers-details .whats-included-numbers-details__group:first-child {
+    margin-bottom: 16px;
+  }
 }
