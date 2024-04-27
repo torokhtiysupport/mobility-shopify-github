@@ -7,3 +7,11 @@
   align-items: center;
   justify-content: center;
 }
+
+.whats-included-numbers {
+  flex-grow: 1;
+}
+
+.whats-included-info {
+  flex-grow: 1;
+}
