@@ -25,5 +25,5 @@
 .whats-included-numbers-summary__image {
   width: 100%;
   position: relative;
-  border-radius: 32px;
+  border-radius: 32px 0;
 }
