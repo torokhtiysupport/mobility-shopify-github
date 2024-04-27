@@ -95,4 +95,5 @@
 
 .whats-included-numbers-details__item {
   display: flex;
+  gap: 12px;
 }
