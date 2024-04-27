@@ -144,4 +144,6 @@
 
 #popup {
   display: none;
+  position: absolute;
+  width: 90%;
 }
