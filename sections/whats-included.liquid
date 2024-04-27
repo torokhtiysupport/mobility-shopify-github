@@ -193,17 +193,16 @@
 
 document.addEventListener("click", function(event) {
   var popup = document.getElementById("popup");
-  // Проверяем, был ли клик сделан вне попапа
   if (!popup.contains(event.target) && event.target !== document.getElementById("popupButton")) {
-    popup.style.display = "none"; // Если да, закрываем попап
+    popup.style.display = "none";
   }
 });
 
   window.addEventListener('scroll', function() {
-  var popup = document.querySelector('.popup'); // Получаем элемент попапа
-  var offsetTop = window.innerHeight / 2; // Получаем половину высоты экрана
-  var scrollTop = window.scrollY || document.documentElement.scrollTop; // Получаем текущее значение прокрутки страницы
+  var popup = document.querySelector('.popup');
+  var offsetTop = window.innerHeight / 2;
+  var scrollTop = window.scrollY || document.documentElement.scrollTop;
   
-  popup.style.top = (scrollTop + offsetTop) + 'px'; // Устанавливаем новое значение top для попапа
+  popup.style.top = (scrollTop + offsetTop) + 'px';
 });
 </script>
