@@ -212,6 +212,14 @@ document.addEventListener("click", function(event) {
   }
 });
 
+  document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") { // Проверяем, была ли нажата клавиша "Esc"
+    var popup = document.getElementById("popup");
+    popup.style.display = "none"; // Закрываем попап
+    document.getElementById("overlay").style.display = "none"; // Скрываем элемент размытия фона
+  }
+});
+
   window.addEventListener('scroll', function() {
   var popup = document.querySelector('.popup');
   var offsetTop = window.innerHeight / 2;
