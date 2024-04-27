@@ -206,4 +206,8 @@
   .whats-included-numbers-summary__text-desc {
     font-size: 10px;
   }
+  .whats-included-numbers-details {
+    margin-top: -80px;
+    padding: 14px;
+  }
 }
