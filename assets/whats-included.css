@@ -210,4 +210,9 @@
     margin-top: -80px;
     padding: 14px;
   }
+
+  .whats-included-numbers-details__item-title {
+    font-size: 20px;
+    line-height: 1.3;
+  }
 }
