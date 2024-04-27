@@ -191,4 +191,10 @@
   .whats-included-info {
   width: 100%;
   }
+
+  .whats-included-numbers-summary__text {
+  padding: 6px 8px;
+  max-width: 217px;
+  min-width: 57px;
+  }
 }
