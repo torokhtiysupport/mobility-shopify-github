@@ -134,9 +134,16 @@
   text-transform: uppercase;
   background: transparent;
   padding: 20px 40px;
+  border-radius: 16px;
+
+  transition: border 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
 }
 
 .whats-included-info__button:hover, .whats-included-info__button:focus {
   color: #fff!important;
   border-color: #fff!important;
+
+  transition: border 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
 }
