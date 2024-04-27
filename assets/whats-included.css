@@ -18,8 +18,11 @@
   width: 50%;
 }
 
-.whats-included-numbers-summary__image {
+.whats-included-numbers-summary__image-container {
   padding: 44px 24px 0;
+}
+
+.whats-included-numbers-summary__image {
   width: 100%;
   position: relative;
   border-radius: 32px;
