@@ -192,12 +192,11 @@
   });
 
   document.getElementById("popup").addEventListener("click", function(event) {
+    console.log(event.target);
     if (event.target == document.getElementById("popup")) {
       document.getElementById("popup").style.display = "none";
     }
   });
-
-  console.log(event.target);
 
   window.addEventListener('scroll', function() {
   var popup = document.querySelector('.popup');
