@@ -192,9 +192,7 @@
   });
 
   document.getElementById("popup").addEventListener("click", function(event) {
-    console.log(event.target);
-    console.log(event.currentTarget);
-    if (event.target == document.getElementById("popup")) {
+    if (event.currentTarget !== document.getElementById("popup")) {
       document.getElementById("popup").style.display = "none";
     }
   });
