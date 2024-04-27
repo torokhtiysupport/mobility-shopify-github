@@ -145,6 +145,8 @@
 #popup {
   display: none;
   position: absolute;
-  width: 90%;
+  top: 50px;
+  width: 90vw;
+  height: auto;
   z-index: 1000;
 }
