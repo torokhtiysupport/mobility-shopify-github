@@ -99,6 +99,9 @@
 }
 
 .whats-included-numbers-details__item-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 6px;
   border-radius: 8px;
   height: 32px;
