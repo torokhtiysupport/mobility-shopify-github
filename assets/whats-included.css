@@ -221,7 +221,7 @@
   }
 
   .whats-included-numbers-summary .whats-included-numbers-summary__text:nth-of-type(2) {
-    top: 0;
+    top: 20px;
     left: 40%;
   }
   
