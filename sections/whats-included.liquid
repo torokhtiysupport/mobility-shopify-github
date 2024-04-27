@@ -5,40 +5,40 @@
     <div>
       <div class="whats-included-numbers">
         <div class="whats-included-numbers-summary">
-          <img class="whats-included-numbers-summary__image" src="{{ block.settings.image | img_url: 'medium' }}" width="" height="" alt="{{ block.settings.image.alt }}">
+          <img class="whats-included-numbers-summary__image" src="{{ section.settings.section_main-image | image_url: 'medium' }}" width="" height="" alt="{{ section.settings.section_title }}">
           <div class="whats-included-numbers-summary__text">
-            <p></p>
-            <p></p>
+            <p class="whats-included-numbers-summary__text-title">{{ section.settings.numbers-summary__text-title-1 }}</p>
+            <p class="whats-included-numbers-summary__text-desc">{{ section.settings.numbers-summary__text-desc-1 }}</p>
           </div>
           <div class="whats-included-numbers-summary__text">
-            <p></p>
-            <p></p>
+            <p class="whats-included-numbers-summary__text-title">{{ section.settings.numbers-summary__text-title-2 }}</p>
+            <p class="whats-included-numbers-summary__text-desc">{{ section.settings.numbers-summary__text-desc-2 }}</p>
           </div>
           <div class="whats-included-numbers-summary__text">
-            <p></p>
-            <p></p>
+            <p class="whats-included-numbers-summary__text-title">{{ section.settings.numbers-summary__text-title-3 }}</p>
+            <p class="whats-included-numbers-summary__text-desc">{{ section.settings.numbers-summary__text-desc-3 }}</p>
           </div>
         </div>
         <div class="whats-included-numbers-details">
           <div class="whats-included-numbers-details__item">
-            <img class="whats-included-numbers-details__item-img" src="" alt="">
-            <p class="whats-included-numbers-details__item-title"></p>
-            <p class="whats-included-numbers-details__item-text"></p>
+            <img class="whats-included-numbers-details__item-img" src="" alt="" width="" height="">
+            <p class="whats-included-numbers-details__item-title">{{ section.settings.numbers-details__title-1 }}</p>
+            <p class="whats-included-numbers-details__item-text">{{ section.settings.numbers-details__text-1 }}</p>
           </div>
           <div class="whats-included-numbers-details__item">
-            <img class="whats-included-numbers-details__item-img" src="" alt="">
-            <p class="whats-included-numbers-details__item-title"></p>
-            <p class="whats-included-numbers-details__item-text"></p>
+            <img class="whats-included-numbers-details__item-img" src="" alt="" width="" height="">
+            <p class="whats-included-numbers-details__item-title">{{ section.settings.numbers-details__title-2 }}</p>
+            <p class="whats-included-numbers-details__item-text">{{ section.settings.numbers-details__text-2 }}</p>
           </div>
           <div class="whats-included-numbers-details__item">
-            <img class="whats-included-numbers-details__item-img" src="" alt="">
-            <p class="whats-included-numbers-details__item-title"></p>
-            <p class="whats-included-numbers-details__item-text"></p>
+            <img class="whats-included-numbers-details__item-img" src="" alt="" width="" height="">
+            <p class="whats-included-numbers-details__item-title">{{ section.settings.numbers-details__title-3 }}</p>
+            <p class="whats-included-numbers-details__item-text">{{ section.settings.numbers-details__text-3 }}</p>
           </div>
           <div class="whats-included-numbers-details__item">
-            <img class="whats-included-numbers-details__item-img" src="" alt="">
-            <p class="whats-included-numbers-details__item-title"></p>
-            <p class="whats-included-numbers-details__item-text"></p>
+            <img class="whats-included-numbers-details__item-img" src="" alt="" width="" height="">
+            <p class="whats-included-numbers-details__item-title">{{ section.settings.numbers-details__title-4 }}</p>
+            <p class="whats-included-numbers-details__item-text">{{ section.settings.numbers-details__text-4 }}</p>
           </div>
         </div>
       </div>
@@ -55,7 +55,100 @@
 
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
-  }
+  "name": "👾What's included",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title"
+    },
+    {
+      "type": "textarea",
+      "id": "section_text",
+      "label": "Section Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "section_main-image",
+      "label": "Section Main Image"
+    },
+    {
+      "type": "text",
+      "id": "numbers-summary__text-title-1",
+      "label": "Numbers Summary Text Title 1"
+    },
+    {
+      "type": "text",
+      "id": "numbers-summary__text-title-2",
+      "label": "Numbers Summary Text Title 2"
+    },
+    {
+      "type": "text",
+      "id": "numbers-summary__text-title-3",
+      "label": "Numbers Summary Text Title 3"
+    },
+    {
+      "type": "textarea",
+      "id": "numbers-summary__text-desc-1",
+      "label": "Numbers Summary Text Desc 1"
+    },
+    {
+      "type": "textarea",
+      "id": "numbers-summary__text-desc-2",
+      "label": "Numbers Summary Text Desc 2"
+    },
+    {
+      "type": "textarea",
+      "id": "numbers-summary__text-desc-3",
+      "label": "Numbers Summary Text Desc 3"
+    },
+    {
+      "type": "text",
+      "id": "numbers-details__title-1",
+      "label": "Numbers Details Title 1"
+    },
+    {
+      "type": "textarea",
+      "id": "numbers-details__text-1",
+      "label": "Numbers Details Text 1"
+    },
+    {
+      "type": "text",
+      "id": "numbers-details__title-2",
+      "label": "Numbers Details Title 2"
+    },
+    {
+      "type": "textarea",
+      "id": "numbers-details__text-2",
+      "label": "Numbers Details Text 2"
+    },
+    {
+      "type": "text",
+      "id": "numbers-details__title-3",
+      "label": "Numbers Details Title 3"
+    },
+    {
+      "type": "textarea",
+      "id": "numbers-details__text-3",
+      "label": "Numbers Details Text 3"
+    },
+    {
+      "type": "text",
+      "id": "numbers-details__title-4",
+      "label": "Numbers Details Title 4"
+    },
+    {
+      "type": "textarea",
+      "id": "numbers-details__text-4",
+      "label": "Numbers Details Text 4"
+    }
+  ],
+  "presets": [
+    {
+      "name": "👾What's included"
+    }
+  ]
+}
 {% endschema %}
