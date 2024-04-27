@@ -28,3 +28,11 @@
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
 }
+
+.whats-included-numbers-details {
+  padding: 24px;
+  border: 1px solid rgba(235, 235, 235, 0.20);
+  border-radius: 16px;
+  background: rgba(235, 235, 235, 0.20);
+  backdrop-filter: blur(20px);
+}
