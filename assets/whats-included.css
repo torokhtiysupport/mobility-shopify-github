@@ -102,5 +102,5 @@
   padding: 6px;
   border-radius: 8px;
   height: auto;
-  overflow: auto;
+  overflow: hidden;
 }
