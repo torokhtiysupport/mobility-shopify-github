@@ -134,5 +134,9 @@
   text-transform: uppercase;
   background: transparent;
   padding: 20px 40px;
+}
 
+.whats-included-info__button:hover, .whats-included-info__button:focus {
+  color: #fff!important;
+  border-color: #fff!important;
 }
