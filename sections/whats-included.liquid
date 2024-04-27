@@ -188,16 +188,20 @@
 
 <script>
   document.getElementById("popupButton").addEventListener("click", function() {
-    document.getElementById("popup").style.display = "block";
-  });
+  document.getElementById("popup").style.display = "block";
+});
 
-  document.getElementById("popup").addEventListener("click", function(event) {
-    if (event.target == document.getElementById("popup")) {
-      document.getElementById("popup").style.display = "none";
-    }
-  });
+document.getElementById("popup").addEventListener("click", function(event) {
+  event.stopPropagation();
+});
 
-  window.addEventListener('scroll', function() {
+document.addEventListener("click", function(event) {
+  if (event.target !== document.getElementById("popup")) {
+    document.getElementById("popup").style.display = "none";
+  }
+});
+
+window.addEventListener('scroll', function() {
   var popup = document.querySelector('.popup');
   var offsetTop = window.innerHeight / 2;
   var scrollTop = window.scrollY || document.documentElement.scrollTop;
