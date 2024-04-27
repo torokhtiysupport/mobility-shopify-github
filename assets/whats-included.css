@@ -197,4 +197,12 @@
   max-width: 217px;
   min-width: 57px;
   }
+  
+  .whats-included-numbers-summary__text-title {
+    font-size: 28px;
+  }
+
+  .whats-included-numbers-summary__text-desc {
+    font-size: 10px;
+  }
 }
