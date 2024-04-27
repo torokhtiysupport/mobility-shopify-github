@@ -84,8 +84,8 @@
 
 .whats-included-numbers-details__group {
   display: flex;
-  justify-content: start;
-  align-items: center;
+  justify-content: center;
+  align-items: start;
   gap: 16px;
 }
 
