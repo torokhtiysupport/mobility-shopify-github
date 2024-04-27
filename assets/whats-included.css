@@ -175,11 +175,4 @@
   right: -15px;
   cursor: pointer;
   z-index: 1001;
-  border-radius: 50px;
-  border: 1px solid rgba(235, 235, 235, 0.20);
-  height: 24px;
-  padding: 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
