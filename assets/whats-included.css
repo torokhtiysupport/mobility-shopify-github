@@ -49,6 +49,9 @@
   font-weight: 500;
 }
 
+.whats-included-numbers-summary__text-title {
+  font-size: 14px;
+}
 
 
 .whats-included-numbers-summary .whats-included-numbers-summary__text:nth-of-type(2) {
