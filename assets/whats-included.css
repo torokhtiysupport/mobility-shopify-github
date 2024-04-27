@@ -97,3 +97,8 @@
   display: flex;
   gap: 12px;
 }
+
+.whats-included-numbers-details__item-icon-container {
+  padding: 6px;
+  border-radius: 8px;
+}
