@@ -32,6 +32,27 @@
   border-top-right-radius: 32px;
 }
 
+.whats-included-numbers-summary__text {
+  position: absolute;
+  padding: 8px;
+  border-radius: 16px;
+}
+
+.whats-included-numbers-summary .whats-included-numbers-summary__text:first-of-type {
+  top: 0;
+  left: 10%;
+}
+
+.whats-included-numbers-summary .whats-included-numbers-summary__text:nth-of-type(2) {
+  top: 60%;
+  right: 0;
+}
+
+.whats-included-numbers-summary .whats-included-numbers-summary__text:nth-of-type(3) {
+  top: 70%;
+  left: 0;
+}
+
 .whats-included-numbers-details {
   padding: 24px;
   border: 1px solid rgba(235, 235, 235, 0.20);
