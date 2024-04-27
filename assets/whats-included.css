@@ -81,3 +81,9 @@
   background: rgba(235, 235, 235, 0.20);
   backdrop-filter: blur(20px);
 }
+
+.whats-included-numbers-details__group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
