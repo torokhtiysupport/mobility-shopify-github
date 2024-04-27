@@ -219,4 +219,19 @@
   .whats-included-numbers-summary__image-container {
     padding: 0 21px;
   }
+
+  .whats-included-numbers-summary .whats-included-numbers-summary__text:nth-of-type(2) {
+    top: 0px;
+    left: 40%;
+  }
+  
+  .whats-included-numbers-summary .whats-included-numbers-summary__text:nth-of-type(3) {
+    top: 45%;
+    right: 0;
+  }
+  
+  .whats-included-numbers-summary .whats-included-numbers-summary__text:nth-of-type(4) {
+    top: 52%;
+    left: 0;
+  }
 }
