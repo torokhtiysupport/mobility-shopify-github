@@ -171,8 +171,10 @@
 
 .close-popup {
   position: absolute;
-  top: -20px;
-  right: -20px;
+  top: -15px;
+  right: -15px;
   cursor: pointer;
   z-index: 1001;
+  border-radius: 50px;
+  border: 1px solid rgba(235, 235, 235, 0.20);
 }
