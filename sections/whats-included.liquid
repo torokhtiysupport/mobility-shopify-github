@@ -72,7 +72,7 @@
       </div>
   </div>
   <div id="popup">
-    <img src="{{ section.settings.section_main-image | img_url: 'original' }}" width="" height="" alt="{{ section.settings.section_title }}">
+    <img src="{{ section.settings.popup_image | img_url: 'original' }}" width="" height="" alt="{{ section.settings.section_title }}">
   </div>
 </div>
 
@@ -171,6 +171,11 @@
       "type": "textarea",
       "id": "numbers-details__text-4",
       "label": "Numbers Details Text 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "popup_image",
+      "label": "Full Size Pupup Image"
     }
   ],
   "presets": [
