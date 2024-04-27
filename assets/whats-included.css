@@ -42,6 +42,7 @@
   justify-content: center;
   align-items: center;
   max-width: 215px;
+  min-width: 108px;
 }
 
 .whats-included-numbers-summary__text-title {
