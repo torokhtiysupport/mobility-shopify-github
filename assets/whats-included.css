@@ -141,8 +141,8 @@
 }
 
 .whats-included-info__button:hover, .whats-included-info__button:focus {
-  color: #fff!important;
-  border-color: #fff!important;
+  color: #fff;
+  border-color: #fff;
 
   transition: border 0.5s ease-in-out;
   transition: color 0.5s ease-in-out;
