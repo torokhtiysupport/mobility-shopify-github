@@ -71,6 +71,7 @@
         </div>
       </div>
   </div>
+  <div id="overlay"></div>
   <div id="popup">
     <img src="{{ section.settings.popup_image | img_url: 'original' }}" width="" height="" alt="{{ section.settings.section_title }}">
   </div>
@@ -187,14 +188,27 @@
 {% endschema %}
 
 <script>
+//   document.getElementById("popupButton").addEventListener("click", function() {
+//   document.getElementById("popup").style.display = "block";
+// });
+
+// document.addEventListener("click", function(event) {
+//   var popup = document.getElementById("popup");
+//   if (!popup.contains(event.target) && event.target !== document.getElementById("popupButton")) {
+//     popup.style.display = "none";
+//   }
+// });
+
   document.getElementById("popupButton").addEventListener("click", function() {
   document.getElementById("popup").style.display = "block";
+  document.getElementById("overlay").style.display = "block";
 });
 
 document.addEventListener("click", function(event) {
   var popup = document.getElementById("popup");
   if (!popup.contains(event.target) && event.target !== document.getElementById("popupButton")) {
     popup.style.display = "none";
+    document.getElementById("overlay").style.display = "none";
   }
 });
 

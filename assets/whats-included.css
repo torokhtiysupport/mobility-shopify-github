@@ -152,3 +152,15 @@
   z-index: 1000;
   overflow-y: auto;
 }
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Цвет фона с прозрачностью для создания эффекта размытия */
+  backdrop-filter: blur(8px); /* Применяем размытие к фону */
+  z-index: 999; /* Устанавливаем z-index поверх всего остального контента */
+}
