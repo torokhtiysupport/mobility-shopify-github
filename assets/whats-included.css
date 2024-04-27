@@ -176,3 +176,11 @@
   cursor: pointer;
   z-index: 1001;
 }
+
+@media screen and (max-width: 768px) {
+  .whats-included {
+  flex-direction: column;
+  gap: 40px;
+  padding: 30px 0;
+  }
+}
