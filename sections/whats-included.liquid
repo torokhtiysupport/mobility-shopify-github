@@ -189,43 +189,38 @@
 {% endschema %}
 
 <script>
-//   document.getElementById("popupButton").addEventListener("click", function() {
-//   document.getElementById("popup").style.display = "block";
-// });
-
-// document.addEventListener("click", function(event) {
-//   var popup = document.getElementById("popup");
-//   if (!popup.contains(event.target) && event.target !== document.getElementById("popupButton")) {
-//     popup.style.display = "none";
-//   }
-// });
-
   document.getElementById("popupButton").addEventListener("click", function() {
-  document.getElementById("popup").style.display = "block";
-  document.getElementById("overlay").style.display = "block";
-});
+    document.getElementById("popup").style.display = "block";
+    document.getElementById("overlay").style.display = "block";
+  });
 
-document.addEventListener("click", function(event) {
-  var popup = document.getElementById("popup");
-  if (!popup.contains(event.target) && event.target !== document.getElementById("popupButton")) {
-    popup.style.display = "none";
-    document.getElementById("overlay").style.display = "none";
-  }
-});
+  document.addEventListener("click", function(event) {
+    var popup = document.getElementById("popup");
+    if (!popup.contains(event.target) && event.target !== document.getElementById("popupButton")) {
+      popup.style.display = "none";
+      document.getElementById("overlay").style.display = "none";
+    }
+  });
 
   document.addEventListener("keydown", function(event) {
-  if (event.key === "Escape") { // Проверяем, была ли нажата клавиша "Esc"
+    if (event.key === "Escape") {
+      var popup = document.getElementById("popup");
+      popup.style.display = "none";
+      document.getElementById("overlay").style.display = "none";
+    }
+  });
+
+  document.querySelector('.close-popup').addEventListener('click', function() {
     var popup = document.getElementById("popup");
-    popup.style.display = "none"; // Закрываем попап
-    document.getElementById("overlay").style.display = "none"; // Скрываем элемент размытия фона
-  }
-});
+    popup.style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+  });
 
   window.addEventListener('scroll', function() {
-  var popup = document.querySelector('.popup');
-  var offsetTop = window.innerHeight / 2;
-  var scrollTop = window.scrollY || document.documentElement.scrollTop;
-  
-  popup.style.top = (scrollTop + offsetTop) + 'px';
-});
+    var popup = document.querySelector('.popup');
+    var offsetTop = window.innerHeight / 2;
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    
+    popup.style.top = (scrollTop + offsetTop) + 'px';
+  });
 </script>
