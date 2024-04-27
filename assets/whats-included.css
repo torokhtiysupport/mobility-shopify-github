@@ -169,3 +169,9 @@
   backdrop-filter: blur(8px);
   z-index: 999;
 }
+
+.close-popup {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
