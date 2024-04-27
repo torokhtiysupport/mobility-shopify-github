@@ -240,4 +240,8 @@
   .whats-included-numbers-details .whats-included-numbers-details__group:first-child {
     margin-bottom: 16px;
   }
+
+  .whats-included-numbers-details__item-text {
+    margin-left: 0!important;
+  }
 }
