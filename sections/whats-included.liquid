@@ -188,14 +188,20 @@
 
 <script>
   document.getElementById("popupButton").addEventListener("click", function() {
-    document.getElementById("popup").style.display = "block";
-  });
+  document.getElementById("popup").style.display = "block";
+});
 
-  document.getElementById("popup").addEventListener("click", function(event) {
-    if (event.target == document.getElementById("popup")) {
-      document.getElementById("popup").style.display = "none";
-    }
-  });
+document.getElementById("popup").addEventListener("click", function(event) {
+  if (event.target == document.getElementById("popup")) {
+    document.getElementById("popup").style.display = "none";
+  }
+});
 
+  window.addEventListener('scroll', function() {
+  var popup = document.querySelector('.popup'); // Получаем элемент попапа
+  var offsetTop = window.innerHeight / 2; // Получаем половину высоты экрана
+  var scrollTop = window.scrollY || document.documentElement.scrollTop; // Получаем текущее значение прокрутки страницы
   
+  popup.style.top = (scrollTop + offsetTop) + 'px'; // Устанавливаем новое значение top для попапа
+});
 </script>
