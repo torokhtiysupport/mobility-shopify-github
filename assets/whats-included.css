@@ -155,7 +155,7 @@
 
 #popup img {
   border-radius: 32px;
-  height: 90%!important;
+  max-height: 90vh;
 }
 
 #overlay {
