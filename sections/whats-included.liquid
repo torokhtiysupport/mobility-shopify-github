@@ -187,18 +187,22 @@
 {% endschema %}
 
 <script>
-  document.getElementById("popupButton").addEventListener("click", function() {
+  document.getElementById("popupButton").addEventListener("click", function(event) {
+  event.stopPropagation(); // Предотвращаем всплытие события клика
   document.getElementById("popup").style.display = "block";
 });
 
-document.getElementById("popup").addEventListener("click", function(event) {
-  event.stopPropagation();
+// Добавляем обработчик события клика на весь документ
+document.addEventListener("click", function(event) {
+  // Проверяем, был ли клик сделан вне попапа
+  if (event.target !== document.getElementById("popup")) {
+    document.getElementById("popup").style.display = "none"; // Если да, закрываем попап
+  }
 });
 
-document.addEventListener("click", function(event) {
-  if (event.target !== document.getElementById("popup")) {
-    document.getElementById("popup").style.display = "none";
-  }
+// Добавляем обработчик события клика на попап
+document.getElementById("popup").addEventListener("click", function(event) {
+  event.stopPropagation(); // Предотвращаем всплытие события клика
 });
 
 window.addEventListener('scroll', function() {
