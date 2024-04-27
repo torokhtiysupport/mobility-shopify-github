@@ -150,4 +150,5 @@
   transform: translate(-50%, -50%);
   max-width: 90%;
   z-index: 1000;
+  overflow-y: auto;
 }
