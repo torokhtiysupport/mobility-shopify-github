@@ -244,4 +244,13 @@
   .whats-included-numbers-details__item-text {
     margin-left: 0!important;
   }
+
+  .whats-included-numbers-details__item-icon {
+    width: 14px;
+  }
+
+  .whats-included-numbers-details__item-icon-container {
+    padding: 5px;
+    height: 24px;
+  }
 }
