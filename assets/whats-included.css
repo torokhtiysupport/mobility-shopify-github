@@ -175,5 +175,5 @@
   top: -10px;
   right: -10px;
   cursor: pointer;
-  z-index: 10000;
+  z-index: 1001;
 }
