@@ -39,7 +39,7 @@
   width: 368px;
   height: auto;
   position: absolute;
-  bottom: 0;
+  top: 0;
 }
 
 .test-our-program-images .test-our-program-images__conatiner:last-of-type img {
