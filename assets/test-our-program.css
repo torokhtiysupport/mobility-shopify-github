@@ -82,6 +82,9 @@
 @media screen and (max-width: 768px) {
   .test-our-program {
     flex-direction: column-reverse;
+
+    gap: 16px;
+    padding: 30px 0;
   }
 
   .test-our-program-images {
