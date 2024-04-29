@@ -89,9 +89,8 @@
   }
 
   .test-our-program-images__conatiner {
-    overflow: hidden;
-    position: relative;
-    border-radius: 32px;
+    width: 100%;
+    height: auto;
   }
 
   .test-our-program-images .test-our-program-images__conatiner:first-of-type img {
