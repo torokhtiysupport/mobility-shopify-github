@@ -109,6 +109,9 @@
     height: auto;
     padding: 24px;
     gap: 24px;
+
+    background-size: 300px;
+    background-position: bottom -200px right -50px;
   }
 
   .test-our-program-info__button {
