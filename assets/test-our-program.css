@@ -104,4 +104,10 @@
     height: auto;
     position: relative;
   }
+
+  .test-our-program-info {
+    height: auto;
+    padding: 24px;
+    gap: 24px;
+  }
 }
