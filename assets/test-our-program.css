@@ -89,7 +89,7 @@
   }
 
   .test-our-program-images__conatiner {
-    width: calc(100%/2);
+    width: 159px;
     height: 200px;
     overflow: hidden;
     position: relative;
