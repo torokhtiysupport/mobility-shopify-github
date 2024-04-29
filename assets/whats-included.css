@@ -192,7 +192,7 @@
   .whats-included {
   flex-direction: column;
   gap: 40px;
-  padding: 30px 0;
+  padding: 0;
   }
 
   .whats-included-numbers {
@@ -232,7 +232,7 @@
   }
 
   .whats-included-numbers-summary__image-container {
-    padding: 44px 21px 0;
+    padding: 30px 21px 0;
   }
 
   .whats-included-numbers-summary .whats-included-numbers-summary__text:nth-of-type(2) {
