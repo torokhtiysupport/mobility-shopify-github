@@ -160,6 +160,7 @@
 #popup img {
   border-radius: 32px;
   max-height: 85vh;
+  max-width: 90vh;
 }
 
 #overlay {
