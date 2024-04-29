@@ -1,3 +1,8 @@
+.custom-section__container {
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
+
 .columns-with-images-section h3, .columns-with-images-section p, .columns-with-images-section h2 {
   margin: 0;
 }
@@ -190,5 +195,10 @@
   }
   .section-content h2 {
     margin-bottom: 16px;
+  }
+
+  .custom-section__container {
+    padding-bottom: 30px;
+    padding-top: 30px;
   }
 }

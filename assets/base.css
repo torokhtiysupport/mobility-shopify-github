@@ -1556,11 +1556,6 @@ p.rating-count {
   position: unset!important;
 }
 
-.custom-section__container {
-  padding-bottom: 80px;
-  padding-top: 80px;
-}
-
 button {
   cursor: pointer;
 }
