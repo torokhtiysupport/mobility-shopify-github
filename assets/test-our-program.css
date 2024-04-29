@@ -34,6 +34,12 @@
   border-radius: 16px;
   text-decoration: none;
   color: #000;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.test-our-program-info__button:hover, .test-our-program-info__button:focus {
+  background-color: #fff;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .test-our-program-images {
