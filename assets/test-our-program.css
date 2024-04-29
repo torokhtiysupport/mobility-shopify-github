@@ -99,14 +99,12 @@
   .test-our-program-images .test-our-program-images__conatiner:first-of-type img {
     width: 100%;
     height: auto;
-    position: absolute;
-    top: 0;
+    position: relative;
   }
 
   .test-our-program-images .test-our-program-images__conatiner:last-of-type img {
     width: 100%;
     height: auto;
-    position: absolute;
-    bottom: 0;
+    position: relative;
   }
 }
