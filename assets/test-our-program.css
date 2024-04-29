@@ -21,8 +21,7 @@
   background: rgba(235, 235, 235, 0.20);
   backdrop-filter: blur(20px);
   background-image: url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/gym-bottle.webp?v=1714364080&width=400');
-  background-position-x: right 10%;
-  background-position-y: bottom -100px;
+  background-position: bottom -50px right 30px;
   background-repeat: no-repeat;
 }
 
