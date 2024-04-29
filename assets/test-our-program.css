@@ -34,6 +34,7 @@
   height: 306px;
   overflow: hidden;
   position: relative;
+  border-radius: 32px;
 }
 
 .test-our-program-images .test-our-program-images__conatiner:first-of-type img {
