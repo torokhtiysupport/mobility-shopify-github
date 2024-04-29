@@ -78,3 +78,35 @@
   position: absolute;
   bottom: 0;
 }
+
+@media screen and (max-width: 768px) {
+  .test-our-program {
+    flex-direction: column-reverse;
+  }
+
+  .test-our-program-images {
+    flex-direction: row;
+  }
+
+  .test-our-program-images__conatiner {
+    width: calc(100%/2);
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 32px;
+  }
+
+  .test-our-program-images .test-our-program-images__conatiner:first-of-type img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+  }
+
+  .test-our-program-images .test-our-program-images__conatiner:last-of-type img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+  }
+}
