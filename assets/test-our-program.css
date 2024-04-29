@@ -29,3 +29,7 @@
   width: auto;
   gap: 32px;
 }
+
+.test-our-program-images__image {
+  height: auto;
+}
