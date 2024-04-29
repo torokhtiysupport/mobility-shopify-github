@@ -28,7 +28,24 @@
   gap: 32px;
 }
 
-.test-our-program-images__image {
-  width: 306px;
+.test-our-program-images__conatiner {
+  width: 368px;
+  height: 306px;
+  overflow: hidden;
+  position: relative;
+}
+
+.test-our-program-images .test-our-program-images__conatiner:first-of-type img {
+  width: 368px;
   height: auto;
+  position: absolute;
+  bottom: 0;
+}
+
+.test-our-program-images .test-our-program-images__conatiner:last-of-type img {
+  width: 368px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
