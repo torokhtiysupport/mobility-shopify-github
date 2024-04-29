@@ -124,12 +124,13 @@
 }
 
 .whats-included-info__title {
+  margin-top: 0px;
   margin-bottom: 40px;
 }
 
 .whats-included-info__text {
   opacity: 0.8;
-  margin: 40px 0!important;
+  margin-bottom: 40px!important;
 }
 
 .whats-included-info__button {
