@@ -46,6 +46,4 @@
   width: 368px;
   height: auto;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
 }
