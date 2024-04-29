@@ -82,7 +82,8 @@
   <div id="overlay"></div>
   <div id="popup">
     <div class="close-popup"><img src="https://cdn.shopify.com/s/files/1/0660/3207/4988/files/close-popup.png?v=1714247576" width="" height="" alt="Close Popup"></div>
-    <img src="{{ section.settings.popup_image | img_url: 'original' }}" width="" height="" alt="{{ section.settings.section_title }}">
+    <img class="popup-desktop-image" src="{{ section.settings.popup_image | img_url: 'original' }}" width="" height="" alt="{{ section.settings.section_title }}">
+    <img class="popup-mob-image" src="{{ section.settings.popup_image_mob | img_url: 'original' }}" width="" height="" alt="{{ section.settings.section_title }}">
   </div>
 </div>
 
@@ -186,6 +187,11 @@
       "type": "image_picker",
       "id": "popup_image",
       "label": "Full Size Pupup Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "popup_image_mob",
+      "label": "Full Size Pupup Image Mob"
     }
   ],
   "presets": [
