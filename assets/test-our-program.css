@@ -20,15 +20,9 @@
   border-radius: 32px;
   background: rgba(235, 235, 235, 0.20);
   backdrop-filter: blur(20px);
+  background-image: url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/gym-bottle.webp?v=1714364080');
 }
 
-.test-our-program-info:before {
-  content: url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/gym-bottle.webp?v=1714364080');
-  position: absolute;
-  bottom: -50px;
-  right: 10%;
-  width: 400px;
-}
 
 .test-our-program-info p, .test-our-program-info h2 {
   margin: 0;
