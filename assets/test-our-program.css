@@ -21,6 +21,10 @@
   backdrop-filter: blur(20px);
 }
 
+.test-our-program-info p, .test-our-program-info h2 {
+  margin: 0;
+}
+
 .test-our-program-images {
   display: flex;
   flex-direction: column;
