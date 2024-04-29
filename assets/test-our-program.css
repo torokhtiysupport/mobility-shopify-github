@@ -89,8 +89,6 @@
   }
 
   .test-our-program-images__conatiner {
-    width: 159px;
-    height: 200px;
     overflow: hidden;
     position: relative;
     border-radius: 32px;
