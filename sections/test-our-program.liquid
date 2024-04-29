@@ -1,6 +1,69 @@
+{{ 'test-our-program.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width">
+  <div class="test-our-program">
+    <div class="test-our-program-info">
+      <h2 class="test-our-program-info__title">{{ section.settings.section_title }}</h2>
+      <p class="test-our-program-info__text">{{ section.settings.section_text }}</p>
+      <a class="test-our-program-info__button" style="background-color: {{ section.settings.main_color }}" href="{{ section.settings.button_link }}">{{ section.settings.button_text }}</a>
+    </div>
+    <div class="test-our-program-images">
+      <div class="test-our-program-images__conatiner">
+        <img class="test-our-program-images__image" src="{{ section.settings.first_image | img_url: 'original' }}" width="" height="" alt="{{ section.settings.section_title }}">
+      </div>
+      <div class="test-our-program-images__conatiner">
+        <img class="test-our-program-images__image" src="{{ section.settings.second_image_image | img_url: 'original' }}" width="" height="" alt="{{ section.settings.section_title }}">
+      </div>
+    </div>
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
-  }
+  "name": "👾Test Our Program",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "main_color",
+      "label": "Main Color"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title"
+    },
+    {
+      "type": "textarea",
+      "id": "section_text",
+      "label": "Section Text"
+    },
+    {
+      "type": "text",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "first_image",
+      "label": "First Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "second_image",
+      "label": "Second Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "👾Test Our Program"
+    }
+  ]
+}
 {% endschema %}
