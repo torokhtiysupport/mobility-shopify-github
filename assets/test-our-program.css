@@ -1,0 +1,27 @@
+.test-our-program {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.test-our-program-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  padding: 60px;
+
+  border: 1px solid rgba(235, 235, 235, 0.20);
+  border-radius: 32px;
+  background: rgba(235, 235, 235, 0.20);
+  backdrop-filter: blur(20px);
+}
+
+.test-our-program-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
