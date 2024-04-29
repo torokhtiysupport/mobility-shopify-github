@@ -9,7 +9,6 @@
 .test-our-program-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 644px;
   padding: 60px;
@@ -38,7 +37,7 @@
 }
 
 .test-our-program-info__button:hover, .test-our-program-info__button:focus {
-  background-color: #fff;
+  background-color: #fff!important;
   transition: background-color 0.5s ease-in-out;
 }
 
