@@ -110,4 +110,9 @@
     padding: 24px;
     gap: 24px;
   }
+
+  .test-our-program-info__button {
+    padding: 14px 24px;
+    font-size: 20px;
+  }
 }
