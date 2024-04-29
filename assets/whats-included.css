@@ -182,6 +182,10 @@
   z-index: 1001;
 }
 
+.popup-mob-image {
+    display: none;
+  }
+
 @media screen and (max-width: 768px) {
   .whats-included {
   flex-direction: column;
@@ -255,5 +259,13 @@
   .whats-included-numbers-details__item-icon-container {
     padding: 5px;
     height: 24px;
+  }
+
+  .popup-desktop-image {
+      display: none;
+  }
+
+  .popup-mob-image {
+    display: block;
   }
 }
