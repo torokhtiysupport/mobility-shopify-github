@@ -22,4 +22,5 @@
 .why-should-you-trust-me__features-container {
   display: flex;
   justify-content: center;
+  gap: 32px;
 }
