@@ -1,0 +1,10 @@
+.about-me__container {
+  padding: 80px 20px;
+}
+
+.about-me {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-radius: 32px;
+  border: 1px solid rgba(235, 235, 235, 0.20);
+}
