@@ -15,6 +15,10 @@
   gap: 80px;
 }
 
+.why-should-you-trust-me > div {
+  width: 35%;
+}
+
 .why-should-you-trust-me h2 {
   margin: 0;
 }
