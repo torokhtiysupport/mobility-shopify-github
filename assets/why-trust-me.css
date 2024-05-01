@@ -18,3 +18,8 @@
 .why-should-you-trust-me h2 {
   margin: 0;
 }
+
+.why-should-you-trust-me__features-container {
+  display: flex;
+  justify-content: center;
+}
