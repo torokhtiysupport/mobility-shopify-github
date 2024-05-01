@@ -203,6 +203,12 @@
         "second_image": "shopify:\/\/shop_images\/test-your-overhead-mobility-1.gif"
       }
     },
+    "why_trust_me_4EhMRb": {
+      "type": "why-trust-me",
+      "settings": {
+        "main_color": "#c6f33f"
+      }
+    },
     "multicolumn_t3EQeB": {
       "type": "multicolumn",
       "blocks": {
@@ -971,6 +977,7 @@
     "columns_with_images_JadPUL",
     "whats_included_j3WGC6",
     "test_our_program_XcTKg7",
+    "why_trust_me_4EhMRb",
     "multicolumn_t3EQeB",
     "b861113b-71fc-41c9-bf1f-80084a7d6f04",
     "9fea5ba7-31d4-4140-849f-3a727ceb4e8f",
