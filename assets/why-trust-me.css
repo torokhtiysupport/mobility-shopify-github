@@ -78,6 +78,13 @@
   width: 100%;
 }
 
+.about-the-creator__info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+}
+
 .about-the-creator__info-text-container p:not(:last-of-type) {
   margin-bottom: 24px;
 }
