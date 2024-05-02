@@ -125,3 +125,10 @@
   justify-content: center;
   flex-direction: column;
 }
+
+.about-the-creator__info-badges div p:first-of-type {
+  font-family: var(--font-heading-family);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+}
