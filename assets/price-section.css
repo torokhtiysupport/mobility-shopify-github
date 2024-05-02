@@ -77,5 +77,5 @@
 }
 
 .price-section__info-price-box button:hover, .price-section__info-price-box button:focus {
-  color: #000;
+  color: #000!important;
 }
