@@ -180,4 +180,8 @@
     flex: flex;
     width: 100%;
   }
+
+  .why-should-you-trust-me h2 {
+    padding-right: 0;
+  }
 }
