@@ -18,3 +18,7 @@
   color: #000;
   text-align: center;
 }
+
+.price-section__title {
+  margin: 0 0 24px;
+}
