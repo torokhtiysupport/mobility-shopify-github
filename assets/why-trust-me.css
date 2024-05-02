@@ -184,4 +184,8 @@
   .why-should-you-trust-me h2 {
     padding-right: 0;
   }
+
+  .why-should-you-trust-me__features {
+    gap: 16px;
+  }
 }
