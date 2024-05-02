@@ -81,6 +81,7 @@
 .about-the-creator > div:first-of-type img {
   width: auto;
   height: 400px;
+  align-self: flex-end;
 }
 
 .about-the-creator > div:first-of-type {
