@@ -231,4 +231,14 @@
   .about-the-creator__info-badges div {
     padding: 8px 34px;
   }
+
+  .about-the-creator__info-badges > div:before {
+    left: 10px;
+    top: 8px;
+  }
+  
+  .about-the-creator__info-badges > div:after {
+    right: 10px;
+    top: 8px;
+  }
 }
