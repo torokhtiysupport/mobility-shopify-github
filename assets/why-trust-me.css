@@ -111,3 +111,8 @@
 .about-the-creator__info-text-container p:not(:last-of-type) {
   margin-bottom: 24px;
 }
+
+.about-the-creator__info-badges {
+  display: flex;
+  justify-content: center;
+}
