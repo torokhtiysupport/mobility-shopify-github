@@ -23,6 +23,12 @@
   margin: 0;
 }
 
+.why-should-you-trust-me__features {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
 .why-should-you-trust-me__features-container {
   display: flex;
   justify-content: center;
