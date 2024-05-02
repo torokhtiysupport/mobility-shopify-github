@@ -69,3 +69,7 @@
 .about-the-creator > div:first-of-type {
   width: 47%;
 }
+
+.about-the-creator > div:first-of-type img {
+  width: 100%;
+}
