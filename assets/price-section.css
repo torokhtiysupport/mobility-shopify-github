@@ -54,6 +54,12 @@
   justify-content: center;
 }
 
+.price-section__info-price-box .price-item--regular {
+  font-family: var(--font-heading-family);
+  font-weight: bold;
+  font-size: 24px;
+}
+
 .price-section__info-price-box-desc {
   text-align: center;
   margin: 20px 0 40px;
