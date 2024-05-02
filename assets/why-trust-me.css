@@ -132,3 +132,7 @@
   font-weight: bold;
   font-size: 20px;
 }
+
+.about-the-creator__info-badges div p:last-of-type {
+  font-size: 10px;
+}
