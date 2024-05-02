@@ -12,4 +12,8 @@
     width: 100%;
     height: 120px;
     background: linear-gradient(to bottom right, black 49.5%, white 50%);
-  }
+}
+
+.price-section__title {
+  color: #000;
+}
