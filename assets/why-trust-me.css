@@ -235,10 +235,14 @@
   .about-the-creator__info-badges > div:before {
     left: 8px;
     top: 8px;
+    width: 17px;
+    height: 37px;
   }
   
   .about-the-creator__info-badges > div:after {
     right: 8px;
     top: 8px;
+    width: 17px;
+    height: 37px;
   }
 }
