@@ -5,7 +5,10 @@
     <h2 class="price-section__title">{{ section.settings.section_title }}</h2>
     <p class="price-section__text">{{ section.settings.section_text }}</p>
     <div class="price-section__info">
-      
+      <div class="price-section__info-price-box">
+        <p>{{ section.settings.section_price }}</p>
+        <p>{{ section.settings.section_desc }}</p>
+      </div>
     </div>
   </div>
 </div>
@@ -30,6 +33,16 @@
       "type": "textarea",
       "id": "section_text",
       "label": "Section Text"
+    },
+    {
+      "type": "text",
+      "id": "section_price",
+      "label": "Section Price"
+    },
+    {
+      "type": "textarea",
+      "id": "section_desc",
+      "label": "Section Desc"
     }
   ],
   "presets": [
