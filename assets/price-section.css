@@ -1,6 +1,7 @@
 .price-section {
   background-color: #fff;
   padding: 280px 0 80px;
+  position: relative;
 }
 
 .price-section::before {
