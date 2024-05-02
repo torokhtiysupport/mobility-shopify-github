@@ -208,4 +208,9 @@
     height: auto;
     padding-right: 0;
   }
+
+  .about-the-creator > div:first-of-type img {
+    width: 100%;
+    height: auto;
+  }
 }
