@@ -12,7 +12,7 @@
 .why-should-you-trust-me {
   display: flex;
   justify-content: center;
-  gap: 80px;
+  gap: 32px;
   margin-bottom: 80px;
 }
 
@@ -66,9 +66,7 @@
   gap: 32px;
 }
 
-.about-the-creator > div:first-of-type {
-  width: 47%;
-}
+
 
 .about-the-creator > div:first-of-type img {
   width: 100%;
