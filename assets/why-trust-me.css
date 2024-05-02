@@ -85,6 +85,8 @@
 }
 
 .about-the-creator > div:first-of-type {
+  display: flex;
+  flex-direction: column;
   flex: none;
   width: 45%;
 }
