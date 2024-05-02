@@ -193,4 +193,8 @@
     flex-direction: column;
     gap: 16px;
   }
+
+  .why-should-you-trust-me__features-item div p:first-of-type {
+    font-size: 20px;
+  }
 }
