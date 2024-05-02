@@ -47,3 +47,7 @@
   font-size: 24px;
 }
 
+.why-should-you-trust-me__features-item div p:last-of-type {
+  margin: 0;
+}
+
