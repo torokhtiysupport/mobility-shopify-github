@@ -6,7 +6,7 @@
     <p class="price-section__text">{{ section.settings.section_text }}</p>
     <div class="price-section__info">
       <div class="price-section__info-price-box">
-        <p>{{ product.price | replace:',','.'}}</p>
+        {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large flex align-center', show_in_card: false -%}
         <p>{{ product.compare_at_price | replace:',','.' }}</p>
         <p>{{ section.settings.section_desc }}</p>
         <product-form class="product-form" data-hide-errors="{{ gift_card_recipient_feature_active }}">
