@@ -117,3 +117,10 @@
   gap: 16px;
   color: #000;
 }
+
+.about-the-creator__info-badges div {
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
