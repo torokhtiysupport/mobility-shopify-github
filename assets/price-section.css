@@ -50,8 +50,8 @@
   margin-bottom: 20px;
 }
 
-.price-section__info-price-box .price-item--regular {
-  text-align: center!important;
+.price-section__info-price-box .align-center {
+  justify-content: center;
 }
 
 .price-section__info-price-box-desc {
