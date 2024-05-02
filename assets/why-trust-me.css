@@ -79,8 +79,8 @@
 }
 
 .about-the-creator > div:first-of-type img {
-  width: auto;
-  height: 400px;
+  width: 100%;
+  height: auto;
 }
 
 .about-the-creator > div:first-of-type {
