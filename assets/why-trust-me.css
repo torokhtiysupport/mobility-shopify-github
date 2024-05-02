@@ -217,4 +217,10 @@
   .about-the-creator > div:first-of-type {
     width: 100%;
   }
+
+  .about-the-creator__info {
+    gap: 24px;
+    padding: 24px;
+    height: auto;
+  }
 }
