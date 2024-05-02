@@ -7,7 +7,7 @@
     <div class="price-section__info">
       <div class="price-section__info-price-box">
         {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large flex align-center', show_in_card: false -%}
-        <p>{{ section.settings.section_desc }}</p>
+        <p class="price-section__info-price-box-desc">{{ section.settings.section_desc }}</p>
         <product-form class="product-form" data-hide-errors="{{ gift_card_recipient_feature_active }}">
                         <div class="product-form__error-message-wrapper alert alert--error alert--no-button" role="alert" hidden>
                           <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
