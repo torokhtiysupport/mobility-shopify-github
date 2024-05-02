@@ -50,6 +50,10 @@
   margin-bottom: 20px;
 }
 
+.price-section__info-price-box .price-item--regular {
+  text-align: center;
+}
+
 .price-section__info-price-box-desc {
   text-align: center;
   margin: 0 0 40px;
