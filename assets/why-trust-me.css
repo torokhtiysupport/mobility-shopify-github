@@ -140,13 +140,13 @@
 }
 
 .about-the-creator__info-badges > div:after {
-  content: url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/laurel-right.png?v=1714626430');
+  content: url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/laurel-left.png?v=1714626430');
   display: inline-block;
   background-size: cover;
   position: absolute;
   right: 15px;
   top: 12px;
-  width: 24px;
+  transform: scaleX(-1);
 }
 
 .about-the-creator__info-badges div p:first-of-type {
