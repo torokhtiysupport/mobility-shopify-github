@@ -57,7 +57,7 @@
 .price-section__info-price-box .price-item--regular {
   font-family: var(--font-heading-family);
   font-weight: bold;
-  font-size: 36px;
+  font-size: 36px!important;
 }
 
 .price-section__info-price-box-desc {
