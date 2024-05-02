@@ -137,7 +137,7 @@
   left: 40px;
 }
 
-.about-the-creator__info-badges > div:last-of-type {
+.about-the-creator__info-badges > div:last-of-type:before {
   content: url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/laurel-left.png?v=1714626430');
   display: inline-block;
   background-size: cover;
