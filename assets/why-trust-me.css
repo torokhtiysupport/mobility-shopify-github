@@ -82,6 +82,11 @@
   height: 400px;
 }
 
+.about-the-creator > div:first-of-type {
+  flex: none;
+  width: 45%;
+}
+
 .about-the-creator__info {
   display: flex;
   justify-content: center;
