@@ -139,6 +139,15 @@
   top: 12px;
 }
 
+.about-the-creator__info-badges > div:after {
+  content: url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/laurel-right.png?v=1714626430');
+  display: inline-block;
+  background-size: cover;
+  position: absolute;
+  right: 15px;
+  top: 12px;
+}
+
 .about-the-creator__info-badges div p:first-of-type {
   font-family: var(--font-heading-family);
   font-weight: bold;
