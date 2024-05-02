@@ -3,6 +3,7 @@
 <div class="price-section">
   <div class="page-width">
     <h2 class="price-section__title">{{ section.settings.section_title }}</h2>
+    <p class="price-section__text">{{ section.settings.section_text }}</p>
   </div>
 </div>
 
@@ -21,6 +22,11 @@
       "type": "text",
       "id": "section_title",
       "label": "Section Title"
+    },
+    {
+      "type": "textarea",
+      "id": "section_text",
+      "label": "Section Text"
     }
   ],
   "presets": [
