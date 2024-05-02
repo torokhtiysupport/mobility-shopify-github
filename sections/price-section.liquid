@@ -22,6 +22,7 @@
                           <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
                           <div class="product-form__buttons product-form__buttons--input{% unless block.settings.quantity_selector_enable %} product-form__buttons--no-quantity{% endunless %}">
                             <button
+                              style="background-color: {{ section.settings.main_color }}"
                               type="submit"
                               name="add"
                               class="product-form__submit button flex w100 cart-submit-button button--bold"
