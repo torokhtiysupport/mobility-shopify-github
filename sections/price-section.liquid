@@ -20,7 +20,7 @@
                         </div>
                         {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                           <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
-                          <div class="product-form__buttons product-form__buttons--input{% unless block.settings.quantity_selector_enable %} product-form__buttons--no-quantity{% endunless %} {% if show_dynamic_checkout and product.selling_plan_groups == empty %}product-form__buttons-group{% else %}product-form__buttons-single{% endif %}">
+                          <div class="product-form__buttons product-form__buttons--input{% unless block.settings.quantity_selector_enable %} product-form__buttons--no-quantity{% endunless %}">
                             <button
                               type="submit"
                               name="add"
