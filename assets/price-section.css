@@ -75,3 +75,7 @@
   border: none; 
   color: #000;
 }
+
+.price-section__info-price-box button:hover, .price-section__info-price-box button:focus {
+  color: #000;
+}
