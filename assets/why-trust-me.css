@@ -67,8 +67,8 @@
 }
 
 .about-the-creator h2 {
-  margin: 0;
-  height: 40vh
+  margin: 0 0 64px;
+  height: 236px;
 }
 
 .about-the-creator h3, .about-the-creator p {
@@ -77,7 +77,7 @@
 
 .about-the-creator > div:first-of-type img {
   width: auto;
-  height: 50vh;
+  height: 300px;
 }
 
 .about-the-creator__info {
@@ -85,7 +85,7 @@
   justify-content: center;
   flex-direction: column;
   gap: 32px;
-  height: 90vh;
+  height: 600px;
 }
 
 .about-the-creator__info-text-container p:not(:last-of-type) {
