@@ -188,4 +188,9 @@
   .why-should-you-trust-me__features {
     gap: 16px;
   }
+
+  .why-should-you-trust-me__features-container {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
