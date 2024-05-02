@@ -213,4 +213,8 @@
     width: 100%;
     height: auto;
   }
+
+  .about-the-creator > div:first-of-type {
+    width: 100%;
+  }
 }
