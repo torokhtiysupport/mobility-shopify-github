@@ -28,3 +28,9 @@
   justify-content: center;
   gap: 32px;
 }
+
+.why-should-you-trust-me__features-item {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+}
