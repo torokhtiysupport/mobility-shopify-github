@@ -213,7 +213,8 @@
       "type": "price-section",
       "settings": {
         "main_color": "",
-        "section_title": "overhead mobility"
+        "section_title": "overhead mobility",
+        "section_text": "My name is Oleksiy Torokhtiy and I’ve been involved with Olympic\nweightlifting  for over 20 years. "
       }
     },
     "product-recommendations": {
