@@ -66,7 +66,13 @@
   gap: 32px;
 }
 
+.about-the-creator h2 {
+  margin: 0 0 84px;
+}
 
+.about-the-creator h3 {
+  margin: 0;
+}
 
 .about-the-creator > div:first-of-type img {
   width: 100%;
