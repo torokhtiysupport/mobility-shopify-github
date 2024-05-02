@@ -83,7 +83,7 @@
   justify-content: center;
   flex-direction: column;
   gap: 32px;
-  height: 600px;
+  height: 90vh;
 }
 
 .about-the-creator__info-text-container p:not(:last-of-type) {
