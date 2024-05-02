@@ -1489,6 +1489,15 @@ p.rating-count {
   animation-timing-function: linear;
 }
 
+.circle-slow {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #C6F33F;
+  animation-duration: 200s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
 .circle1 {
   display: block!important;
   width: 18px;
