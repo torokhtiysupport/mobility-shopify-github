@@ -1512,43 +1512,43 @@ p.rating-count {
 
 @keyframes move1 {
   0%   { top: 20%; left: 28%; }
-  10%  { top: 100%; left: 13%; }
-  20%  { top: 0%; left: 87%; }
-  30%  { top: 100%; left: 30%; }
-  40%  { top: 0%; left: 50%; }
-  50%  { top: 100%; left: 15%; }
-  60%  { top: 0%; left: 33%; }
-  70%  { top: 100%; left: 76%; }
-  80%  { top: 0%; left: 93%; }
-  90%  { top: 100%; left: 67%; }
+  10%  { top: 95%; left: 13%; }
+  20%  { top: 5%; left: 87%; }
+  30%  { top: 95%; left: 30%; }
+  40%  { top: 5%; left: 50%; }
+  50%  { top: 95%; left: 15%; }
+  60%  { top: 5%; left: 33%; }
+  70%  { top: 95%; left: 76%; }
+  80%  { top: 5%; left: 93%; }
+  90%  { top: 95%; left: 67%; }
   100% { top: 20%; left: 28%; }
 }
 
 @keyframes move2 {
   0%   { top: 80%; left: 76%; }
-  10%  { top: 0%; left: 85%; }
-  20%  { top: 34%; left: 100%; }
-  30%  { top: 0%; left: 92%; }
-  40%  { top: 100%; left: 67%; }
-  50%  { top: 0%; left: 31%; }
-  60%  { top: 100%; left: 65%; }
-  70%  { top: 0%; left: 88%; }
-  80%  { top: 33%; left: 100%; }
-  90%  { top: 0%; left: 41%; }
+  10%  { top: 5%; left: 85%; }
+  20%  { top: 34%; left: 95%; }
+  30%  { top: 5%; left: 92%; }
+  40%  { top: 95%; left: 67%; }
+  50%  { top: 5%; left: 31%; }
+  60%  { top: 95%; left: 65%; }
+  70%  { top: 5%; left: 88%; }
+  80%  { top: 33%; left: 95%; }
+  90%  { top: 5%; left: 41%; }
   100% { top: 80%; left: 76%; }
 }
 
 @keyframes move3 {
   0%   { top: 46%; left: 58%; }
-  10%  { top: 100%; left: 32%; }
-  20%  { top: 0%; left: 18%; }
-  30%  { top: 81%; left: 0%; }
-  40%  { top: 0%; left: 23%; }
-  50%  { top: 100%; left: 46%; }
-  60%  { top: 0%; left: 75%; }
-  70%  { top: 23%; left: 100%; }
-  80%  { top: 0%; left: 85%; }
-  90%  { top: 100%; left: 59%; }
+  10%  { top: 95%; left: 32%; }
+  20%  { top: 5%; left: 18%; }
+  30%  { top: 81%; left: 5%; }
+  40%  { top: 5%; left: 23%; }
+  50%  { top: 95%; left: 46%; }
+  60%  { top: 5%; left: 75%; }
+  70%  { top: 23%; left: 95%; }
+  80%  { top: 5%; left: 85%; }
+  90%  { top: 95%; left: 59%; }
   100% { top: 46%; left: 58%; }
 }
 
