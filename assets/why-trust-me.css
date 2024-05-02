@@ -197,4 +197,15 @@
   .why-should-you-trust-me__features-item div p:first-of-type {
     font-size: 20px;
   }
+
+  .about-the-creator {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-the-creator h2 {
+    margin: 0 0 40px;
+    height: auto;
+    padding-right: 0;
+  }
 }
