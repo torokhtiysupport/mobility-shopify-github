@@ -160,3 +160,25 @@
 .about-the-creator__info-badges div p:last-of-type {
   font-size: 10px;
 }
+
+@media screen and (max-width: 768px) {
+  .about-me__container {
+    padding: 30px 6px;
+  }
+
+  .about-me {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .why-should-you-trust-me {
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  .why-should-you-trust-me > div:first-of-type {
+    flex: flex;
+    width: 100%;
+  }
+}
