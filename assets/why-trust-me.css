@@ -68,6 +68,7 @@
 
 .about-the-creator h2 {
   margin: 0 0 84px;
+  height: calc(45vh - 80px)
 }
 
 .about-the-creator h3, .about-the-creator p {
@@ -75,7 +76,8 @@
 }
 
 .about-the-creator > div:first-of-type img {
-  width: 100%;
+  width: auto;
+  height: 55vh;
 }
 
 .about-the-creator__info {
