@@ -101,6 +101,11 @@
   gap: 32px;
   padding: 0 32px;
   height: 600px;
+
+  border: 1px solid rgba(235, 235, 235, 0.20);
+  border-radius: 32px;
+  background: rgba(235, 235, 235, 0.20);
+  backdrop-filter: blur(20px);
 }
 
 .about-the-creator__info-text-container p:not(:last-of-type) {
