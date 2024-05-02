@@ -84,9 +84,12 @@
   align-self: flex-end;
 }
 
-.about-the-creator > div:first-of-type {
+.about-the-creator__image-container {
   display: flex;
-  flex-direction: column;
+  justify-content: end;
+}
+
+.about-the-creator > div:first-of-type {
   flex: none;
   width: 45%;
 }
