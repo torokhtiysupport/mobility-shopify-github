@@ -44,6 +44,10 @@
   height: 500px;
 }
 
+.price-section__info-price-box .product-form__buttons {
+  display: block;
+}
+
 .price-section__info-price-box .price-item--last {
   line-height: 1;
   font-size: 120px!important;
