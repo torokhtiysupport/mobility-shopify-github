@@ -233,12 +233,12 @@
   }
 
   .about-the-creator__info-badges > div:before {
-    left: 10px;
+    left: 8px;
     top: 8px;
   }
   
   .about-the-creator__info-badges > div:after {
-    right: 10px;
+    right: 8px;
     top: 8px;
   }
 }
