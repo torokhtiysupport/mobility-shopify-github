@@ -77,3 +77,7 @@
 .about-the-creator > div:first-of-type img {
   width: 100%;
 }
+
+.about-the-creator__info-text-container p:not(:last-of-type) {
+  margin-bottom: 24px;
+}
