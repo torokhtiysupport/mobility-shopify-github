@@ -42,6 +42,7 @@
   padding: 0 48px;
   width: 45%;
   height: 500px;
+  border-radius: 32px;
 }
 
 .price-section__info-price-box .product-form__buttons {
