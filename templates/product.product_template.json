@@ -209,6 +209,12 @@
         "main_color": "#c6f33f"
       }
     },
+    "price_section_qHUdRY": {
+      "type": "price-section",
+      "settings": {
+        "main_color": ""
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -255,6 +261,7 @@
     "whats_included_j3WGC6",
     "test_our_program_XcTKg7",
     "why_trust_me_4EhMRb",
+    "price_section_qHUdRY",
     "product-recommendations",
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed"
   ]
