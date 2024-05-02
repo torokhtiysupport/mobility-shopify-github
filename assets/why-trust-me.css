@@ -93,6 +93,7 @@
   justify-content: center;
   flex-direction: column;
   gap: 32px;
+  padding: 0 32px;
   height: 600px;
 }
 
