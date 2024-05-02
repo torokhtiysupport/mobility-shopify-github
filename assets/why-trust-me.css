@@ -81,7 +81,7 @@
 .about-the-creator > div:first-of-type img {
   width: auto;
   height: 400px;
-  align-self: flex-end;
+  border-radius: 32px;
 }
 
 .about-the-creator__image-container {
