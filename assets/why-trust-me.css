@@ -223,4 +223,8 @@
     padding: 24px;
     height: auto;
   }
+
+  .about-the-creator__info-text-container p:not(:last-of-type) {
+    margin-bottom: 8px;
+  }
 }
