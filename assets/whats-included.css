@@ -190,9 +190,9 @@
 
 @media screen and (max-width: 768px) {
   .whats-included {
-  flex-direction: column;
-  gap: 40px;
-  padding: 0;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 0 30px;
   }
 
   .whats-included-numbers {
@@ -208,9 +208,9 @@
   }
   
   .whats-included-numbers-summary__text {
-  padding: 6px 8px;
-  max-width: 217px;
-  min-width: 57px;
+    padding: 6px 8px;
+    max-width: 217px;
+    min-width: 57px;
   }
   
   .whats-included-numbers-summary__text-title {
