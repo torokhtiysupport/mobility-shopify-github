@@ -1,0 +1,13 @@
+.price-section {
+  background-color: #fff;
+}
+
+.price-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to bottom right, black 0%, white 100%);
+  }
