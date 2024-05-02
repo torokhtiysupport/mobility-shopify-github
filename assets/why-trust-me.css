@@ -63,6 +63,7 @@
 .about-the-creator {
   display: flex;
   justify-content: center;
+  gap: 32px;
 }
 
 .about-the-creator > div:first-of-type {
