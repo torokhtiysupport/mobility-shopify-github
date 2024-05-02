@@ -32,3 +32,7 @@
   justify-content: center;
   gap: 32px;
 }
+
+.price-section__info-price-box {
+  background-color: #000;
+}
