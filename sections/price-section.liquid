@@ -6,7 +6,8 @@
     <p class="price-section__text">{{ section.settings.section_text }}</p>
     <div class="price-section__info">
       <div class="price-section__info-price-box">
-        <p>{{ section.settings.section_price }}</p>
+        <p>{{ product.price }}</p>
+        <p>{{ product.compare_at_price }}</p>
         <p>{{ section.settings.section_desc }}</p>
         <product-form class="product-form" data-hide-errors="{{ gift_card_recipient_feature_active }}">
                         <div class="product-form__error-message-wrapper alert alert--error alert--no-button" role="alert" hidden>
