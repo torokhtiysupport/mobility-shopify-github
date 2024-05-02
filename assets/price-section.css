@@ -70,3 +70,8 @@
   margin: 20px 0 40px;
   opacity: 0.8;
 }
+
+.price-section__info-price-box button {
+  border: none; 
+  color: #000;
+}
