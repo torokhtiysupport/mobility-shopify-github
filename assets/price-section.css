@@ -68,4 +68,5 @@
 .price-section__info-price-box-desc {
   text-align: center;
   margin: 20px 0 40px;
+  opacity: 0.8;
 }
