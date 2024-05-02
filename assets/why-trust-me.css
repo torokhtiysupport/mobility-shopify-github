@@ -114,4 +114,5 @@
 
 .about-the-creator__info-badges {
   display: flex;
+  gap: 16px;
 }
