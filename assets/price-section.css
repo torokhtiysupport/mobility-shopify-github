@@ -36,3 +36,7 @@
 .price-section__info-price-box {
   background-color: #000;
 }
+
+.price-item--last {
+  font-size: 80px;
+}
