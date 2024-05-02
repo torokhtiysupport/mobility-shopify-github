@@ -74,6 +74,9 @@
 .price-section__info-price-box button {
   border: none; 
   color: #000;
+  padding: 20px 40px;
+  font-size: 20px;
+  border-radius: 16px;
 }
 
 .price-section__info-price-box button:hover, .price-section__info-price-box button:focus {
