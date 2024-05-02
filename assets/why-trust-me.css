@@ -136,6 +136,9 @@
   background-size: cover;
   position: absolute;
   left: 15px;
+  top: 50%;
+  bottom: 0;
+  transform: translateY(-50%);
 }
 
 .about-the-creator__info-badges div p:first-of-type {
