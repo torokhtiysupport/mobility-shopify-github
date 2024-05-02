@@ -38,3 +38,11 @@
 .why-should-you-trust-me__features-item svg {
   flex: none;
 }
+
+.why-should-you-trust-me__features-item div p:first-of-type {
+  margin: 0 0 4px;
+  font-family: var(--font-heading-family);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
