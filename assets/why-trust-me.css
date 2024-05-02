@@ -116,6 +116,7 @@
   display: flex;
   gap: 16px;
   color: #000;
+  text-transform: uppercase;
 }
 
 .about-the-creator__info-badges div {
@@ -128,7 +129,6 @@
 
 .about-the-creator__info-badges div p:first-of-type {
   font-family: var(--font-heading-family);
-  text-transform: uppercase;
   font-weight: bold;
   font-size: 20px;
 }
