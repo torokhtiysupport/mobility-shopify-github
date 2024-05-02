@@ -51,7 +51,7 @@
 }
 
 .price-section__info-price-box .price-item--regular {
-  text-align: center;
+  text-align: center!important;
 }
 
 .price-section__info-price-box-desc {
