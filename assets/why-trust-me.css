@@ -85,7 +85,7 @@
 
 .about-the-creator > div:first-of-type {
   flex: none;
-  width: 45%;
+  width: calc(45% - 32px);
 }
 
 .about-the-creator__info {
