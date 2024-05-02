@@ -212,7 +212,8 @@
     "price_section_qHUdRY": {
       "type": "price-section",
       "settings": {
-        "main_color": ""
+        "main_color": "",
+        "section_title": "overhead mobility"
       }
     },
     "product-recommendations": {
