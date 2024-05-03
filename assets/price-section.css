@@ -159,4 +159,16 @@
     flex-direction: column;
     gap: 16px;
   }
+  .price-section__info-price-box {
+    background-color: #000;
+    padding: 40px 30px;
+    width: 100%;
+    flex: flex;
+    height: auto;
+    border-radius: 16px;
+  
+    background-size: 215px, 240px;
+    background-position: left -150px top -100px, bottom -150px right -120px;
+    background-repeat: no-repeat, no-repeat;
+  }
 }
