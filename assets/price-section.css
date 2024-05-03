@@ -168,7 +168,7 @@
     border-radius: 16px;
   
     background-size: 215px, 240px;
-    background-position: left -150px top -100px, bottom -150px right -120px;
+    background-position: left -100px top -100px, bottom -100px right -120px;
     background-repeat: no-repeat, no-repeat;
   }
 }
