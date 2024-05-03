@@ -117,4 +117,6 @@
 
 .features-section__item-icon-container {
   padding: 16px;
+  border-radius: 50%;
+  background-color: rgba(68, 68, 69, 1);
 }
