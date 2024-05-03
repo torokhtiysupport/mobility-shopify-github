@@ -120,3 +120,8 @@
   border-radius: 50%;
   background-color: rgba(68, 68, 69, 1);
 }
+
+.features-section__item-desc {
+  margin: 0;
+  font-size: 24px;
+}
