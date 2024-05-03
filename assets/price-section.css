@@ -54,6 +54,7 @@
   height: 344px;
   top: -100px;
   left: -100px;
+  z-index: 2;
 }
 
 .price-section__info-price-box .product-form__buttons {
