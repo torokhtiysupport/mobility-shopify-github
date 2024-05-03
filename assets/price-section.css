@@ -114,3 +114,7 @@
   background-color: #fff;
   border-radius: 16px;
 }
+
+.features-section__item-icon-container {
+  padding: 16px;
+}
