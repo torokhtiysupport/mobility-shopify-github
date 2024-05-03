@@ -168,7 +168,7 @@
     border-radius: 16px;
   
     background-size: 215px, 240px;
-    background-position: left -90px top -40px, bottom -90px right -80px;
+    background-position: left -90px top -40px, bottom -90px right -90px;
     background-repeat: no-repeat, no-repeat;
   }
   .price-section__info-price-box .price-item--last {
