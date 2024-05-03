@@ -90,10 +90,10 @@
   border-radius: 32px;
   width: 100%;
   height: 500px;
+  color: #000;
 }
 
 .features-section__title {
-  color: #000;
   margin: 0 0 32px;
 }
 
