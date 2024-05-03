@@ -108,4 +108,5 @@
 .features-section__item {
   display: flex;
   justify-content: center;
+  gap: 24px;
 }
