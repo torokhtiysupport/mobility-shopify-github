@@ -107,4 +107,5 @@
 
 .features-section__item {
   display: flex;
+  justify-content: center;
 }
