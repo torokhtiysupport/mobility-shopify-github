@@ -14,6 +14,13 @@
     background: linear-gradient(to bottom right, black 49.5%, white 50%);
 }
 
+.section-container .page-width > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
 .price-section__title, .price-section__text {
   color: #000;
   text-align: center;
@@ -81,4 +88,9 @@
 
 .price-section__info-price-box button:hover, .price-section__info-price-box button:focus {
   color: #000!important;
+}
+
+.features-section {
+  padding: 40px;
+  background-color: rgba(240, 240, 240, 1);
 }
