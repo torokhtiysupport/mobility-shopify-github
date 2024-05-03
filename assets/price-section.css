@@ -14,7 +14,7 @@
     background: linear-gradient(to bottom right, black 49.5%, white 50%);
 }
 
-.section-container .page-width > div {
+.price-section {
   display: flex;
   align-items: center;
   justify-content: center;
