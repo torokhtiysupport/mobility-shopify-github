@@ -88,5 +88,6 @@
   padding: 40px;
   background-color: rgba(240, 240, 240, 1);
   border-radius: 32px;
+  width: auto;
   height: 500px;
 }
