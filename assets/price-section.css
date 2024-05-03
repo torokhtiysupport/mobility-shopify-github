@@ -170,6 +170,8 @@
     background-size: 215px, 240px;
     background-position: left -90px top -40px, bottom -90px right -90px;
     background-repeat: no-repeat, no-repeat;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
   }
   .price-section__info-price-box .price-item--last {
     font-size: 80px!important;
