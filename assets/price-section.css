@@ -155,4 +155,8 @@
   .price-section__text {
     margin: 0 0 40px;
   }
+  .price-section__info {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
