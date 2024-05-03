@@ -2,10 +2,10 @@
 
 <div class="section-container">
   <div class="page-width">
+      <h2 class="price-section__title">{{ section.settings.section_title }}</h2>
+      <p class="price-section__text">{{ section.settings.section_text }}</p>
       <div class="price-section">
         <div class="price-box">
-          <h2 class="price-section__title">{{ section.settings.section_title }}</h2>
-          <p class="price-section__text">{{ section.settings.section_text }}</p>
           <div class="price-section__info">
             <div class="price-section__info-price-box">
               {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large flex align-center', show_in_card: false -%}
