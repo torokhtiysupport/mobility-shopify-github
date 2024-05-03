@@ -1,10 +1,10 @@
-.price-section {
+.section-container {
   background-color: #fff;
   padding: 200px 0 80px;
   position: relative;
 }
 
-.price-section::before {
+.section-container::before {
     content: '';
     position: absolute;
     top: 0;
