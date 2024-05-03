@@ -171,4 +171,7 @@
     background-position: left -80px top -100px, bottom -100px right -80px;
     background-repeat: no-repeat, no-repeat;
   }
+  .price-section__info-price-box .price-item--last {
+    font-size: 80px!important;
+  }
 }
