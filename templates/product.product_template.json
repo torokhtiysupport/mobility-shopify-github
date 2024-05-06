@@ -223,6 +223,12 @@
         "bottom_desc": "Iaculis nunc sed augue lacus viverra vitae congue eu consequat. Gravida in fermentum et sollicitudin ac orci phasellus. Viverra ipsum nunc aliquet bibendum enim facilisis gravida."
       }
     },
+    "slider_section_Jtheh9": {
+      "type": "slider-section",
+      "settings": {
+        "alt_tags": ""
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -270,6 +276,7 @@
     "test_our_program_XcTKg7",
     "why_trust_me_4EhMRb",
     "price_section_qHUdRY",
+    "slider_section_Jtheh9",
     "product-recommendations",
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed"
   ]

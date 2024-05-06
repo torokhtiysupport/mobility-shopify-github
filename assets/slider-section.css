@@ -2,6 +2,8 @@ section-slider-container {
     position: relative;
     max-width: 100%;
     overflow: hidden;
+
+    background-color: #fff;
 }
 
 .section-slider {
