@@ -209,6 +209,7 @@
   .features-section__item-icon-container svg {
     width: 16px;
     height: 16px;
+    object-view-box: 0 0 16 16;
   }
   
   .features-section__item-desc {
