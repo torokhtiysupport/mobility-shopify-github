@@ -83,8 +83,12 @@
         }
     
         function slideNext() {
-            goToSlide(currentIndex + 1);
-        }
+    if (currentIndex === slides.length - 1) {
+        goToSlide(0); // Перейти к первому слайду
+    } else {
+        goToSlide(currentIndex + 1);
+    }
+}
     
         function slidePrev() {
             goToSlide(currentIndex - 1);
