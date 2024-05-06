@@ -1,0 +1,52 @@
+.section-slider-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.section-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.section-slide {
+    flex: 0 0 33.33%; /* Для десктопа показывать по 3 изображения */
+    max-width: 33.33%; /* Для десктопа показывать по 3 изображения */
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .section-slide {
+        flex: 0 0 100%; /* Показывать одно изображение на мобильных устройствах */
+        max-width: 100%; /* Показывать одно изображение на мобильных устройствах */
+    }
+}
+
+/* Стили для кнопок "назад" и "вперед" */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 15px;
+    z-index: 2;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
