@@ -226,6 +226,7 @@
     "slider_section_Jtheh9": {
       "type": "slider-section",
       "settings": {
+        "slider_images": "shopify:\/\/shop_images\/slide-1-man-with-dumbbells.webp",
         "alt_tags": ""
       }
     },
