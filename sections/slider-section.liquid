@@ -64,49 +64,54 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const slider = document.querySelector('.section-slider');
-        const slides = document.querySelectorAll('.section-slider__slide');
-        const prevBtn = document.querySelector('.section-slider__prev');
-        const nextBtn = document.querySelector('.section-slider__next');
-        let currentIndex = 0;
-        const slideWidth = slides[0].clientWidth;
-    
-        function goToSlide(index) {
-            if (index < 0) {
-                index = slides.length - 1;
-            } else if (index >= slides.length) {
-                index = 0;
-            }
-            currentIndex = index;
-            const offset = -currentIndex * slideWidth;
-            slider.style.transform = `translateX(${offset}px)`;
+    const slider = document.querySelector('.section-slider');
+    const slides = document.querySelectorAll('.section-slider__slide');
+    const prevBtn = document.querySelector('.section-slider__prev');
+    const nextBtn = document.querySelector('.section-slider__next');
+    let currentIndex = 0;
+    let slideWidth = slides[0].clientWidth; // Обновляем ширину слайда
+
+    // Рассчитываем общую ширину слайдера
+    const sliderWidth = slideWidth * slides.length;
+    slider.style.width = `${sliderWidth}px`;
+
+    function goToSlide(index) {
+        if (index < 0) {
+            index = slides.length - 1;
+        } else if (index >= slides.length) {
+            index = 0;
         }
-    
-        function slideNext() {
-            goToSlide(currentIndex + 1);
-        }
-    
-        function slidePrev() {
-            goToSlide(currentIndex - 1);
-        }
-    
-        prevBtn.addEventListener('click', slidePrev);
-        nextBtn.addEventListener('click', slideNext);
-    
-        let touchStartX = 0;
-        let touchEndX = 0;
-    
-        slider.addEventListener('touchstart', function(event) {
-            touchStartX = event.touches[0].clientX;
-        });
-    
-        slider.addEventListener('touchend', function(event) {
-            touchEndX = event.changedTouches[0].clientX;
-            if (touchEndX < touchStartX) {
-                slideNext();
-            } else if (touchEndX > touchStartX) {
-                slidePrev();
-            }
-        });
+        currentIndex = index;
+        const offset = -currentIndex * slideWidth;
+        slider.style.transform = `translateX(${offset}px)`;
+    }
+
+    function slideNext() {
+        goToSlide(currentIndex + 1);
+    }
+
+    function slidePrev() {
+        goToSlide(currentIndex - 1);
+    }
+
+    prevBtn.addEventListener('click', slidePrev);
+    nextBtn.addEventListener('click', slideNext);
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    slider.addEventListener('touchstart', function(event) {
+        touchStartX = event.touches[0].clientX;
     });
+
+    slider.addEventListener('touchend', function(event) {
+        touchEndX = event.changedTouches[0].clientX;
+        if (touchEndX < touchStartX) {
+            slideNext();
+        } else if (touchEndX > touchStartX) {
+            slidePrev();
+        }
+    });
+});
+
 </script>
