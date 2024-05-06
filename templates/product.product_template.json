@@ -225,9 +225,53 @@
     },
     "slider_section_Jtheh9": {
       "type": "slider-section",
+      "blocks": {
+        "column_zVmM4A": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slide-1-man-with-dumbbells.webp",
+            "alt_tag": "Man with dumbbells"
+          }
+        },
+        "column_YwpeyH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slide-2-man-lifting-a-barbell.webp",
+            "alt_tag": "Man lifting a barbel"
+          }
+        },
+        "column_9KHJwq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slide-3-woman-is-doing-ab-exercises.webp",
+            "alt_tag": "Woman is doing ab exercises"
+          }
+        },
+        "column_3nt8hJ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slide-2-man-lifting-a-barbell.webp",
+            "alt_tag": "Man lifting a barbel"
+          }
+        },
+        "column_pJ9tWk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slide-3-woman-is-doing-ab-exercises.webp",
+            "alt_tag": "Woman is doing ab exercises"
+          }
+        }
+      },
+      "block_order": [
+        "column_zVmM4A",
+        "column_YwpeyH",
+        "column_9KHJwq",
+        "column_3nt8hJ",
+        "column_pJ9tWk"
+      ],
       "settings": {
-        "slider_images": "shopify:\/\/shop_images\/slide-1-man-with-dumbbells.webp",
-        "alt_tags": ""
+        "section_title": "",
+        "section_text": ""
       }
     },
     "product-recommendations": {

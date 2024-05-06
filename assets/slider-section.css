@@ -8,6 +8,7 @@ section-slider-container {
 
 .section-slider {
     display: flex;
+    gap: 32px;
     transition: transform 0.5s ease;
 }
 
