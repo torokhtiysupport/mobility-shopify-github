@@ -1,6 +1,40 @@
+{{ 'slider-section.css' | asset_url | stylesheet_tag }}
+
+<div class="slider-container">
+    <div class="slider">
+        {% for image in section.settings.slider_images %}
+            <div class="slide">
+              <img src="{{ image | img_url: 'original' }}" width="" height="" alt="{% cycle section.settings.alt_tags split:',' %}">
+            </div>
+        {% endfor %}
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
-  }
+  "name": "👾Slider Section",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "slider_images",
+      "label": "Slider Images",
+      "info": "Add images for the slider."
+    },
+    {
+      "type": "text",
+      "id": "alt_tags",
+      "label": "Alt Tags",
+      "info": "Add alt tags for each image, separated by commas."
+    }
+  ],
+  "presets": [
+    {
+      "name": "👾Slider Section"
+    }
+  ]
+}
 {% endschema %}
