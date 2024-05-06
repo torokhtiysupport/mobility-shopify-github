@@ -64,49 +64,42 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const slider = document.querySelector('.section-slider');
-        const slides = document.querySelectorAll('.section-slider__slide');
-        const prevBtn = document.querySelector('.section-slider__prev');
-        const nextBtn = document.querySelector('.section-slider__next');
-        let currentIndex = 0;
-        const slideWidth = slides[0].clientWidth;
-    
-        function goToSlide(index) {
-            if (index < 0) {
-                index = slides.length - 1;
-            } else if (index >= slides.length) {
-                index = 0;
-            }
-            currentIndex = index;
-            const offset = -currentIndex * slideWidth;
-            slider.style.transform = `translateX(${offset}px)`;
+    const slider = document.querySelector('.section-slider');
+    const slides = document.querySelectorAll('.section-slider__slide');
+    const prevBtn = document.querySelector('.section-slider__prev');
+    const nextBtn = document.querySelector('.section-slider__next');
+    const visibleSlides = 3; // Количество видимых слайдов
+    const slideWidth = slides[0].clientWidth;
+    const totalSlides = slides.length;
+    let currentIndex = 0;
+
+    function updateSliderSize() {
+        slider.style.width = `${slideWidth * visibleSlides}px`;
+        slider.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+    }
+
+    function slideNext() {
+        currentIndex += visibleSlides;
+        if (currentIndex >= totalSlides) {
+            currentIndex = 0;
         }
-    
-        function slideNext() {
-            goToSlide(currentIndex + 1);
+        slider.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+    }
+
+    function slidePrev() {
+        currentIndex -= visibleSlides;
+        if (currentIndex < 0) {
+            currentIndex = Math.floor(totalSlides / visibleSlides) * visibleSlides;
         }
-    
-        function slidePrev() {
-            goToSlide(currentIndex - 1);
-        }
-    
-        prevBtn.addEventListener('click', slidePrev);
-        nextBtn.addEventListener('click', slideNext);
-    
-        let touchStartX = 0;
-        let touchEndX = 0;
-    
-        slider.addEventListener('touchstart', function(event) {
-            touchStartX = event.touches[0].clientX;
-        });
-    
-        slider.addEventListener('touchend', function(event) {
-            touchEndX = event.changedTouches[0].clientX;
-            if (touchEndX < touchStartX) {
-                slideNext();
-            } else if (touchEndX > touchStartX) {
-                slidePrev();
-            }
-        });
-    });
+        slider.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+    }
+
+    prevBtn.addEventListener('click', slidePrev);
+    nextBtn.addEventListener('click', slideNext);
+
+    // Обновляем размер слайдера при загрузке и изменении размера окна
+    window.addEventListener('load', updateSliderSize);
+    window.addEventListener('resize', updateSliderSize);
+});
+
 </script>
