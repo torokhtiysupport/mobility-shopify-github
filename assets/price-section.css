@@ -174,4 +174,13 @@
   .price-section__info-price-box .price-item--last {
     font-size: 80px!important;
   }
+  .price-section__info-price-box .price-item--regular {
+    font-size: 20px!important;
+  }
+  .price-section__info-price-box-desc {
+    margin: 20px 0 24px;
+  }
+  .price-section__info-price-box button {
+    padding: 14px 24px!important;
+  }
 }
