@@ -1,3 +1,8 @@
+.section-slider-container {
+  background-color: #fff;
+  padding: 80px 0;
+}
+
 .slider-container {
     position: relative;
     max-width: 100%;
