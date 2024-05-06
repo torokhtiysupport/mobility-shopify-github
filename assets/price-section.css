@@ -183,4 +183,10 @@
   .price-section__info-price-box button {
     padding: 14px 24px!important;
   }
+
+  .features-section {
+    padding: 24px;
+    border-radius: 16px;
+    height: auto;
+  }
 }
