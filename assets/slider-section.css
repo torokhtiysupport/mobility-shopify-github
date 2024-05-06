@@ -9,24 +9,16 @@ section-slider-container {
     transition: transform 0.5s ease;
 }
 
-.section-slide {
+.section-slider__slide {
     flex: 0 0 33.33%;
     max-width: 33.33%;
     box-sizing: border-box;
 }
 
-img {
+.section-slider__slide img {
     width: 100%;
     height: auto;
     display: block;
-}
-
-
-@media (max-width: 768px) {
-    .section-slide {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
 }
 
 .section-slider__prev, .section-slider__next {
@@ -48,4 +40,11 @@ img {
 
 .section-slider__next {
     right: 0;
+}
+
+@media (max-width: 768px) {
+    .section-slider__slide {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
