@@ -1,9 +1,8 @@
 {{ 'slider-section.css' | asset_url | stylesheet_tag }}
 
 
-<div class="section-container">
+<div class="section-slider-container">
   <div class="page-width">
-    <div class="section-slider-container">
       <div class="section-slider">
           {% for image in section.settings.slider_images %}
               <div class="section-slider__slide">
@@ -13,7 +12,6 @@
       </div>
       <button class="section-slider__prev">&#10094;</button>
       <button class="section-slider__next">&#10095;</button>
-    </div>
   </div>
 </div>
 
