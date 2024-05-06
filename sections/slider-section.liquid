@@ -1,15 +1,20 @@
 {{ 'slider-section.css' | asset_url | stylesheet_tag }}
 
-<div class="slider-container">
-    <div class="slider">
-        {% for image in section.settings.slider_images %}
-            <div class="slide">
-              <img src="{{ image | img_url: 'original' }}" width="" height="" alt="{% cycle section.settings.alt_tags split:',' %}">
-            </div>
-        {% endfor %}
+
+<div class="section-container">
+  <div class="page-width">
+    <div class="section-slider-container">
+      <div class="section-slider">
+          {% for image in section.settings.slider_images %}
+              <div class="section-slider__slide">
+                <img src="{{ image | img_url: 'original' }}" width="" height="" alt="{% cycle section.settings.alt_tags split:',' %}">
+              </div>
+          {% endfor %}
+      </div>
+      <button class="section-slider__prev">&#10094;</button>
+      <button class="section-slider__next">&#10095;</button>
     </div>
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
+  </div>
 </div>
 
 {% schema %}
