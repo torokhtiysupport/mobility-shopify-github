@@ -78,10 +78,10 @@
         index = 0;
     }
     currentIndex = index;
-    const offset = -currentIndex * slideWidth;
+    let offset = -currentIndex * slideWidth;
     
-    // Если текущий индекс равен последнему слайду, показать первый слайд
-    if (currentIndex === slides.length - 1) {
+    // Если последний слайд находится справа от контейнера, показать первый слайд
+    if (currentIndex === slides.length - 1 && offset > 0) {
         currentIndex = 0;
         offset = 0;
     }
