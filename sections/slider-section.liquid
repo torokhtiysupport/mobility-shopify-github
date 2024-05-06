@@ -4,9 +4,11 @@
 <div class="section-slider-container">
   <div class="page-width">
       <div class="section-slider">
-          {% for image in section.settings.slider_images %}
+      <h2 class="section-slider__title">{{ section.settings.section_title }}</h2>
+      <p class="section-slider__text">{{ section.settings.section_text }}</p>
+          {% for block in section.blocks %}
               <div class="section-slider__slide">
-                <img src="{{ image | img_url: 'original' }}" width="" height="" alt="{% cycle section.settings.alt_tags split:',' %}">
+                <img src="{{ block.settings.image | img_url: 'original' }}" width="" height="" alt="{{ block.settings.alt_tag }}">
               </div>
           {% endfor %}
       </div>
@@ -22,16 +24,32 @@
   "tag": "section",
   "settings": [
     {
-      "type": "image_picker",
-      "id": "slider_images",
-      "label": "Slider Images",
-      "info": "Add images for the slider."
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title"
     },
     {
-      "type": "text",
-      "id": "alt_tags",
-      "label": "Alt Tags",
-      "info": "Add alt tags for each image, separated by commas."
+      "type": "textarea",
+      "id": "section_text",
+      "label": "Section Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "alt_tag",
+          "label": "Alt tag"
+        }
+      ]
     }
   ],
   "presets": [
@@ -44,10 +62,10 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const slider = document.querySelector('.slider');
+        const slider = document.querySelector('.section-slider__slide');
         const slides = document.querySelectorAll('.slide');
-        const prevBtn = document.querySelector('.prev');
-        const nextBtn = document.querySelector('.next');
+        const prevBtn = document.querySelector('.section-slider__prev');
+        const nextBtn = document.querySelector('.section-slider__next');
         let currentIndex = 0;
         const slideWidth = slides[0].clientWidth;
     
