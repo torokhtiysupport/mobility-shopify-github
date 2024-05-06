@@ -1,4 +1,4 @@
-.section-slider-container {
+section-slider-container {
     position: relative;
     max-width: 100%;
     overflow: hidden;
@@ -10,8 +10,8 @@
 }
 
 .section-slide {
-    flex: 0 0 33.33%; /* Для десктопа показывать по 3 изображения */
-    max-width: 33.33%; /* Для десктопа показывать по 3 изображения */
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
     box-sizing: border-box;
 }
 
@@ -21,16 +21,15 @@ img {
     display: block;
 }
 
-/* Для мобильных устройств */
+
 @media (max-width: 768px) {
     .section-slide {
-        flex: 0 0 100%; /* Показывать одно изображение на мобильных устройствах */
-        max-width: 100%; /* Показывать одно изображение на мобильных устройствах */
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }
 
-/* Стили для кнопок "назад" и "вперед" */
-.prev, .next {
+.section-slider__prev, .section-slider__next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -43,10 +42,10 @@ img {
     z-index: 2;
 }
 
-.prev {
+.section-slider__prev {
     left: 0;
 }
 
-.next {
+.section-slider__next {
     right: 0;
 }
