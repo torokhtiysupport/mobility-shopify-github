@@ -7,11 +7,13 @@
       <div class="section-slider">
       <h2 class="section-slider__title">{{ section.settings.section_title }}</h2>
       <p class="section-slider__text">{{ section.settings.section_text }}</p>
+        <div class="my-slick-slider center">
           {% for block in section.blocks %}
               <div class="section-slider__slide">
                 <img src="{{ block.settings.image | img_url: 'original' }}" width="" height="" alt="{{ block.settings.alt_tag }}">
               </div>
           {% endfor %}
+        </div>
       </div>
       <button class="section-slider__prev">&#10094;</button>
       <button class="section-slider__next">&#10095;</button>
@@ -62,7 +64,7 @@
 }
 {% endschema %}
 
-<script>
+<!-- <script>
     document.addEventListener("DOMContentLoaded", function() {
         const slider = document.querySelector('.section-slider');
         const slides = document.querySelectorAll('.section-slider__slide');
@@ -109,4 +111,31 @@
             }
         });
     });
+</script> -->
+<script>
+$('.center').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
 </script>
