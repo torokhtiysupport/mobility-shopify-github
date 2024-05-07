@@ -10,14 +10,11 @@
 }
 
 .section-slider {
-    display: flex;
     transition: transform 0.5s ease;
 }
 
 .section-slider__slide {
     padding: 0 16px;
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
     box-sizing: border-box;
 }
 
@@ -46,11 +43,4 @@
 
 .section-slider__next {
     right: 0;
-}
-
-@media (max-width: 768px) {
-    .section-slider__slide {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
 }
