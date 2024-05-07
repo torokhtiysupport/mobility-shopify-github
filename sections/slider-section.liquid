@@ -65,8 +65,9 @@
 {% endschema %}
 
 
-<script async>
-$('.center').slick({
+<script>
+  $(document).ready(function(){
+  $('.center').slick({
   centerMode: true,
   centerPadding: '60px',
   slidesToShow: 3,
@@ -90,5 +91,6 @@ $('.center').slick({
       }
     }
   ]
+});
 });
 </script>
