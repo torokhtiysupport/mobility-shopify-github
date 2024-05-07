@@ -8,11 +8,16 @@
       <h2 class="section-slider__title">{{ section.settings.section_title }}</h2>
       <p class="section-slider__text">{{ section.settings.section_text }}</p>
         <div class="my-slick-slider">
-          {% for block in section.blocks %}
+          <div style="background-color: #000"></div>
+          <div style="background-color: #F42727"></div>
+          <div style="background-color: green"></div>
+          <div style="background-color: blue"></div>
+          <div style="background-color: pink"></div>
+          <!-- {% for block in section.blocks %}
               <div class="section-slider__slide">
                 <img src="{{ block.settings.image | img_url: 'original' }}" width="" height="" alt="{{ block.settings.alt_tag }}">
               </div>
-          {% endfor %}
+          {% endfor %} -->
         </div>
       </div>
       <button class="section-slider__prev">&#10094;</button>
