@@ -67,7 +67,7 @@
 
 <script async>
   $(document).ready(function(){
-  $('.my-slick-slider').slick({
+  setTimeout(function() { $('.my-slick-slider').slick({
   centerMode: true,
   centerPadding: '60px',
   slidesToShow: 3,
@@ -92,5 +92,6 @@
     }
   ]
 });
+  }, 1000);
 });
 </script>
