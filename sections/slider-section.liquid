@@ -7,7 +7,7 @@
       <div class="section-slider">
       <h2 class="section-slider__title">{{ section.settings.section_title }}</h2>
       <p class="section-slider__text">{{ section.settings.section_text }}</p>
-        <div class="my-slick-slider center">
+        <div class="my-slick-slider">
           {% for block in section.blocks %}
               <div class="section-slider__slide">
                 <img src="{{ block.settings.image | img_url: 'original' }}" width="" height="" alt="{{ block.settings.alt_tag }}">
@@ -67,7 +67,7 @@
 
 <script>
   $(document).ready(function(){
-  $('.center').slick({
+  $('.my-slick-slider').slick({
   centerMode: true,
   centerPadding: '60px',
   slidesToShow: 3,
