@@ -188,6 +188,36 @@
       document.documentElement.classList.add('shopify-design-mode');
     }
     </script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+      $('.my-slick-slider').slick({
+      centerMode: true,
+      centerPadding: '60px',
+      slidesToShow: 3,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: true,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: true,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+    });
+    </script>
   </head>
 
   <body class="gradient">
@@ -340,35 +370,5 @@
       {%- endif -%}  
       {{ 'no-js.css' | asset_url | stylesheet_tag }}
     </noscript>
-
-    <script>
-      $(document).ready(function(){
-      $('.my-slick-slider').slick({
-      centerMode: true,
-      centerPadding: '60px',
-      slidesToShow: 3,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            arrows: true,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            arrows: true,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 1
-          }
-        }
-      ]
-    });
-    });
-    </script>
   </body>
 </html>
