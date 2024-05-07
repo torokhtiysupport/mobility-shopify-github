@@ -23,36 +23,3 @@
     height: auto;
     display: block;
 }
-
-.section-slider__prev, .section-slider__next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.5);
-    border: none;
-    color: black;
-    font-size: 20px;
-    cursor: pointer;
-    padding: 10px 15px;
-    z-index: 2;
-}
-
-.section-slider__prev {
-    left: 0;
-}
-
-.section-slider__next {
-    right: 0;
-}
-
-.slick-prev:before {
-  content: "<";
-  color: red;
-  font-size: 30px;
-}
-
-.slick-next:before {
-  content: ">";
-  color: red;
-  font-size: 30px;
-}
