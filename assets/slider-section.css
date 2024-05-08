@@ -22,3 +22,7 @@
     height: auto;
     display: block;
 }
+
+.slick-prev:hover, .slick-next:hover, .slick-prev:focus, .slick-next:focus {
+  background-color: --main-color!important;
+}
