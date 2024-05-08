@@ -16,7 +16,7 @@
   position: relative;
   z-index: 2;
   margin: 0;
-  line-height: 0.9;
+  line-height: 1;
 }
 
 .scrolling-text-section__first-text p {
