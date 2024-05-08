@@ -49,3 +49,14 @@
   margin: 0 0 5px;
 }
 
+.program-demo-section__badge {
+  margin-bottom: 80px;
+}
+
+.program-demo-section__badge p {
+  font-family: var(--font-heading-family);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 28px;
+  margin: 0;
+}
