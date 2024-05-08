@@ -1,6 +1,40 @@
+{{ 'program-demo-section.css' | asset_url | stylesheet_tag }}
+
+<div class="section-container">
+  <div class="page-width">
+    <div class="program-demo-section">
+      <h2>{{ section.settings.section_title }}</h2>
+      <p>{{ section.settings.section_text }}</p>
+    </div>
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
-  }
+  "name": "👾Program Demo Section",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "main_color",
+      "label": "Main Color"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title"
+    },
+    {
+      "type": "text",
+      "id": "section_text",
+      "label": "Section Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "👾Program Demo Section"
+    }
+  ]
+}
 {% endschema %}
