@@ -30,6 +30,7 @@
   background-image: url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/overhead-gym-photo.webp?v=1715202969');
   background-size: 72px;
   background-repeat: no-repeat;
+  border-radius: 50%;
 }
 
 .program-demo-section {
