@@ -37,6 +37,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .section-slider-container {
+    background-color: #fff;
+    padding: 30px 0 100px;
+  }
   .section-slider__title {
     margin: 0 0 16px;
   }
