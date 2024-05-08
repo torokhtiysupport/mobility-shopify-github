@@ -6,6 +6,8 @@
 .scrolling-text-section p {
   font-family: var(--font-heading-family);
   font-size: 100px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .scrolling-text-section__first-text p {
