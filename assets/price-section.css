@@ -146,7 +146,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .section-container {
+  .section-container:has(.price-section) {
     padding: 100px 0 30px;
   }
   .section-container:has(.price-section):before {
