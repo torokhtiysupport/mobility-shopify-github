@@ -162,7 +162,7 @@
     padding: 70px 0 30px;
   }
   .section-container:has(.program-demo-section)::before {
-      height: 120px;
+      height: 32px;
   }
   .program-demo-section {
     padding: 30px 0 0;
