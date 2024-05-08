@@ -19,7 +19,7 @@
   display: inline-block;
   position: absolute;
   width: 50%;
-  height: 50%;
+  height: 354px;
   top: 220px;
   left: 50%;
   transform: translateX(-50%);
@@ -43,4 +43,8 @@
   font-weight: bold;
   font-size: 28px;
   margin: 0 0 155px;
+}
+
+.program-demo-section__badge {
+  position: absolute;
 }
