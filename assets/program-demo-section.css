@@ -73,3 +73,20 @@
   margin: 0;
   text-align: center;
 }
+
+.program-demo-section__button {
+  padding: 20px 40px;
+  font-size: 20px;
+  font-family: var(--font-heading-family);
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #000;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.program-demo-section__button:hover, .program-demo-section__button:focus {
+  background-color: #fff!important;
+  transition: background-color 0.5s ease-in-out;
+}
