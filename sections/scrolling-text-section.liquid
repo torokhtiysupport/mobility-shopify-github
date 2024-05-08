@@ -1,5 +1,16 @@
 {{ 'scrolling-text-section.css' | asset_url | stylesheet_tag }}
 
+<div class="scrolling-text-section">
+  <div class="circle-slow circle1"></div>
+  <div class="circle-slow circle2"></div>
+  <div class="scrolling-text-section__first-text">
+    <p>{{ section.settings.section_first_text }}</p>
+  </div>
+  <div class="scrolling-text-section__second-text">
+    <p>{{ section.settings.section_second_text }}</p>
+  </div>
+</div>
+
 {% schema %}
   {
   "name": "👾Scrolling Text Section",
