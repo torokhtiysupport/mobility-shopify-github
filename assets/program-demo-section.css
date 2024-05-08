@@ -13,3 +13,7 @@
     height: 120px;
     background: linear-gradient(to bottom right, white 49.5%, black 50%);
 }
+
+.program-demo-section__title, program-demo-section__text {
+  color: #000;
+}
