@@ -5,7 +5,7 @@
 
 .scrolling-text-section p {
   font-family: var(--font-heading-family);
-  font-size: 100px;
+  font-size: 80px;
   text-transform: uppercase;
   font-weight: bold;
 }
