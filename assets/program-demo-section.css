@@ -199,7 +199,7 @@
   .section-container:has(.program-demo-section):after {
     width: 80%;
     height: 120px;
-    top: 180px;
+    top: 170px;
     left: 50%;
     transform: translateX(-50%);
   }
