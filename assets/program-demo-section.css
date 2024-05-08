@@ -14,6 +14,24 @@
     background: linear-gradient(to bottom right, white 49.5%, black 50%);
 }
 
+.program-demo-section-bg {
+  position: relative;
+}
+
+.program-demo-section-bg:before {
+  content: '';
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  z-index: 6;
+  bottom: 5%;
+  left: 20%;
+
+  background-image: url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/overhead-gym-photo.webp?v=1715202969');
+  background-size: 72px;
+  background-repeat: no-repeat;
+}
+
 .program-demo-section {
   padding: 80px 0 0;
   display: flex;
