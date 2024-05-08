@@ -22,3 +22,7 @@
     height: auto;
     display: block;
 }
+
+.section-slider__title {
+  color: #000;
+}
