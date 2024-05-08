@@ -194,7 +194,13 @@
     height: 76px;
     top: 10%;
     left: 5%;
-  
     background-size: 76px;
+  }
+  .section-container:has(.program-demo-section):after {
+    width: 80%;
+    height: 100px;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
