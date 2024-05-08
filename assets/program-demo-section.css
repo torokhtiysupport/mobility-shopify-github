@@ -53,8 +53,8 @@
   margin-top: -10px;
   margin-bottom: 80px;
   padding: 16px 24px;
-  display: flex;
-  justify-content: center;
+  display: inline-block;
+  text-align: center;
   width: auto;
   transform: rotate(-4.61deg);
   background-color: rgba(68, 68, 69, 1);
