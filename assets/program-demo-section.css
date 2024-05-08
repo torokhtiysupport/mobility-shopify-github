@@ -18,6 +18,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  background-image: url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/gym-bottle.webp?v=1714364080'), url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/dumbell.webp?v=1714716405');
+  background-size: 345px, 402px;
+  background-position: left -150px top -100px, bottom -150px right -120px;
+  background-repeat: no-repeat, no-repeat;
 }
 
 .section-container:has(.program-demo-section):after {
