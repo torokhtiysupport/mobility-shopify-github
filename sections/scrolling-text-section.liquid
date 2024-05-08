@@ -42,24 +42,26 @@
 {% endschema %}
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-  var section = document.querySelector(".scrolling-text-section");
-  window.addEventListener("scroll", function() {
-    if (isInViewport(section)) {
-      section.classList.add("show-text");
-    } else {
-      section.classList.remove("show-text");
+  $(document).ready(function() {
+    var section = $(".scrolling-text-section");
+  
+    $(window).on("scroll resize", function() {
+      if (isInViewport(section)) {
+        section.find(".scrolling-text-section__first-text").animate({opacity: 1, left: "0"}, 500);
+        section.find(".scrolling-text-section__second-text").animate({opacity: 1, right: "0"}, 500);
+      } else {
+        section.find(".scrolling-text-section__first-text").animate({opacity: 0, left: "-100%"}, 500);
+        section.find(".scrolling-text-section__second-text").animate({opacity: 0, right: "-100%"}, 500);
+      }
+    });
+  
+    function isInViewport($element) {
+      var windowHeight = $(window).height(),
+          scrollTop = $(window).scrollTop(),
+          elementOffsetTop = $element.offset().top,
+          elementHeight = $element.outerHeight();
+      
+      return (scrollTop + windowHeight > elementOffsetTop && scrollTop < elementOffsetTop + elementHeight);
     }
   });
-});
-
-function isInViewport(element) {
-  var rect = element.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= window.innerHeight &&
-    rect.right <= window.innerWidth
-  );
-}
 </script>
