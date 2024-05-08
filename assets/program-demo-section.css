@@ -185,7 +185,7 @@
   .program-demo-section:after {
     width: 82px;
     height: 82px;
-    bottom: 7%;
+    bottom: 10%;
     right: 5%; 
     background-size: 82px;
   }
