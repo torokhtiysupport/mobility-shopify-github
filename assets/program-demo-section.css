@@ -192,8 +192,8 @@
   .program-demo-section:before {
     width: 76px;
     height: 76px;
-    top: 10%;
-    left: 5%;
+    top: 80px;
+    left: 0;
     background-size: 76px;
   }
   .section-container:has(.program-demo-section):after {
