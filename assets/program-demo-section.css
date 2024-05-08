@@ -17,7 +17,7 @@
 .program-demo-section {
   text-align: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
 .section-container:has(.program-demo-section):after {
