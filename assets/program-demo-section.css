@@ -14,7 +14,7 @@
     background: linear-gradient(to bottom right, white 49.5%, black 50%);
 }
 
-.program-demo-section-bg:before {
+.section-container:has(.program-demo-section):after {
   content: '';
   display: inline-block;
   position: absolute;
