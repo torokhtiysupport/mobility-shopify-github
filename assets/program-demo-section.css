@@ -20,11 +20,6 @@
   align-items: center;
   position: relative;
   z-index: 5;
-
-  background-image: url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/dumbell.webp?v=1714716405');
-  background-size: 354px;
-  background-position: top 40px left 7%;
-  background-repeat: no-repeat;
 }
 
 .program-demo-section:before {
