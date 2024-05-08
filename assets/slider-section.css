@@ -26,3 +26,7 @@
 .slick-prev:hover, .slick-next:hover, .slick-prev:focus, .slick-next:focus {
   background-color: --main-color!important;
 }
+
+.slick-prev:hover, .slick-next:hover, .slick-prev:focus, .slick-next:focus {
+  background-color: #000!important;
+}
