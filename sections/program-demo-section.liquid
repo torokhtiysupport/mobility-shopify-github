@@ -6,6 +6,10 @@
       <div class="program-demo-section">
         <h2 class="program-demo-section__title">{{ section.settings.section_title }}</h2>
         <p class="program-demo-section__text">{{ section.settings.section_text }}</p>
+        <div class="program-demo-section__badge">
+          <p>FOR FREE</p>
+        </div>
+        <a class="program-demo-section__button" href="{{ section.settings.demo_link }}" target="_blank">DOWNLOAD</a>
       </div>
     </div>
   </div>
@@ -31,6 +35,11 @@
       "type": "text",
       "id": "section_text",
       "label": "Section Text"
+    },
+    {
+      "type": "url",
+      "id": "demo_link",
+      "label": "Demo Link"
     }
   ],
   "presets": [
