@@ -2,7 +2,7 @@
   background-color: #fff;
   padding: 80px 0;
   position: relative;
-  z-index: 5;
+  z-index: 2;
 }
 
 .scrolling-text-section p {
@@ -10,6 +10,8 @@
   font-size: 80px;
   text-transform: uppercase;
   font-weight: bold;
+  position: relative;
+  z-index: 2;
 }
 
 .scrolling-text-section__first-text p {
