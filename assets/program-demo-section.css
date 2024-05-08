@@ -17,6 +17,7 @@
 .program-demo-section-bg:before {
   content: '';
   display: inline-block;
+  position: absolute;
   width: 50%;
   height: 50%;
   border-radius: 50%;
