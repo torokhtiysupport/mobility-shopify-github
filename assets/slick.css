@@ -117,3 +117,15 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+.slick-prev {
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+.slick-next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
