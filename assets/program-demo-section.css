@@ -50,6 +50,7 @@
 }
 
 .program-demo-section__badge {
+  margin-top: -10px;
   margin-bottom: 80px;
   padding: 16px 24px;
   transform: rotate(-4.61deg);
@@ -63,6 +64,6 @@
   text-transform: uppercase;
   font-weight: bold;
   font-size: 28px;
-  margin: -10px 0 0;
+  margin: 0;
   text-align: center;
 }
