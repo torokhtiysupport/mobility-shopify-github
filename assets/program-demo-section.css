@@ -37,6 +37,10 @@
   margin: 0 0 48px;
 }
 
+.program-demo-section__text-container {
+  position: relative;
+}
+
 .program-demo-section__text {
   font-family: var(--font-heading-family);
   text-transform: uppercase;
