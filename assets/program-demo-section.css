@@ -51,11 +51,11 @@
 
 .program-demo-section__badge {
   margin-bottom: 80px;
+  padding: 16px 24px;
   transform: rotate(-4.61deg);
 }
 
 .program-demo-section__badge p {
-  padding: 16px 24px;
   font-family: var(--font-heading-family);
   text-transform: uppercase;
   font-weight: bold;
