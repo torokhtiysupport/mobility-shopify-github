@@ -213,7 +213,7 @@
   .program-demo-section__badge {
     margin-top: -7px;
     margin-bottom: 32px;
-    padding: 8px 14px;
+    padding: 8px 0px;
     width: 100px;
     border-radius: 8px;
   }
