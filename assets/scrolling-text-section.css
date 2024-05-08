@@ -5,6 +5,7 @@
   overflow: hidden;
   white-space: nowrap;
   z-index: 2;
+  height: 420px;
 }
 
 .scrolling-text-section p {
@@ -30,7 +31,6 @@
 .scrolling-text-section__first-text,
 .scrolling-text-section__second-text {
   position: absolute;
-  top: 50%;
   white-space: nowrap;
 }
 
