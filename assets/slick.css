@@ -171,14 +171,14 @@
 
 @media screen and (max-width: 768px) {
   .slick-prev {
-    left: 25%;
+    left: 30%;
     top: auto;
-    bottom: -60px;
+    bottom: -70px;
   }
   
   .slick-next {
-    right: 25%;
+    right: 30%;
     top: auto;
-    bottom: -60px;
+    bottom: -70px;
   }
 }
