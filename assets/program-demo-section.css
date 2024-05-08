@@ -52,6 +52,8 @@
 }
 
 .program-demo-section__badge {
+  position: relative;
+  z-index: 3;
   margin-top: -10px;
   margin-bottom: 80px;
   padding: 16px 24px;
