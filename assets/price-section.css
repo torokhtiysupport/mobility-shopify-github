@@ -149,7 +149,7 @@
   .section-container {
     padding: 100px 0 30px;
   }
-  .section-container::before {
+  .section-container:has(.price-section):before {
     height: 32px;
   } 
   .price-section__title {
