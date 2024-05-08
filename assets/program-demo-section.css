@@ -15,7 +15,9 @@
 }
 
 .program-demo-section {
-  text-align: center;
+  text-align: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .section-container:has(.program-demo-section):after {
