@@ -283,6 +283,14 @@
         "section_second_text": "and it's time for you too! "
       }
     },
+    "program_demo_section_YzjTxc": {
+      "type": "program-demo-section",
+      "settings": {
+        "main_color": "#c6f33f",
+        "section_title": "Not ready to buy?We have a solution",
+        "section_text": "Download the first 3 lesson"
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -332,6 +340,7 @@
     "price_section_qHUdRY",
     "slider_section_Jtheh9",
     "scrolling_text_section_yTtrci",
+    "program_demo_section_YzjTxc",
     "product-recommendations",
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed"
   ]
