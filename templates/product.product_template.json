@@ -287,7 +287,7 @@
       "type": "program-demo-section",
       "settings": {
         "main_color": "#c6f33f",
-        "section_title": "Not ready to buy?We have a solution",
+        "section_title": "Not ready to buy?<br>We have a solution",
         "section_text": "Download the first 3 lesson",
         "demo_link": "http:\/\/eepurl.com\/id6Su5"
       }
