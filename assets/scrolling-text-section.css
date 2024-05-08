@@ -67,11 +67,10 @@
   .scrolling-text-section {
     padding: 40px 0;
     white-space: wrap;
-    height: 320px;
+    height: 340px;
   }
   .scrolling-text-section p {
     font-size: 50px;
-    line-height: 1.1;
   }
   .scrolling-text-section__first-text,
   .scrolling-text-section__second-text {
