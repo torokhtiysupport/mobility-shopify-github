@@ -127,6 +127,10 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(235, 235, 235, 1);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
 }
 
 .slick-next {
@@ -138,6 +142,10 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(235, 235, 235, 1);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
 }
 
 .slick-prev:before {
