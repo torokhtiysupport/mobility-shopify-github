@@ -168,3 +168,15 @@
   width: 14px;
   height: 24px;
 }
+
+@media screen and (max-width: 768px) {
+  .slick-prev {
+    left: calc(50%-20px);
+    top: 100%;
+  }
+  
+  .slick-next {
+    right: calc(50%-20px);
+    top: 100%;
+  }
+}
