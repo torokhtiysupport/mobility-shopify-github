@@ -16,6 +16,7 @@
   position: relative;
   z-index: 2;
   margin: 0;
+  line-height: 1;
 }
 
 .scrolling-text-section__first-text p {
@@ -38,14 +39,14 @@
   left: -100%;
   transform: translateX(-100%);
   transition: transform 1s;
-  top: 100px;
+  top: 80px;
 }
 
 .scrolling-text-section__second-text {
   right: -100%;
   transform: translateX(100%);
   transition: transform 1s;
-  bottom: 100px;
+  bottom: 80px;
 }
 
 .scrolling-text-section.show-text .scrolling-text-section__first-text,
