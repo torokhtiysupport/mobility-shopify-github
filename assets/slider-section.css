@@ -23,6 +23,6 @@
     display: block;
 }
 
-.section-slider__title {
+.section-slider__title, .section-slider__text {
   color: #000;
 }
