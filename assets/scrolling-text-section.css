@@ -31,7 +31,6 @@
 .scrolling-text-section__first-text,
 .scrolling-text-section__second-text {
   position: absolute;
-  top: 50%;
   white-space: nowrap;
 }
 
@@ -39,12 +38,14 @@
   left: -100%;
   transform: translateX(-100%);
   transition: transform 1s;
+  top: 80px;
 }
 
 .scrolling-text-section__second-text {
   right: -100%;
   transform: translateX(100%);
   transition: transform 1s;
+  bottom: 80px;
 }
 
 .scrolling-text-section.show-text .scrolling-text-section__first-text,
