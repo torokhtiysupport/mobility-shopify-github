@@ -14,7 +14,7 @@
     background: linear-gradient(to bottom right, white 49.5%, black 50%);
 }
 
-.program-demo-section__title, program-demo-section__text {
+.program-demo-section__title, .program-demo-section__text {
   color: #fff;
   text-align: center;
 }
