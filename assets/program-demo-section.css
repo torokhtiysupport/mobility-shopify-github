@@ -24,6 +24,7 @@
   left: 50%;
   transform: translateX(-50%);
   border-radius: 50%;
+  z-index: -1;
 }
 
 .program-demo-section__title, .program-demo-section__text {
