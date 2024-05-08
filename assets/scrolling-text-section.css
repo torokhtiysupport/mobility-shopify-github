@@ -38,11 +38,11 @@
 }
 
 .scrolling-text-section__first-text {
-  left: -100%;
+  left: 0;
 }
 
 .scrolling-text-section__second-text {
-  right: -100%;
+  right: 0;
 }
 
 .scrolling-text-section.show-text .scrolling-text-section__first-text,
