@@ -62,3 +62,31 @@
 .scrolling-text-section.show-text .scrolling-text-section__second-text {
   right: 60px;
 }
+
+@media screen and (max-width: 768px) {
+  .scrolling-text-section {
+    padding: 40px 0;
+    white-space: wrap;
+    height: 320px;
+  }
+  .scrolling-text-section p {
+    font-size: 50px;
+  }
+  .scrolling-text-section__first-text,
+  .scrolling-text-section__second-text {
+    white-space: wrap;
+  }
+  .scrolling-text-section__first-text {
+    top: 40px;
+  }
+  .scrolling-text-section__second-text {
+    bottom: 40px;
+  }
+  .scrolling-text-section.show-text .scrolling-text-section__first-text {
+    left: 20px;
+  }
+  
+  .scrolling-text-section.show-text .scrolling-text-section__second-text {
+    right: 20px;
+  }
+}
