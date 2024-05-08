@@ -1,6 +1,31 @@
+{{ 'scrolling-text-section.css' | asset_url | stylesheet_tag }}
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
-  }
+  "name": "👾Scrolling Text Section",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "main_color",
+      "label": "Main Color"
+    },
+    {
+      "type": "text",
+      "id": "section_first_text",
+      "label": "Section First Text"
+    },
+    {
+      "type": "text",
+      "id": "section_second_text",
+      "label": "Section Second Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "👾Scrolling Text Section"
+    }
+  ]
+}
 {% endschema %}
