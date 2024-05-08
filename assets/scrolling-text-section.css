@@ -53,9 +53,9 @@
 }
 
 .scrolling-text-section.show-text .scrolling-text-section__first-text {
-  left: 0;
+  left: 60px;
 }
 
 .scrolling-text-section.show-text .scrolling-text-section__second-text {
-  right: 0;
+  right: 60px;
 }
