@@ -14,6 +14,10 @@
     background: linear-gradient(to bottom right, white 49.5%, black 50%);
 }
 
+.program-demo-section {
+  text-align: center;
+}
+
 .section-container:has(.program-demo-section):after {
   content: '';
   display: inline-block;
@@ -37,10 +41,6 @@
   margin: 0 0 48px;
 }
 
-.program-demo-section__text-container {
-  position: relative;
-}
-
 .program-demo-section__text {
   font-family: var(--font-heading-family);
   text-transform: uppercase;
@@ -53,8 +53,6 @@
   margin-top: -10px;
   margin-bottom: 80px;
   padding: 16px 24px;
-  display: flex;
-  justify-content: center;
   width: 161px;
   transform: rotate(-4.61deg);
   background-color: rgba(68, 68, 69, 1);
