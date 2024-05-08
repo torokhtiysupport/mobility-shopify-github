@@ -203,4 +203,15 @@
     left: 50%;
     transform: translateX(-50%);
   }
+  .program-demo-section__title {
+    margin: 0 0 32px;
+  }
+  
+  .program-demo-section__text {
+    font-family: var(--font-heading-family);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+  }
 }
