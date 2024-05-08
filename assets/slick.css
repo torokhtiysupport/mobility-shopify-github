@@ -139,7 +139,7 @@
 }
 
 .slick-prev:before {
-  content: url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/icon-arrow.png?v=1715139501');
+  content: url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/icon-arrow.png?v=1715139501&width=14&height=24');
   display: inline-block;
   transform: rotateY(180deg);
   width: 14px;
