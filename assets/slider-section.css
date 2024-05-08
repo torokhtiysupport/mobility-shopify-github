@@ -27,3 +27,11 @@
   color: #000;
   text-align: center;
 }
+
+.section-slider__title {
+  margin: 0 0 32px;
+}
+
+.section-slider__text {
+  margin: 0 0 80px;
+}
