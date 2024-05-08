@@ -14,4 +14,6 @@
 
 .scrolling-text-section__second-text p {
   color: transparent;
+  -webkit-text-stroke: 1px black;
+  text-stroke: 1px black;
 }
