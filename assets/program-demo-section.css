@@ -167,4 +167,34 @@
   .program-demo-section {
     padding: 30px 0 0;
   }
+  .program-demo-section-bg:before {
+    width: 30px;
+    height: 30px;
+    bottom: 5%;
+    left: 20%;
+  
+    background-size: 30px;
+  }
+  .program-demo-section-bg:after {
+    width: 52px;
+    height: 52px;
+    top: 0;
+    right: 15%;
+    background-size: 52px;
+  }
+  .program-demo-section:after {
+    width: 82px;
+    height: 82px;
+    bottom: 0;
+    right: 0; 
+    background-size: 82px;
+  }
+  .program-demo-section:before {
+    width: 76px;
+    height: 76px;
+    top: 10%;
+    left: 5%;
+  
+    background-size: 76px;
+  }
 }
