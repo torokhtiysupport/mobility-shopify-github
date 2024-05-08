@@ -53,6 +53,7 @@
   margin-top: -10px;
   margin-bottom: 80px;
   padding: 16px 24px;
+  display: inline-block;
   width: auto;
   transform: rotate(-4.61deg);
   background-color: rgba(68, 68, 69, 1);
