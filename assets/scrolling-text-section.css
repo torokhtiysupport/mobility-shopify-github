@@ -31,6 +31,7 @@
 .scrolling-text-section__first-text,
 .scrolling-text-section__second-text {
   position: absolute;
+  top: 50%;
   white-space: nowrap;
 }
 
