@@ -170,8 +170,8 @@
   .program-demo-section-bg:before {
     width: 30px;
     height: 30px;
-    bottom: 5%;
-    left: 20%;
+    bottom: 20%;
+    left: 10%;
   
     background-size: 30px;
   }
