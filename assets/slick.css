@@ -132,6 +132,7 @@
   height: 56px;
   border-radius: 50%;
   border: none;
+  transition: background-color .5s ease-in-out;
 }
 
 .slick-next {
@@ -148,6 +149,7 @@
   height: 56px;
   border-radius: 50%;
   border: none;
+  transition: background-color .5s ease-in-out;
 }
 
 .slick-prev:before {
