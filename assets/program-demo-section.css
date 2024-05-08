@@ -18,3 +18,14 @@
   color: #fff;
   text-align: center;
 }
+
+.program-demo-section__title {
+  margin: 0 0 48px;
+}
+
+.program-demo-section__text {
+  font-family: var(--font-heading-family);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 0 155px;
+}
