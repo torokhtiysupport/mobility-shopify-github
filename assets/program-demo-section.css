@@ -22,7 +22,7 @@
   z-index: 5;
 }
 
-.program-demo-section:before {
+.program-demo-section:after {
   content: '';
   position: absolute;
   width: 324px;
