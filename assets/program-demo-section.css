@@ -220,4 +220,7 @@
   .program-demo-section__badge p {
     font-size: 20px;
   }
+  .program-demo-section__button {
+    padding: 14px 24px;
+  }
 }
