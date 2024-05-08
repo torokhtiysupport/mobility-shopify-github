@@ -178,8 +178,8 @@
   .program-demo-section-bg:after {
     width: 52px;
     height: 52px;
-    top: 0;
-    right: 15%;
+    top: -20px;
+    right: 0;
     background-size: 52px;
   }
   .program-demo-section:after {
