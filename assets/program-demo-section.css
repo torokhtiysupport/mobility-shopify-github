@@ -53,6 +53,9 @@
   margin-bottom: 80px;
   padding: 16px 24px;
   transform: rotate(-4.61deg);
+  background-color: rgba(68, 68, 69, 1);
+  border: 1px solid rgba(235, 235, 235, 0.20);
+  border-radius: 16px;
 }
 
 .program-demo-section__badge p {
