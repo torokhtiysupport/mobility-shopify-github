@@ -46,7 +46,7 @@
   text-transform: uppercase;
   font-weight: bold;
   font-size: 28px;
-  margin: 0 0 5px;
+  margin: 0;
 }
 
 .program-demo-section__badge {
@@ -60,6 +60,6 @@
   text-transform: uppercase;
   font-weight: bold;
   font-size: 28px;
-  margin: 0;
+  margin: -10px 0 0;
   text-align: center;
 }
