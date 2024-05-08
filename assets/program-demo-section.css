@@ -23,7 +23,7 @@
 
   background-image: url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/gym-bottle.webp?v=1714364080'), url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/dumbell.webp?v=1714716405');
   background-size: 324px, 354px;
-  background-position: right 100px bottom 82px, top: 230px left: 250px;
+  background-position: right 20% bottom 82px, top 230px left 20%;
   background-repeat: no-repeat, no-repeat;
 }
 
