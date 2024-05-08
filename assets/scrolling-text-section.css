@@ -38,11 +38,11 @@
 }
 
 .scrolling-text-section__first-text {
-  left: 0;
+  left: -100%;
 }
 
 .scrolling-text-section__second-text {
-  right: 0;
+  right: -100%;
 }
 
 .scrolling-text-section.show-text .scrolling-text-section__first-text,
@@ -50,4 +50,12 @@
   transform: translateY(-50%);
   opacity: 1;
   transition: transform 0.5s, opacity 0.5s;
+}
+
+.scrolling-text-section.show-text .scrolling-text-section__first-text {
+  left: 0;
+}
+
+.scrolling-text-section.show-text .scrolling-text-section__second-text {
+  right: 0;
 }
