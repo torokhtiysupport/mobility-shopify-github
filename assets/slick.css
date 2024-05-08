@@ -118,9 +118,8 @@
     display: none;
 }
 
-.slick-prev {
-  position: absolute;
-  left: -27px;
+.slick-prev, .slick-next {
+  position: absolute; 
   top: 50%;
   z-index: 1;
   display: flex;
@@ -136,22 +135,12 @@
   transition: border 0.5s ease-in-out;
 }
 
+.slick-prev {
+  left: -27px;
+}
+
 .slick-next {
-  position: absolute;
   right: -27px;
-  top: 50%;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  background-color: rgba(235, 235, 235, 1);
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  border: 1px solid transparent;
-  transition: background-color .5s ease-in-out;
-  transition: border 0.5s ease-in-out;
 }
 
 .slick-prev:before {
