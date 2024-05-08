@@ -1,6 +1,6 @@
 .section-container:has(.program-demo-section) {
   padding: 200px 0 80px;
-  color: #000;
+  background-color: #000;
   position: relative;
 }
 
