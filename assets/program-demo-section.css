@@ -36,8 +36,22 @@
   bottom: 0;
   right: 0;
 
-  background-image: url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/gym-bottle.webp?v=1714364080');
+  background-image: url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/gym-bottle-2.webp?v=1715201814');
   background-size: 324px;
+  background-repeat: no-repeat;
+}
+
+.program-demo-section:before {
+  content: '';
+  position: absolute;
+  width: 354px;
+  height: 354px;
+  z-index: 6;
+  top: 0;
+  left: 0;
+
+  background-image: url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/dumbbell-2.webp?v=1715201814');
+  background-size: 354px;
   background-repeat: no-repeat;
 }
 
