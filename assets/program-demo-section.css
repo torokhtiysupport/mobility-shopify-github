@@ -208,10 +208,16 @@
   }
   
   .program-demo-section__text {
-    font-family: var(--font-heading-family);
-    text-transform: uppercase;
-    font-weight: bold;
     font-size: 20px;
-    margin: 0;
+  }
+  .program-demo-section__badge {
+    margin-top: -7px;
+    margin-bottom: 32px;
+    padding: 8px 14px;
+    width: 86px;
+    border-radius: 8px;
+  }
+  .program-demo-section__badge p {
+    font-size: 20px;
   }
 }
