@@ -197,7 +197,7 @@
     background-size: 76px;
   }
   .section-container:has(.program-demo-section):after {
-    width: 90%;
+    width: 85%;
     height: 125px;
     top: 170px;
     left: 50%;
