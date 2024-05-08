@@ -275,6 +275,14 @@
         "section_text": "Check out our before and after images of clients who have improved\ntheir mobility with our program."
       }
     },
+    "scrolling_text_section_yTtrci": {
+      "type": "scrolling-text-section",
+      "settings": {
+        "main_color": "#c6f33f",
+        "section_first_text": "the secret to my success in lifting",
+        "section_second_text": "and it's time for you too! "
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -323,6 +331,7 @@
     "why_trust_me_4EhMRb",
     "price_section_qHUdRY",
     "slider_section_Jtheh9",
+    "scrolling_text_section_yTtrci",
     "product-recommendations",
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed"
   ]
