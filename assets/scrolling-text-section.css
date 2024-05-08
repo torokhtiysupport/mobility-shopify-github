@@ -24,3 +24,27 @@
   -webkit-text-stroke: 1px black;
   text-stroke: 1px black;
 }
+
+.scrolling-text-section__first-text,
+.scrolling-text-section__second-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.scrolling-text-section__first-text {
+  left: -100%;
+}
+
+.scrolling-text-section__second-text {
+  right: -100%;
+}
+
+.scrolling-text-section.show-text .scrolling-text-section__first-text,
+.scrolling-text-section.show-text .scrolling-text-section__second-text {
+  transform: translateY(-50%);
+  opacity: 1;
+  transition: transform 0.5s, opacity 0.5s;
+}
