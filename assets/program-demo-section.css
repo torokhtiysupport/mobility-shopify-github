@@ -198,7 +198,7 @@
   }
   .section-container:has(.program-demo-section):after {
     width: 80%;
-    height: 130px;
+    height: 125px;
     top: 170px;
     left: 50%;
     transform: translateX(-50%);
