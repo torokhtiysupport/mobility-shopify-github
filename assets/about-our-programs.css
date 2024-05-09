@@ -68,6 +68,10 @@
   gap: 40px;
 }
 
+.about-our-programs-info p {
+  line-height: 1;
+}
+
 .about-our-programs-info-numbers {
   display: flex;
   justify-content: space-between;
