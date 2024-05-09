@@ -142,11 +142,11 @@
   
   .about-our-programs-image-numbers.second-number {
     bottom: 47px;
-    left: -24px;
+    left: -16px;
   }
   
   .about-our-programs-image-numbers__title {
-    font-size: 24px;
+    font-size: 28px;
   }
   
   .about-our-programs-image-numbers__text {
@@ -170,16 +170,8 @@
     max-width: 100px;
   }
   
-  .about-our-programs-info-numbers > div {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  
   .about-our-programs-info-numbers__title {
-    font-family: var(--font-heading-family);
-    font-size: 40px;
-    font-weight: 600;
+    font-size: 32px;
   }
   
   
