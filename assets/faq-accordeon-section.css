@@ -45,6 +45,13 @@
   padding: 8px;
   border-radius: 50%;
   background-color: rgba(235, 235, 235, 0.2);
+  border: 1px solid transparent;
+  transition: border .5s ease-in-out;
+}
+
+.faq-toggle:hover, .faq-toggle:focus{
+  border: 1px solid rgba(235, 235, 235, 0.20);
+  transition: border .5s ease-in-out;
 }
 
 .faq-toggle:before {
