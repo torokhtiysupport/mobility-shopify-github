@@ -164,10 +164,7 @@
   .about-our-programs-info-numbers {
     display: flex;
     justify-content: space-between;
-  }
-  
-  .about-our-programs-info-numbers p {
-    line-height: 1;
+    max-width: 100px;
   }
   
   .about-our-programs-info-numbers > div {
