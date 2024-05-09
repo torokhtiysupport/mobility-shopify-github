@@ -18,12 +18,12 @@
 }
 
 .faq-toggle:before {
-  content: url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/icon-plus.svg?v=1715239275');
+  content: url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/icon-plus.svg?v=1715239722');
   width: 24px;
   height: 24px;
   line-height: 1;
 }
 
 .faq-toggle.open:before {
-  content: '-';
+  content: url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/icon-minus.svg?v=1715238869');
 }
