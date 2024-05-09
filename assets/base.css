@@ -1569,10 +1569,16 @@ button {
   cursor: pointer;
 }
 
+/* Judge Me Custom Styles */
+
 .jdgm-rev-widg__title {
   color: #000;
   font-size: calc(var(--font-heading-scale) * 4rem)!important;
   margin: 0 0 60px!important;
+}
+
+.jdgm-rev-widg {
+  padding: 80px 0!important;
 }
 
 .jdgm-rev__icon {
