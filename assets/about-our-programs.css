@@ -109,3 +109,89 @@
 .about-our-programs-info button:hover, .about-our-programs-info button:focus {
   color: #000!important;
 }
+
+@media screen and (max-width: 768px) {
+  .about-our-programs {
+    padding: 30px 0;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .about-our-programs-image {
+    position: relative;
+    flex: flex;
+    width: 100%;
+  }
+  
+  .about-our-programs-image__image-container img {
+    border-radius: 16px;
+  }
+  
+  .about-our-programs-image-numbers {
+    width: 78px;
+    padding: 6px 0;
+    gap: 5px;
+  
+    border-radius: 12px;
+  }
+  
+  .about-our-programs-image-numbers.first-number {
+    top: -35px;
+    right: 28px;
+  }
+  
+  .about-our-programs-image-numbers.second-number {
+    bottom: 47px;
+    left: -24px;
+  }
+  
+  .about-our-programs-image-numbers__title {
+    font-size: 24px;
+  }
+  
+  .about-our-programs-image-numbers__text {
+    font-size: 10px;
+  }
+  
+  .about-our-programs-info p, .about-our-programs-info h2 {
+    margin: 0;
+  }
+  
+  .about-our-programs-info {
+    gap: 24px;
+  }
+  
+  .about-our-programs-info-numbers {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .about-our-programs-info-numbers p {
+    line-height: 1;
+  }
+  
+  .about-our-programs-info-numbers > div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .about-our-programs-info-numbers__title {
+    font-family: var(--font-heading-family);
+    font-size: 40px;
+    font-weight: 600;
+  }
+  
+  
+  .about-our-programs-info button {
+    border: none; 
+    color: #000;
+    padding: 20px 40px!important;
+    font-size: 20px;
+    border-radius: 16px;
+  }
+  
+  .about-our-programs-info button:hover, .about-our-programs-info button:focus {
+    color: #000!important;
+  }
+}
