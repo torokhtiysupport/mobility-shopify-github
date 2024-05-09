@@ -301,6 +301,9 @@
       "block_order": [
         "judge_me_reviews_review_widget_WK6tDC"
       ],
+      "custom_css": [
+        "{background-color: #fff !important;}"
+      ],
       "settings": {
         "include_margins": true
       }
