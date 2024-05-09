@@ -1,6 +1,68 @@
+{{ 'faq-accordeon-section.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width">
+  <div class="faq-accordeon-section">
+    <h2 class="faq-accordeon-section__title">{{ section.settings.section_title }}</h2>
+    <div class="faq-accordeon-section-items">
+      {% for block in section.blocks %}
+        <div class="faq-accordeon-section-items__item">
+           <h3 class="faq-question">{{ block.settings.question }}</h3>
+           <div class="faq-answer">{{ block.settings.answer }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+
+{
+  "name": "👾FAQ Accordeon Section",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "main_color",
+      "label": "Main Color"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "👾FAQ Accordeon Section"
+    }
+  ]
+}
+
 {% endschema %}
+
+{% javascript %}
+  $(document).ready(function() {
+    $('.faq-question').click(function() {
+      $(this).next('.faq-answer').slideToggle();
+    });
+  });
+{% endjavascript %}
