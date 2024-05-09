@@ -38,12 +38,14 @@
   cursor: pointer;
   display: block!important;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 24px;
+  right: 24px;;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 8px;
+  border-radius: 50%;
+  background-color: rgba(235, 235, 235, 0.2);
 }
 
 .faq-toggle:before {
