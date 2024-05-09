@@ -1593,3 +1593,7 @@ button {
   box-shadow: none!important;
   padding: 16px 20px!important;
 }
+
+.jdgm-rev__media {
+  display: none!important;
+}
