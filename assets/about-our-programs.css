@@ -26,6 +26,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
+  z-index: 5;
 
   background: rgba(235, 235, 235, 0.20);
   backdrop-filter: blur(20px);
