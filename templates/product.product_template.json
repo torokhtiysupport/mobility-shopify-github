@@ -312,6 +312,25 @@
         "info_number_text_3": "Memberships Managed"
       }
     },
+    "faq_accordeon_section_mihiLF": {
+      "type": "faq-accordeon-section",
+      "blocks": {
+        "column_EMqAUh": {
+          "type": "column",
+          "settings": {
+            "question": "Who is the mobility routine for lifters best suited for?",
+            "answer": "This overhead mobility program is best suited for those with very mild to no (0-2) shoulder pain ANYTHING related to overhead shoulder mobility deficits. People that have difficulty with overhead lifts (Functional Fitness & Olympic weightlifters) and individuals that want to improve their overhead mobility and stability! "
+          }
+        }
+      },
+      "block_order": [
+        "column_EMqAUh"
+      ],
+      "settings": {
+        "main_color": "#c6f33f",
+        "section_title": "FAQ"
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -363,6 +382,7 @@
     "scrolling_text_section_yTtrci",
     "program_demo_section_YzjTxc",
     "about_our_programs_iQwmLt",
+    "faq_accordeon_section_mihiLF",
     "product-recommendations",
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed"
   ]
