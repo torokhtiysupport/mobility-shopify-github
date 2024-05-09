@@ -1578,3 +1578,10 @@ button {
 .jdgm-rev__icon {
   display: none!important;
 }
+
+.jdgm-rev__author {
+  font-size: 24px!important;
+  font-family: var(--font-heading-family)!important;
+  font-weight: 600!important;
+  color: #000!important;
+}
