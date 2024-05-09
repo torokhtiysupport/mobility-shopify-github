@@ -19,7 +19,7 @@
 
 .about-our-programs-image-numbers {
   position: absolute;
-  width: 82px;
+  width: 92px;
   padding: 8px 0;
   display: flex;
   flex-direction: column;
@@ -58,10 +58,14 @@
   font-size: 14px;
 }
 
+.about-our-programs-info p, .about-our-programs-info h2 {
+  margin: 0;
+}
+
 .about-our-programs-info {
   display: flex;
   flex-direction: column;
-  
+  gap: 40px;
 }
 
 
