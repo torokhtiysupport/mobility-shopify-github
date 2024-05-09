@@ -63,6 +63,7 @@
 <script type="text/javascript">
   $(document).ready(function() {
     $('.faq-toggle').click(function() {
+      $(this).toggleClass('open');
       $(this).next('.faq-answer').slideToggle();
     });
   });
