@@ -45,6 +45,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
+  padding: 8px;
   border-radius: 50%;
   background-color: rgba(235, 235, 235, 0.2);
 }
