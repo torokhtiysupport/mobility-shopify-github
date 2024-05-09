@@ -5,6 +5,10 @@
   gap: 100px;
 }
 
+.about-our-programs-image {
+  width: 45%;
+}
+
 .about-our-programs-image__image-container {
   position: relative;
   border-radius: 32px;
