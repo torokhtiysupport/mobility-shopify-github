@@ -4,6 +4,8 @@
   align-items: center;
   justify-content: center;
   gap: 100px;
+  position: relative;
+  z-index: 5;
 }
 
 .about-our-programs-image {
