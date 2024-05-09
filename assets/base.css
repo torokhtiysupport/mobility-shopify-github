@@ -1618,3 +1618,8 @@ button {
 .jdgm-row-media {
   display: none!important;
 }
+
+.jdgm-rev__body, .jdgm-rev__timestamp {
+  color: #000!important;
+  opacity: 0.8!important;
+}
