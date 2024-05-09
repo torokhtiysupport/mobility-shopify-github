@@ -30,6 +30,11 @@
   border-radius: 16px;
 }
 
+.about-our-programs-image-numbers.first-number {
+  top: 0;
+  right: 28px;
+}
+
 .about-our-programs-image-numbers p {
   margin: 0;
 }
