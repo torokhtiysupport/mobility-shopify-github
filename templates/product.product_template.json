@@ -369,8 +369,25 @@
         "section_title": "FAQ"
       }
     },
+    "17152727106dddcc0a": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_WK6tDC": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_WK6tDC"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
         "title": "Section heading",
         "subtitle": "",
@@ -395,34 +412,6 @@
         "padding_top": 72,
         "padding_bottom": 40
       }
-    },
-    "42ea5b86-e5b3-44b9-8a28-410eec1590ed": {
-      "type": "recently-viewed-products",
-      "settings": {
-        "title": "Recently viewed",
-        "subtitle": "",
-        "heading_size": "h2",
-        "full_width": false,
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "17152727106dddcc0a": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_WK6tDC": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_WK6tDC"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
@@ -437,8 +426,7 @@
     "program_demo_section_YzjTxc",
     "about_our_programs_iQwmLt",
     "faq_accordeon_section_mihiLF",
-    "product-recommendations",
-    "42ea5b86-e5b3-44b9-8a28-410eec1590ed",
-    "17152727106dddcc0a"
+    "17152727106dddcc0a",
+    "product-recommendations"
   ]
 }
