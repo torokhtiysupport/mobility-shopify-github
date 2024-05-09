@@ -292,6 +292,26 @@
         "demo_link": "http:\/\/eepurl.com\/id6Su5"
       }
     },
+    "about_our_programs_iQwmLt": {
+      "type": "about-our-programs",
+      "settings": {
+        "main_color": "#c6f33f",
+        "section_title": "Craft your physique, rewrite your story",
+        "section_text": "Iaculis nunc sed augue lacus viverra vitae congue eu consequat. Gravida in fermentum et sollicitudin ac orci phasellus. Viverra ipsum nunc aliquet bibendum enim facilisis gravida. Massa eget egestas purus viverra accumsan in nisl nisi scelerisque. Feugiat pretium nibh ipsum consequat nisl vel pretium lectus quam.",
+        "section_main-image": "shopify:\/\/shop_images\/overhead-photo.webp",
+        "image_alt": "Overhead in the gym",
+        "image_number_title_1": "18",
+        "image_number_text_1": "Works",
+        "image_number_title_2": "6",
+        "image_number_text_2": "Weeks",
+        "info_number_title_1": "35",
+        "info_number_text_1": "Programs",
+        "info_number_title_2": "40132",
+        "info_number_text_2": "Program Downloads",
+        "info_number_title_3": "3M",
+        "info_number_text_3": "Memberships Managed"
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -342,6 +362,7 @@
     "slider_section_Jtheh9",
     "scrolling_text_section_yTtrci",
     "program_demo_section_YzjTxc",
+    "about_our_programs_iQwmLt",
     "product-recommendations",
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed"
   ]
