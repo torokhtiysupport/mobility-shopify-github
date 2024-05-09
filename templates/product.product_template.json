@@ -289,6 +289,22 @@
         "section_second_text": "and it's time for you too! "
       }
     },
+    "17152727106dddcc0a": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_WK6tDC": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_WK6tDC"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "program_demo_section_YzjTxc": {
       "type": "program-demo-section",
       "settings": {
@@ -369,22 +385,6 @@
         "section_title": "FAQ"
       }
     },
-    "17152727106dddcc0a": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_WK6tDC": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_WK6tDC"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "product-recommendations": {
       "type": "product-recommendations",
       "disabled": true,
@@ -423,10 +423,10 @@
     "price_section_qHUdRY",
     "slider_section_Jtheh9",
     "scrolling_text_section_yTtrci",
+    "17152727106dddcc0a",
     "program_demo_section_YzjTxc",
     "about_our_programs_iQwmLt",
     "faq_accordeon_section_mihiLF",
-    "17152727106dddcc0a",
     "product-recommendations"
   ]
 }
