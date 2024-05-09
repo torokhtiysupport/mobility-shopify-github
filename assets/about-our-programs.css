@@ -128,7 +128,7 @@
   }
   
   .about-our-programs-image-numbers {
-    width: 78px;
+    width: 70px;
     padding: 6px 0;
     gap: 5px;
   
@@ -150,7 +150,7 @@
   }
   
   .about-our-programs-image-numbers__text {
-    font-size: 10px;
+    font-size: 12px;
   }
   
   .about-our-programs-info p, .about-our-programs-info h2 {
