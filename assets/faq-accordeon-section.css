@@ -16,7 +16,7 @@
   padding: 8px;
 }
 
-.faq-toggle::before {
+.faq-toggle:before {
   content: '+';
   width: 24px;
   height: 24px;
@@ -24,6 +24,6 @@
   font-size: 20px;
 }
 
-.faq-toggle.open::before {
+.faq-toggle.open:before {
   content: '-';
 }
