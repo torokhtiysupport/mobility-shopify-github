@@ -83,31 +83,15 @@
     padding-right: 60px;
   }
   
-  .faq-answer {
-    display: none;
-    margin: 24px 0 0;
-    opacity: 0.8;
-  }
-  
-  .faq-accordeon-section-items__item {
-    position: relative;
-    padding: 24px;
-  
-    background: rgba(235, 235, 235, 0.20);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(235, 235, 235, 0.20);
-    border-radius: 16px;
-  }
-  
   .faq-toggle {
     cursor: pointer;
     display: block!important;
     position: absolute;
     top: 24px;
     right: 24px;
-    width: 40px;
-    height: 40px;
-    padding: 8px;
+    width: 32px;
+    height: 32px;
+    padding: 4px;
     border-radius: 50%;
     background-color: rgba(235, 235, 235, 0.2);
     border: 1px solid transparent;
