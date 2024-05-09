@@ -1584,4 +1584,5 @@ button {
   font-family: var(--font-heading-family)!important;
   font-weight: 600!important;
   color: #000!important;
+  text-transform: uppercase;
 }
