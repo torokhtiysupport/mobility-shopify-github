@@ -1586,3 +1586,7 @@ button {
   color: #000!important;
   text-transform: uppercase;
 }
+
+.jdgm-rev {
+  background-color: rgba(240, 240, 240, 1)!important;
+}
