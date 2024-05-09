@@ -1619,7 +1619,7 @@ button {
   display: none!important;
 }
 
-.jdgm-rev__body, .jdgm-rev__timestamp {
+.jdgm-rev__body, .jdgm-rev__timestamp, .jdgm-rev__title {
   color: #000!important;
   opacity: 0.8!important;
 }
