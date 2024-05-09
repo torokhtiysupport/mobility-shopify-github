@@ -1592,6 +1592,7 @@ button {
   border-radius: 16px!important;
   box-shadow: none!important;
   padding: 16px 20px!important;
+  min-height: auto!important;
 }
 
 .jdgm-rev__media {
