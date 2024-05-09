@@ -5,13 +5,16 @@
 .faq-accordeon-section__title {
   text-align: center;
   margin: 0 0 80px;
-  font-size: 20px;
 }
 
 .faq-accordeon-section-items {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.faq-question { 
+  font-size: 20px;
 }
 
 .faq-answer {
