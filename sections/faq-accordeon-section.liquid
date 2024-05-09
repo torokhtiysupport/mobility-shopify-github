@@ -64,9 +64,12 @@
 
 <script type="text/javascript">
   $(document).ready(function() {
-    $('.faq-toggle').click(function() {
-      $(this).toggleClass('open');
-      $(this).next('.faq-answer').slideToggle();
+    $('.faq-question, .faq-toggle').click(function() {
+      var $toggle = $(this).closest('.faq-accordeon-section-items__item').find('.faq-toggle');
+      var $answer = $(this).closest('.faq-accordeon-section-items__item').find('.faq-answer');
+
+      $toggle.toggleClass('open');
+      $answer.slideToggle();
     });
   });
 </script>
