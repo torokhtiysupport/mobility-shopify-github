@@ -83,6 +83,12 @@
   gap: 16px;
 }
 
+.about-our-programs-info-numbers__title {
+  font-family: var(--font-heading-family);
+  font-size: 40px;
+  font-weight: 600;
+}
+
 
 .about-our-programs-info button {
   border: none; 
