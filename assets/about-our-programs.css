@@ -54,6 +54,15 @@
   font-weight: 600;
 }
 
+.about-our-programs-image-numbers__title {
+  font-size: 14px;
+}
+
+.about-our-programs-info {
+  display: flex;
+  flex-direction: column;
+  
+}
 
 
 .about-our-programs-info button {
