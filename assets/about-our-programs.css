@@ -68,10 +68,6 @@
   gap: 40px;
 }
 
-.about-our-programs-info p {
-  line-height: 1;
-}
-
 .about-our-programs-info__text {
   opacity: 0.8;
 }
@@ -79,6 +75,10 @@
 .about-our-programs-info-numbers {
   display: flex;
   justify-content: space-between;
+}
+
+.about-our-programs-info-numbers p {
+  line-height: 1;
 }
 
 .about-our-programs-info-numbers > div {
