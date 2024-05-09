@@ -1590,4 +1590,5 @@ button {
 .jdgm-rev {
   background-color: rgba(240, 240, 240, 1)!important
   border-radius: 16px!important;
+  box-shadow: none!important;
 }
