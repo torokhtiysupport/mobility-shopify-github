@@ -72,6 +72,10 @@
   line-height: 1;
 }
 
+.about-our-programs-info__text {
+  opacity: 0.8;
+}
+
 .about-our-programs-info-numbers {
   display: flex;
   justify-content: space-between;
