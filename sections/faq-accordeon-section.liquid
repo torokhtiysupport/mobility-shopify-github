@@ -7,6 +7,7 @@
       {% for block in section.blocks %}
         <div class="faq-accordeon-section-items__item">
            <h3 class="faq-question">{{ block.settings.question }}</h3>
+           <div class="faq-toggle"></div>
            <div class="faq-answer">{{ block.settings.answer }}</div>
         </div>
       {% endfor %}
@@ -61,7 +62,7 @@
 
 <script type="text/javascript">
   $(document).ready(function() {
-    $('.faq-question').click(function() {
+    $('.faq-toggle').click(function() {
       $(this).next('.faq-answer').slideToggle();
     });
   });
