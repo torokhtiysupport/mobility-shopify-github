@@ -71,6 +71,11 @@
           "settings": {
             "custom_liquid": "<div class=\"weeks\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/1806\/0489\/files\/weeks.png?v=1710501784\" alt=\"6 weeks\">\n<\/div>\n\n<style>\n.weeks {\nposition: absolute;\ntop: 10%;\nright: 10%;\n}\n<\/style>"
           }
+        },
+        "judge_me_reviews_preview_badge_4CBhBG": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -81,7 +86,8 @@
         "e592d434-8377-4309-b179-f98d4b3742a2",
         "price",
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7",
-        "custom_liquid_LXFttN"
+        "custom_liquid_LXFttN",
+        "judge_me_reviews_preview_badge_4CBhBG"
       ],
       "custom_css": [
         "media-gallery {display: none !important;}",
@@ -401,6 +407,23 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "17152627932c45745c": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_C68QNM": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_C68QNM"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -416,6 +439,7 @@
     "about_our_programs_iQwmLt",
     "faq_accordeon_section_mihiLF",
     "product-recommendations",
-    "42ea5b86-e5b3-44b9-8a28-410eec1590ed"
+    "42ea5b86-e5b3-44b9-8a28-410eec1590ed",
+    "17152627932c45745c"
   ]
 }
