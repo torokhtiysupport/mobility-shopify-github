@@ -16,6 +16,7 @@
 .faq-question { 
   font-size: 28px;
   margin: 0;
+  cursor: pointer;
 }
 
 .faq-answer {
