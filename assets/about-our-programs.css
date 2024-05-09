@@ -68,6 +68,17 @@
   gap: 40px;
 }
 
+.about-our-programs-info-numbers {
+  display: flex;
+  align-items: space-between;
+}
+
+.about-our-programs-info-numbers > div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 
 .about-our-programs-info button {
   border: none; 
