@@ -1576,5 +1576,5 @@ button {
 }
 
 .jdgm-rev__icon {
-  display: none;
+  display: none!important;
 }
