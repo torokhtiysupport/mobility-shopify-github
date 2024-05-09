@@ -164,6 +164,9 @@
   .about-our-programs-info-numbers {
     display: flex;
     justify-content: space-between;
+  }
+
+  .about-our-programs-info-numbers > div {
     max-width: 100px;
   }
   
