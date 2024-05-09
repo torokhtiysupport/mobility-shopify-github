@@ -4,6 +4,10 @@
   align-items: center;
   justify-content: center;
   gap: 100px;
+}
+
+.about-our-programs-image {
+  position: relative;
   flex: none;
   width: 45%;
 }
@@ -11,10 +15,6 @@
 .about-our-programs-image__image-container img {
   width: 100%;
   border-radius: 32px;
-}
-
-.about-our-programs-image {
-  position: relative;
 }
 
 .about-our-programs-image-numbers {
