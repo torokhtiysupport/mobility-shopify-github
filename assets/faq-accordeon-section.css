@@ -18,10 +18,9 @@
 }
 
 .faq-toggle:before {
-  content: '+';
+  content: url('https://cdn.shopify.com/s/files/1/0660/3207/4988/files/icon-plus.svg?v=1715239275');
   width: 24px;
   height: 24px;
-  font-size: 24px;
   line-height: 1;
 }
 
