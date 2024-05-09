@@ -1574,3 +1574,7 @@ button {
   font-size: calc(var(--font-heading-scale) * 4rem)!important;
   margin: 0 0 60px!important;
 }
+
+.jdgm-rev__icon {
+  display: none;
+}
