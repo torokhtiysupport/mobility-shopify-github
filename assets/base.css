@@ -1610,3 +1610,7 @@ button {
 .jdgm-rev__read-full {
   display: none!important;
 }
+
+.jdgm-row-carousel .jdgm-star {
+  color: #000!important;
+}
