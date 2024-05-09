@@ -14,6 +14,10 @@
   border-radius: 32px;
 }
 
+.about-our-programs-image__image-container img {
+  width: auto;
+}
+
 .about-our-programs-image-numbers {
   position: absolute;
   width: 108px;
