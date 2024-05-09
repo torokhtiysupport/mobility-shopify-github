@@ -1,0 +1,17 @@
+.about-our-programs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.about-our-programs-image__image-container {
+  position: relative;
+  border-radius: 32px;
+}
+
+.about-our-programs-image-numbers {
+  position: absolute;
+  width: 108px;
+  padding: 8px 0;
+}
