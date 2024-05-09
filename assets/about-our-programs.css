@@ -70,7 +70,7 @@
 
 .about-our-programs-info-numbers {
   display: flex;
-  align-items: space-between;
+  justify-content: space-between;
 }
 
 .about-our-programs-info-numbers > div {
