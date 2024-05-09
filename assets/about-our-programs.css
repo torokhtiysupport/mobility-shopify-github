@@ -46,6 +46,12 @@
   margin: 0;
 }
 
+.about-our-programs-image-numbers__title {
+  font-family: var(--font-heading-family);
+  font-size: 32px;
+  font-weight: 600;
+}
+
 
 
 .about-our-programs-info button {
