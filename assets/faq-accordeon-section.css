@@ -24,6 +24,12 @@
 
 .faq-accordeon-section-items__item {
   position: relative;
+  padding: 24px;
+
+  background: rgba(235, 235, 235, 0.20);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(235, 235, 235, 0.20);
+  border-radius: 16px;
 }
 
 .faq-toggle {
