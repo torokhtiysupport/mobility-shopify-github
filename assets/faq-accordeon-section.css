@@ -1,3 +1,29 @@
 .faq-answer {
   display: none;
 }
+
+.faq-accordeon-section-items__item {
+  position: relative;
+}
+
+.faq-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.faq-toggle::before {
+  content: '+';
+  width: 24px;
+  height: 24px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.faq-toggle.open::before {
+  content: '-';
+}
