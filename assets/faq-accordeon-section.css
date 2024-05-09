@@ -39,11 +39,12 @@
   display: block!important;
   position: absolute;
   top: 24px;
-  right: 24px;;
+  right: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: rgba(235, 235, 235, 0.2);
 }
