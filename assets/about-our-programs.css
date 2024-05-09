@@ -8,11 +8,11 @@
 
 .about-our-programs-image__image-container {
   position: relative;
-  border-radius: 32px;
 }
 
 .about-our-programs-image__image-container img {
   width: 100%;
+  border-radius: 32px;
 }
 
 .about-our-programs-image-numbers {
