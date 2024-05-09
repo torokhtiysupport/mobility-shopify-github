@@ -6,13 +6,13 @@
   gap: 100px;
 }
 
-.about-our-programs-image__image-container {
-  position: relative;
-}
-
 .about-our-programs-image__image-container img {
   width: 100%;
   border-radius: 32px;
+}
+
+.about-our-programs-image {
+  position: relative;
 }
 
 .about-our-programs-image-numbers {
