@@ -1595,6 +1595,10 @@ button {
   min-height: auto!important;
 }
 
+.jdgm-row-carousel {
+  height: auto!important;
+}
+
 .jdgm-rev__media {
   display: none!important;
 }
