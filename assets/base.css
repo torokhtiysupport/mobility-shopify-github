@@ -1643,7 +1643,7 @@ button {
   border: none!important;
 }
 
-.jdgm-btn--dark:not([disabled]):hover, .jdgm-btn--dark:focus {
+.jdgm-btn:hover, .jdgm-btn:focus, .jdgm-btn--dark:not([disabled]):hover, .jdgm-btn--dark:focus {
   background-color: #fff!important;
   transition: background-color 0.5s ease-in-out;
   opacity: 1!important;
