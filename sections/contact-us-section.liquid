@@ -1,6 +1,58 @@
+{{ 'contact-us-section.css' | asset_url | stylesheet_tag }}
+
+<div class="contact-us-section-container">
+  <div class="contact-us-section">
+    <div>
+      <h2>{{ section.settings.section_title }}</h2>
+      <p>{{ section.settings.section_text }}</p>
+    </div>
+    <div>
+      <a href="mailto:direct@torokhtiy.com" style="background-color: {{ section.settings.main_color }}">CONTACT US</a>
+    </div>
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
-  }
+  "name": "👾Contact Us Section",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "main_color",
+      "label": "Main Color"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title"
+    },
+    {
+      "type": "textarea",
+      "id": "section_text",
+      "label": "Section Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "section_bg_desktop",
+      "label": "Section Background Desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "section_bg_mobile",
+      "label": "Section Background Mobile"
+    },
+    {
+      "type": "textarea",
+      "id": "image_alt",
+      "label": "Image Alt Tag"
+    }
+  ],
+  "presets": [
+    {
+      "name": "👾Contact Us Section"
+    }
+  ]
+}
 {% endschema %}
