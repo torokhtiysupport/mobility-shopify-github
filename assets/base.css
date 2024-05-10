@@ -1644,7 +1644,7 @@ button {
   border: 1px solid transparent!important;
 }
 
-.jdgm-btn:hover, .jdgm-btn:focus, .jdgm-btn--dark:not([disabled]):hover, .jdgm-btn--dark:focus {
+.jdgm-btn:hover, .jdgm-btn:focus, .jdgm-btn--dark:not([disabled]):hover, .jdgm-btn--dark:focus, .jdgm-write-rev-link.jdgm-write-rev-link:hover, .jdgm-write-rev-link.jdgm-write-rev-link:focus {
   background-color: #fff!important;
   transition: background-color 0.5s ease-in-out;
   opacity: 1!important;
