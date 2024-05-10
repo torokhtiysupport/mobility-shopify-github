@@ -19,7 +19,10 @@
   align-items: center;
   gap: 186px;
 
-  flex: none;
+  flex: auto;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  max-width: var(--page-width);
 }
 
 .contact-us-section h2 {
@@ -67,8 +70,6 @@
     flex-direction: column;
     align-items: center;
     gap: 24px;
-  
-    flex: auto;
   }
   
   .contact-us-section h2 {
