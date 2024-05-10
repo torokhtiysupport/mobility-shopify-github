@@ -1675,6 +1675,12 @@ button {
   transition: border 0.5s ease-in-out!important;
 }
 
+.jdgm-rev-carousel-prev:hover, .jdgm-rev-carousel-prev:focus, .jdgm-rev-carousel-next:hover, .jdgm-rev-carousel-next:focus {
+    border: 1px solid #000!important;
+    transition: background-color .5s ease-in-out!important;
+    transition: border 0.5s ease-in-out!important;
+}
+
 .jdgm-rev-carousel-next {
   right: -20px!important;
 }
