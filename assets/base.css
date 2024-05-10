@@ -1676,4 +1676,5 @@ button {
 
 .jdgm-rev-carousel-next {
   top: -56px!important;
+  z-index: 5!important;
 }
