@@ -46,3 +46,53 @@
   background-color: #fff!important;
   transition: background-color 0.5s ease-in-out;
 }
+
+@media screen and (max-width: 768px) {
+  .contact-us-section-container {
+    padding: 0 1.5rem 60px;
+  }
+  
+  .contact-us-section {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    height: 620px;
+    border-radius: 24px;
+    flex-direction: column;
+    padding: 60px 24px 24px;
+  }
+  
+  .contact-us-flex-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  
+    flex: flex;
+  }
+  
+  .contact-us-section h2 {
+    margin: 0 0 32px;
+  }
+  
+  .contact-us-section p {
+    margin: 0;
+  }
+  
+  .contact-us-section a {
+    padding: 20px 40px;
+    font-size: 20px;
+    font-family: var(--font-heading-family);
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 16px;
+    text-decoration: none;
+    color: #000;
+    transition: background-color 0.5s ease-in-out;
+  }
+  
+  .contact-us-section a:hover, .contact-us-section a:focus {
+    background-color: #fff!important;
+    transition: background-color 0.5s ease-in-out;
+  }
+}
