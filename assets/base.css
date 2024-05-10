@@ -1701,6 +1701,10 @@ button {
   color: #000!important;
 }
 
+.jdgm-widget__popup-content .jdgm-rev-widg__reviews > div:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 @media screen and (max-width: 768px) {
   .jdgm-rev-widg__title {
     margin: 0 0 40px!important;
