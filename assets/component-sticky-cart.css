@@ -1,6 +1,6 @@
 sticky-cart {
   transition: transform 300ms ease;
-  z-index: 3;
+  z-index: 10;
   inset-inline-end: var(--right-position);
 }
 
