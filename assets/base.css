@@ -1653,8 +1653,10 @@ button {
 }
 
 .jdgm-row-readmore {
-  margin-bottom: 40px;
+  margin-bottom: 40px!important;
 }
 
-
+.jdgm-rev-widg__summary-average {
+  color: #000!important;
+}
 
