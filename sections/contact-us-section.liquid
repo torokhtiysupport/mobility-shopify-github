@@ -34,12 +34,12 @@
       "label": "Section Text"
     },
     {
-      "type": "textarea",
+      "type": "image_picker",
       "id": "section_bg_desktop",
       "label": "Section Background Desktop"
     },
     {
-      "type": "textarea",
+      "type": "image_picker",
       "id": "section_bg_mobile",
       "label": "Section Background Mobile"
     },
@@ -59,11 +59,11 @@
 
 <style>
   .contact-us-section {
-    background: {{ section.settings.section_bg_desktop }};
+    background: url('{{ section.settings.section_bg_desktop }}');
   }
   @media screen and (max-width: 768px) {
     .contact-us-section {
-      background: {{ section.settings.section_bg_mobile }};
+      background: url('{{ section.settings.section_bg_mobile }}');
     }
   }
 </style>
