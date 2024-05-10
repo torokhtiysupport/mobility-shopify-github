@@ -1628,3 +1628,16 @@ button {
 .jdgm-rev__body, .jdgm-rev__timestamp, .jdgm-rev__title {
   color: rgba(11, 11, 11, 1)!important;
 }
+
+.jdgm-btn {
+  padding: 20px 40px!important;
+  font-size: 20px!important;
+  font-family: var(--font-heading-family)!important;
+  font-weight: bold!important;
+  text-transform: uppercase!important;
+  border-radius: 16px!important;
+  text-decoration: none!important;
+  color: #000!important;
+  transition: background-color 0.5s ease-in-out!important;
+  line-height: 1!important;
+}
