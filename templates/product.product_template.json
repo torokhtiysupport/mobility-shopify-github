@@ -302,7 +302,8 @@
         "judge_me_reviews_review_widget_WK6tDC"
       ],
       "custom_css": [
-        "{background-color: #fff !important;}"
+        "{background-color: #fff !important;}",
+        ".jdgm-btn {background-color: #c6f33f !important;}"
       ],
       "settings": {
         "include_margins": true
