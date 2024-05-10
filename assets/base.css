@@ -1708,6 +1708,6 @@ button {
 
   .jdgm-write-rev-link {
     width: auto!important;
-    display: inline-block;
+    display: inline-block!important;
   }
 }
