@@ -1679,7 +1679,10 @@ button {
     border: 1px solid #000!important;
     transition: background-color .5s ease-in-out!important;
     transition: border 0.5s ease-in-out!important;
-    opacity: 1important;
+}
+
+.jdgm-rev-carousel-prev:hover:not(.disabled), .jdgm-rev-carousel-next:hover:not(.disabled) {
+   opacity: 1important;
 }
 
 .jdgm-rev-carousel-next {
