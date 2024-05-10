@@ -1673,6 +1673,10 @@ button {
   border: 1px solid transparent!important;
   transition: background-color .5s ease-in-out!important;
   transition: border 0.5s ease-in-out!important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .jdgm-rev-carousel-prev:hover, .jdgm-rev-carousel-prev:focus, .jdgm-rev-carousel-next:hover, .jdgm-rev-carousel-next:focus {
