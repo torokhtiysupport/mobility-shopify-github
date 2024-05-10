@@ -1694,6 +1694,9 @@ button {
 }
 
 @media screen and (max-width: 768px) {
+  .jdgm-rev-widg__title {
+    margin: 0 0 40px!important;
+  }
   .jdgm-rev-carousel-prev, .jdgm-rev-carousel-next{
     width: 44px!important;
     height: 44px!important;
