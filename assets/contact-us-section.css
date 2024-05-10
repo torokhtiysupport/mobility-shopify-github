@@ -11,6 +11,13 @@
   border-radius: 32px;
 }
 
+.contact-us-flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 186px;
+}
+
 .contact-us-section h2 {
   margin: 0 0 32px;
 }
