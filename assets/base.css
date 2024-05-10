@@ -1640,6 +1640,7 @@ button {
   color: #000!important;
   transition: background-color 0.5s ease-in-out!important;
   line-height: 1!important;
+  border: none!important;
 }
 
 .jdgm-btn:hover, .jdgm-btn:focus {
