@@ -1663,3 +1663,13 @@ button {
 .jdgm-rev-carousel-prev:before, .jdgm-rev-carousel-next:before {
   color: #000!important;
 }
+
+.jdgm-rev-carousel-prev, .jdgm-rev-carousel-next{
+  background-color: rgba(235, 235, 235, 1)!important;
+  width: 56px!important;
+  height: 56px!important;
+  border-radius: 50%!important;
+  border: 1px solid transparent!important;
+  transition: background-color .5s ease-in-out!important;
+  transition: border 0.5s ease-in-out!important;
+}
