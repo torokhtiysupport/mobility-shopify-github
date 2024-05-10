@@ -7,10 +7,6 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 186px;
   height: 580px;
   border-radius: 32px;
 }
