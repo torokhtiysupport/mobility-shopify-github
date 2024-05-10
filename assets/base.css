@@ -1652,5 +1652,9 @@ button {
   transition: border 0.5s ease-in-out!important;
 }
 
+.jdgm-row-readmore {
+  margin-bottom: 40px;
+}
+
 
 
