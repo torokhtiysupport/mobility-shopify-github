@@ -15,6 +15,11 @@
             "show_if_no_reviews": true
           }
         },
+        "judge_me_reviews_preview_badge_4CBhBG": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -71,23 +76,18 @@
           "settings": {
             "custom_liquid": "<div class=\"weeks\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/1806\/0489\/files\/weeks.png?v=1710501784\" alt=\"6 weeks\">\n<\/div>\n\n<style>\n.weeks {\nposition: absolute;\ntop: 10%;\nright: 10%;\n}\n<\/style>"
           }
-        },
-        "judge_me_reviews_preview_badge_4CBhBG": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
         }
       },
       "block_order": [
         "custom_liquid_HF9kbY",
         "2525f94e-add4-418e-b362-bd2bb35545fa",
+        "judge_me_reviews_preview_badge_4CBhBG",
         "title",
         "description_XTdzmE",
         "e592d434-8377-4309-b179-f98d4b3742a2",
         "price",
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7",
-        "custom_liquid_LXFttN",
-        "judge_me_reviews_preview_badge_4CBhBG"
+        "custom_liquid_LXFttN"
       ],
       "custom_css": [
         "media-gallery {display: none !important;}",
@@ -305,7 +305,7 @@
         "{background-color: #fff !important;}",
         ".jdgm-btn:not(:hover),.jdgm-btn:not(:focus),.jdgm-write-rev-link:not(:hover),.jdgm-write-rev-link:not(:focus) {background-color: #c6f33f;}",
         ".jdgm-histogram__bar-content,.jdgm-rev__buyer-badge {background-color: #c6f33f;}",
-        ".jdgm-rev-carousel-prev:hover, .jdgm-rev-carousel-prev:focus, .jdgm-rev-carousel-next:hover, .jdgm-rev-carousel-next:focus {background-color: #c6f33f!important;}"
+        ".jdgm-rev-carousel-prev:hover,.jdgm-rev-carousel-prev:focus,.jdgm-rev-carousel-next:hover,.jdgm-rev-carousel-next:focus {background-color: #c6f33f !important;}"
       ],
       "settings": {
         "include_margins": true
