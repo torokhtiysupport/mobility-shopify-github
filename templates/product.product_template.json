@@ -304,7 +304,8 @@
       "custom_css": [
         "{background-color: #fff !important;}",
         ".jdgm-btn:not(:hover),.jdgm-btn:not(:focus),.jdgm-write-rev-link:not(:hover),.jdgm-write-rev-link:not(:focus) {background-color: #c6f33f;}",
-        ".jdgm-histogram__bar-content, .jdgm-rev__buyer-badge{background-color: #c6f33f;}"
+        ".jdgm-histogram__bar-content,.jdgm-rev__buyer-badge {background-color: #c6f33f;}",
+        ".jdgm-rev-carousel-prev:hover, .jdgm-rev-carousel-prev:focus, .jdgm-rev-carousel-next:hover, .jdgm-rev-carousel-next:focus {background-color: #c6f33f; border: 1px solid #000; transition: background-color .5s ease-in-out; transition: border 0.5s ease-in-out;}"
       ],
       "settings": {
         "include_margins": true
