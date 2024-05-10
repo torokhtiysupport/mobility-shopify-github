@@ -14,6 +14,10 @@
   padding: 0 1.5rem;
 }
 
+.contact-us-section .page-width {
+  flex: auto;
+}
+
 .contact-us-flex-container {
   display: flex;
   align-items: center;
