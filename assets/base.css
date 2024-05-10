@@ -1706,11 +1706,7 @@ button {
 }
 
 .jdgm-rev__reply {
-  background-color: none!important;
-
-  background: rgba(235, 235, 235, 0.20)!important;
-  backdrop-filter: blur(20px)!important;
-  border: 1px solid rgba(235, 235, 235, 0.20)!important;
+  background-color: #ccc!important;
 }
 
 @media screen and (max-width: 768px) {
