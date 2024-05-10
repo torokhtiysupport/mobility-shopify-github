@@ -1688,3 +1688,8 @@ button {
 .jdgm-rev-carousel-next {
   right: -20px!important;
 }
+
+.jdgm-rev-carousel-prev {
+  left: -20px!important;
+}
+
