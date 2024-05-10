@@ -681,7 +681,7 @@
           "text": "#fafafa",
           "sale_off_price": "#ef4444",
           "compare_at_price": "#737373",
-          "background": "#0b0b0b",
+          "background": "#000",
           "gradient_background": "",
           "background_input": "#171717",
           "solid_button_label_primary": "#ffffff",
