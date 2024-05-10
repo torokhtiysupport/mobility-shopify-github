@@ -1698,4 +1698,11 @@ button {
     width: 44px!important;
     height: 44px!important;
   }
+  .jdgm-rev-carousel-next {
+    right: -10px!important;
+  }
+  
+  .jdgm-rev-carousel-prev {
+    left: -10px!important;
+  }
 }
