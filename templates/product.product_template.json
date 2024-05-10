@@ -385,6 +385,17 @@
         "section_title": "FAQ"
       }
     },
+    "contact_us_section_wEyEYE": {
+      "type": "contact-us-section",
+      "settings": {
+        "main_color": "#c6f33f",
+        "section_title": "Questions? Look Here!",
+        "section_text": "There's over 60 unique exercises designed  to improve your overhead shoulder mobility.",
+        "section_bg_desktop": "shopify:\/\/shop_images\/overhead-mobility-cycle-hero-banner.webp",
+        "section_bg_mobile": "shopify:\/\/shop_images\/overhead-mobility-cycle-hero-banner-mob.webp",
+        "image_alt": ""
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "disabled": true,
@@ -427,6 +438,7 @@
     "program_demo_section_YzjTxc",
     "about_our_programs_iQwmLt",
     "faq_accordeon_section_mihiLF",
+    "contact_us_section_wEyEYE",
     "product-recommendations"
   ]
 }
