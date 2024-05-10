@@ -59,11 +59,11 @@
 
 <style>
   .contact-us-section {
-    background: url('{{ section.settings.section_bg_desktop }}'), linear-gradient(rgba(0, 0, 0, 0.24) 0%, rgba(11, 11, 11, 0.6) 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.24) 0%, rgba(11, 11, 11, 0.6) 100%), url('{{ section.settings.section_bg_desktop }}');
   }
   @media screen and (max-width: 768px) {
     .contact-us-section {
-      background: url('{{ section.settings.section_bg_mobile }}'), linear-gradient(rgba(0, 0, 0, 0.24) 0%, rgba(11, 11, 11, 0.6) 100%);
+      background: linear-gradient(rgba(0, 0, 0, 0.24) 0%, rgba(11, 11, 11, 0.6) 100%), url('{{ section.settings.section_bg_mobile }}');
     }
   }
 </style>
