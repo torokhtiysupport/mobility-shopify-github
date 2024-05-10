@@ -1656,7 +1656,7 @@ button {
   margin-bottom: 40px!important;
 }
 
-.jdgm-rev-widg__summary-average {
+.jdgm-rev-widg__summary-average, .jdgm-rev-widg__summary-text {
   color: #000!important;
 }
 
