@@ -1660,3 +1660,6 @@ button {
   color: #000!important;
 }
 
+.jdgm-rev-carousel-prev:before, .jdgm-rev-carousel-next:before {
+  color: #000!important;
+}
