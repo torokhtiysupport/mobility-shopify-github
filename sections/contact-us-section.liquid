@@ -59,11 +59,11 @@
 
 <style>
   .contact-us-section {
-    background: url('{{ section.settings.section_bg_desktop }}');
+    background-image: url('{{ section.settings.section_bg_desktop }}'), linear-gradient(rgba(0, 0, 0, 0.24));
   }
   @media screen and (max-width: 768px) {
     .contact-us-section {
-      background: url('{{ section.settings.section_bg_mobile }}');
+      background-image: url('{{ section.settings.section_bg_mobile }}');
     }
   }
 </style>
