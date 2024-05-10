@@ -56,3 +56,14 @@
   ]
 }
 {% endschema %}
+
+<style>
+  .contact-us-section {
+    background: {{ section.settings.section_bg_desktop }};
+  }
+  @media screen and (max-width: 768px) {
+    .contact-us-section {
+      background: {{ section.settings.section_bg_mobile }};
+    }
+  }
+</style>
