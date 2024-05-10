@@ -1657,7 +1657,7 @@ button {
   margin-bottom: 40px!important;
 }
 
-.jdgm-rev-widg__summary-average, .jdgm-rev-widg__summary-text, .jdgm-histogram__frequency, .jdgm-rev__buyer-badge {
+.jdgm-rev-widg__summary-average, .jdgm-rev-widg__summary-text, .jdgm-histogram__frequency, .jdgm-glider-track .jdgm-rev__buyer-badge {
   color: #000!important;
 }
 
