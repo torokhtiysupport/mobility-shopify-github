@@ -391,8 +391,8 @@
         "main_color": "#c6f33f",
         "section_title": "Questions? Look Here!",
         "section_text": "There's over 60 unique exercises designed  to improve your overhead shoulder mobility.",
-        "section_bg_desktop": "",
-        "section_bg_mobile": "",
+        "section_bg_desktop": "shopify:\/\/shop_images\/overhead-mobility-cycle-hero-banner.webp",
+        "section_bg_mobile": "shopify:\/\/shop_images\/overhead-mobility-cycle-hero-banner-mob.webp",
         "image_alt": ""
       }
     },
