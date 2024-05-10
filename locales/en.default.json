@@ -253,6 +253,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "Page not found",
+      "subtext": "404"
+    },
     "search": {
       "no_results": "No results found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
       "no_products": "No products found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
@@ -294,10 +298,6 @@
       "opening_hour": {
         "heading": "Opening hour"
       }
-    },
-    "404": {
-      "title": "Page not found",
-      "subtext": "404"
     },
     "compare": {
       "header_icon": "Product compare",
@@ -403,7 +403,7 @@
     },
     "background-color-swatches": {
       "preview_title": "Preview color swatches",
-      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
+      "preview_description": "This preview is only visible on the Theme Editor page to help you add\/edit\/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
       "group_item": "Group #{{ index }}"
     },
     "cookies_banner": {
@@ -560,6 +560,40 @@
       "max_characters": "{{ max_chars }} characters max",
       "send_on": "YYYY-MM-DD",
       "send_on_label": "Send on (optional)"
+    }
+  },
+  "gempages": {
+    "Carousel": {
+      "no_slider": "No Slider"
+    },
+    "Newsletter": {
+      "err_msg_default": "Can’t send email. Please try again later.",
+      "success_msg_default": "Thanks for contacting us. We'll get back to you as soon as possible."
+    },
+    "IconListV2": {
+      "icons_not_found": "Icons not found"
+    },
+    "IconList": {
+      "icons_not_found": "Icons not found"
+    },
+    "IconListHoz": {
+      "icons_not_found": "Icons not found"
+    },
+    "Product": {
+      "product_not_found": "Product not found"
+    },
+    "ProductList": {
+      "product_not_found": "Product Not Found!",
+      "no_products_found": "No products found!"
+    },
+    "ProductTitle": {
+      "product_not_found": "Product Not Found"
+    },
+    "ProductVariants": {
+      "please_select": "Please select an option"
+    },
+    "StockCounter": {
+      "let_buy_now": "<mark>HURRY!<\/mark> LET BUY NOW"
     }
   }
 }
