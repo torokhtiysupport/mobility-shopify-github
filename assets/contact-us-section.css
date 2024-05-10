@@ -68,7 +68,7 @@
     align-items: center;
     gap: 24px;
   
-    flex: flex;
+    flex: auto;
   }
   
   .contact-us-section h2 {
