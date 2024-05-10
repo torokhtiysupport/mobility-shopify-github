@@ -1705,4 +1705,9 @@ button {
   .jdgm-rev-carousel-prev {
     left: -10px!important;
   }
+
+  .jdgm-write-rev-link {
+    width: auto!important;
+    display: inline-block;
+  }
 }
