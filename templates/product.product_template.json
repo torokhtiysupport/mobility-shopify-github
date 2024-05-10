@@ -303,8 +303,7 @@
       ],
       "custom_css": [
         "{background-color: #fff !important;}",
-        ".jdgm-btn {background-color: #c6f33f !important;}",
-        ".jdgm-btn--dark:not([disabled]):hover,.jdgm-btn--dark:focus {background-color: #fff !important; transition: background-color 0.5s ease-in-out; opacity: 1 !important;}"
+        ".jdgm-btn {background-color: #c6f33f !important;}"
       ],
       "settings": {
         "include_margins": true
