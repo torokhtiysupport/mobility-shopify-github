@@ -1603,6 +1603,7 @@ button {
 
 .jdgm-row-carousel {
   height: auto!important;
+  overflow: visible!important;
 }
 
 .jdgm-rev__media {
