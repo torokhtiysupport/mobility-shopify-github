@@ -9,6 +9,12 @@
 
   height: 580px;
   border-radius: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-us-section .page-width {
+  flex: none;
 }
 
 .contact-us-flex-container {
