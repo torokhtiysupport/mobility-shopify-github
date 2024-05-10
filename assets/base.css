@@ -1693,3 +1693,9 @@ button {
   left: -20px!important;
 }
 
+@media screen and (max-width: 768px) {
+  .jdgm-rev-carousel-prev, .jdgm-rev-carousel-next{
+    width: 40px!important;
+    height: 40px!important;
+  }
+}
