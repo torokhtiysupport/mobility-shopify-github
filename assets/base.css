@@ -1697,13 +1697,14 @@ button {
   left: -40px!important;
 }
 
-.jdgm-sort-dropdown, .jdgm-sort-dropdown-arrow {
+.jdgm-sort-dropdown, .jdgm-sort-dropdown-arrow, .jdgm-paginate__page:not(.jdgm-curt) {
   color: #000!important;
 }
 
 .jdgm-widget__popup-content .jdgm-rev-widg__reviews > div:not(:last-child) {
   margin-bottom: 10px;
 }
+
 
 @media screen and (max-width: 768px) {
   .jdgm-rev-widg__title {
