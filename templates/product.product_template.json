@@ -9,10 +9,9 @@
             "custom_liquid": "<div class=\"about-author\">\n <div>\n  <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/1806\/0489\/files\/Oleksiy_avatar.jpg?v=1710775881\" alt=\"Oleksiy Torokhtiy\">\n <\/div>\n <div class=\"about-author__text\">\n  <p>OLEKSIY TOROKHTIY<\/p>\n  <p>Experienced Coach<\/p>\n <\/div>\n<\/div>\n\n<style>\n .about-author {\n display: flex;\n align-items: center;\n}\n.about-author img {\ndisplay: block;\n border-radius: 100px;\n margin-right: 20px;\n height: 70px;\n width: 70px;\n}\n\n@media screen and (max-width: 768px) {\n .about-author img {\ndisplay: block;\n border-radius: 100px;\n margin-right: 5px;\n height: 40px;\n width: 40px;\n}\n}\n\n.about-author__text p:first-of-type {\n font-size: 24px;\n font-weight: bold;\n margin: 0 0 5px;\n}\n\n@media screen and (max-width: 768px) {\n .about-author__text p:first-of-type {\n font-size: 16px;\nmargin: 0;\n}\n}\n\n.about-author__text p:last-of-type {\n font-size: 14px;\n margin: 0;\nopacity: 0.9;\n}\n\n<\/style>"
           }
         },
-        "2525f94e-add4-418e-b362-bd2bb35545fa": {
-          "type": "rating",
+        "judge_me_reviews_preview_badge_GGFTFr": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
-            "show_if_no_reviews": true
           }
         },
         "title": {
@@ -75,7 +74,7 @@
       },
       "block_order": [
         "custom_liquid_HF9kbY",
-        "2525f94e-add4-418e-b362-bd2bb35545fa",
+        "judge_me_reviews_preview_badge_GGFTFr",
         "title",
         "description_XTdzmE",
         "e592d434-8377-4309-b179-f98d4b3742a2",
