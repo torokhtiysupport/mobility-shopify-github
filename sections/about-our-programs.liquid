@@ -1,77 +1,78 @@
 {{ 'about-our-programs.css' | asset_url | stylesheet_tag }}
-
-<div class="page-width">
-  <div class="about-our-programs">
-    <div class="circle-slow circle1"></div>
-    <div class="circle-slow circle2"></div>
-    <div class="about-our-programs-image">
-      <div class="about-our-programs-image__image-container">
-        <img src="{{ section.settings.section_main-image | img_url: 'original' }}" alt="{{ section.settings.image_alt }}" width="" height="">
-      </div>
-      <div class="about-our-programs-image-numbers first-number">
-        <p class="about-our-programs-image-numbers__title">{{ section.settings.image_number_title_1 }}</p>
-        <p class="about-our-programs-image-numbers__text">{{ section.settings.image_number_text_1 }}</p>
-      </div>
-      <div class="about-our-programs-image-numbers second-number">
-        <p class="about-our-programs-image-numbers__title">{{ section.settings.image_number_title_2 }}</p>
-        <p class="about-our-programs-image-numbers__text">{{ section.settings.image_number_text_2 }}</p>
-      </div>
-    </div>
-    <div class="about-our-programs-info">
-      <h2 class="about-our-programs-info__title">{{ section.settings.section_title }}</h2>
-      <p class="about-our-programs-info__text">{{ section.settings.section_text }}</p>
-      <div class="about-our-programs-info-numbers">
-        <div>
-          <p class="about-our-programs-info-numbers__title">{{ section.settings.info_number_title_1 }}</p>
-          <p class="about-our-programs-info-numbers__text">{{ section.settings.info_number_text_1 }}</p>
+<div class="about-our-programs-container">
+  <div class="page-width">
+    <div class="about-our-programs">
+      <div class="circle-slow circle1"></div>
+      <div class="circle-slow circle2"></div>
+      <div class="about-our-programs-image">
+        <div class="about-our-programs-image__image-container">
+          <img src="{{ section.settings.section_main-image | img_url: 'original' }}" alt="{{ section.settings.image_alt }}" width="" height="">
         </div>
-        <div>
-          <p class="about-our-programs-info-numbers__title">{{ section.settings.info_number_title_2 }}</p>
-          <p class="about-our-programs-info-numbers__text">{{ section.settings.info_number_text_2 }}</p>
+        <div class="about-our-programs-image-numbers first-number">
+          <p class="about-our-programs-image-numbers__title">{{ section.settings.image_number_title_1 }}</p>
+          <p class="about-our-programs-image-numbers__text">{{ section.settings.image_number_text_1 }}</p>
         </div>
-        <div>
-          <p class="about-our-programs-info-numbers__title">{{ section.settings.info_number_title_3 }}</p>
-          <p class="about-our-programs-info-numbers__text">{{ section.settings.info_number_text_3 }}</p>
+        <div class="about-our-programs-image-numbers second-number">
+          <p class="about-our-programs-image-numbers__title">{{ section.settings.image_number_title_2 }}</p>
+          <p class="about-our-programs-image-numbers__text">{{ section.settings.image_number_text_2 }}</p>
         </div>
       </div>
-      <product-form class="product-form" data-hide-errors="{{ gift_card_recipient_feature_active }}">
-        <div class="product-form__error-message-wrapper alert alert--error alert--no-button" role="alert" hidden>
-          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
-            <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
-            <circle cx="6.5" cy="6.5" r="5.5" fill="currentColor" stroke="currentColor" stroke-width="0.7"/>
-            <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
-            <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
-          </svg>
-          <span class="product-form__error-message"></span>
-        </div>
-        {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
-          <div class="product-form__buttons product-form__buttons--input{% unless block.settings.quantity_selector_enable %} product-form__buttons--no-quantity{% endunless %}">
-            <button
-              style="background-color: {{ section.settings.main_color }}"
-              type="submit"
-              name="add"
-              class="product-form__submit button flex w100 cart-submit-button button--bold"
-              {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
-              id="card-submit-button-{{ section.id }}"
-            >
-              <span>
-                {%- if product.selected_or_first_available_variant.available -%}
-                  BUY NOW
-                {%- else -%}
-                  {{ 'products.product.sold_out' | t }}
-                {%- endif -%}
-              </span>
-              <div class="loading-overlay__spinner hidden">
-                {%- render 'icon-cart-loading' -%}
-              </div>
-            </button>
+      <div class="about-our-programs-info">
+        <h2 class="about-our-programs-info__title">{{ section.settings.section_title }}</h2>
+        <p class="about-our-programs-info__text">{{ section.settings.section_text }}</p>
+        <div class="about-our-programs-info-numbers">
+          <div>
+            <p class="about-our-programs-info-numbers__title">{{ section.settings.info_number_title_1 }}</p>
+            <p class="about-our-programs-info-numbers__text">{{ section.settings.info_number_text_1 }}</p>
           </div>
-        {%- endform -%}
-      </product-form> 
+          <div>
+            <p class="about-our-programs-info-numbers__title">{{ section.settings.info_number_title_2 }}</p>
+            <p class="about-our-programs-info-numbers__text">{{ section.settings.info_number_text_2 }}</p>
+          </div>
+          <div>
+            <p class="about-our-programs-info-numbers__title">{{ section.settings.info_number_title_3 }}</p>
+            <p class="about-our-programs-info-numbers__text">{{ section.settings.info_number_text_3 }}</p>
+          </div>
+        </div>
+        <product-form class="product-form" data-hide-errors="{{ gift_card_recipient_feature_active }}">
+          <div class="product-form__error-message-wrapper alert alert--error alert--no-button" role="alert" hidden>
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
+              <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+              <circle cx="6.5" cy="6.5" r="5.5" fill="currentColor" stroke="currentColor" stroke-width="0.7"/>
+              <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+              <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+            </svg>
+            <span class="product-form__error-message"></span>
+          </div>
+          {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
+            <div class="product-form__buttons product-form__buttons--input{% unless block.settings.quantity_selector_enable %} product-form__buttons--no-quantity{% endunless %}">
+              <button
+                style="background-color: {{ section.settings.main_color }}"
+                type="submit"
+                name="add"
+                class="product-form__submit button flex w100 cart-submit-button button--bold"
+                {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                id="card-submit-button-{{ section.id }}"
+              >
+                <span>
+                  {%- if product.selected_or_first_available_variant.available -%}
+                    BUY NOW
+                  {%- else -%}
+                    {{ 'products.product.sold_out' | t }}
+                  {%- endif -%}
+                </span>
+                <div class="loading-overlay__spinner hidden">
+                  {%- render 'icon-cart-loading' -%}
+                </div>
+              </button>
+            </div>
+          {%- endform -%}
+        </product-form> 
+      </div>
     </div>
   </div>
-</div>
+<div>
 
 {% schema %}
   {
