@@ -304,7 +304,8 @@
       "custom_css": [
         "{background-color: #fff !important;}",
         ".jdgm-btn:not(:hover),.jdgm-btn:not(:focus) {background-color: #c6f33f;}",
-        ".jdgm-histogram__bar-content {background-color: #c6f33f;}"
+        ".jdgm-histogram__bar-content {background-color: #c6f33f;}",
+        ".jdgm-write-rev-link {border: 1px solid #c6f33f!important; color: #c6f33f!important;}"
       ],
       "settings": {
         "include_margins": true
