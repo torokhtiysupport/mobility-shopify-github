@@ -1697,6 +1697,10 @@ button {
   left: -40px!important;
 }
 
+.jdgm-sort-dropdown, .jdgm-sort-dropdown-arrow {
+  color: #000!important;
+}
+
 @media screen and (max-width: 768px) {
   .jdgm-rev-widg__title {
     margin: 0 0 40px!important;
