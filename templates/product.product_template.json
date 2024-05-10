@@ -297,8 +297,8 @@
       ],
       "custom_css": [
         "{background-color: #fff !important;}",
-        ".jdgm-btn:not(:hover),.jdgm-btn:not(:focus),.jdgm-write-rev-link:not(:hover),.jdgm-write-rev-link:not(:focus) {background-color: #c6f33f;}",
-        ".jdgm-histogram__bar-content,.jdgm-rev__buyer-badge,.jdgm-widget__popup-content .jdgm-rev__buyer-badge {background-color: #c6f33f;}",
+        ".jdgm-btn:not(:hover),.jdgm-btn:not(:focus),.jdgm-write-rev-link:not(:hover),.jdgm-write-rev-link:not(:focus) {background-color: #c6f33f!important;}",
+        ".jdgm-histogram__bar-content,.jdgm-rev__buyer-badge {background-color: #c6f33f;}",
         ".jdgm-rev-carousel-prev:hover,.jdgm-rev-carousel-prev:focus,.jdgm-rev-carousel-next:hover,.jdgm-rev-carousel-next:focus {background-color: #c6f33f !important;}"
       ],
       "settings": {
