@@ -1682,7 +1682,7 @@ button {
 }
 
 .jdgm-rev-carousel-prev:hover:not(.disabled), .jdgm-rev-carousel-next:hover:not(.disabled) {
-   opacity: 1important;
+   opacity: 1!important;
 }
 
 .jdgm-rev-carousel-next {
