@@ -303,7 +303,7 @@
       ],
       "custom_css": [
         "{background-color: #fff !important;}",
-        ".jdgm-btn:not(:hover), .jdgm-btn:not(:focus) {background-color: #c6f33f !important;}"
+        ".jdgm-btn:not(:hover),.jdgm-btn:not(:focus) {background-color: #c6f33f;}"
       ],
       "settings": {
         "include_margins": true
