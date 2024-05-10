@@ -1705,6 +1705,13 @@ button {
   margin-bottom: 10px;
 }
 
+.jdgm-rev__reply {
+  background-color: none!important;
+
+  background: rgba(235, 235, 235, 0.20);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(235, 235, 235, 0.20)!important;
+}
 
 @media screen and (max-width: 768px) {
   .jdgm-rev-widg__title {
