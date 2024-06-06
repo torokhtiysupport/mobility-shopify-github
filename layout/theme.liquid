@@ -27,6 +27,14 @@
         <script src="https://cdn.intelligems.io/ebf8e65eae83.js"></script>
     <!-- End Intelligems -->
 
+    <!-- Redirect to Torokhtiy -->
+    {% if template == 'index' %}
+      <script>
+        window.location.href = "https://shop.torokhtiy.com/";
+      </script>
+    {% endif %}
+    <!-- End Redirect to Torokhtiy -->
+
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
