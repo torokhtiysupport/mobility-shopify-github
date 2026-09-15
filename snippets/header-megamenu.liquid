@@ -23,11 +23,11 @@
       assign block = section.blocks[block_index_number]
       capture block_html
         if block.type == 'mega_menu_promotion'
-          render 'header-megamenu-promotion-block' with block: block
+          render 'header-megamenu-promotion-block' with block, block: block
         elsif block.type == 'mega_menu_product_brand'
-          render 'header-megamenu-product-brand-block' with block: block
+          render 'header-megamenu-product-brand-block' with block, block: block
         elsif block.type == 'mega_menu_product_type'
-          render 'header-megamenu-product-type-block' with block: block  
+          render 'header-megamenu-product-type-block' with block, block: block
         endif
       endcapture
       case block.settings.position
@@ -163,4 +163,19 @@
       </div>
     </div>
   {%- endif -%}
-{%- endif -%}
+{%- endif -%}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "          render 'header-megamenu-promotion-block' with block: block"
+  to: "          render 'header-megamenu-promotion-block' with block, block: block"
+  position: 879..954
+- from: "          render 'header-megamenu-product-brand-block' with block: block"
+  to: "          render 'header-megamenu-product-brand-block' with block, block: block"
+  position: 1009..1088
+- from: "          render 'header-megamenu-product-type-block' with block: block  "
+  to: "          render 'header-megamenu-product-type-block' with block, block: block"
+  position: 1142..1220
+{%- endcomment -%}

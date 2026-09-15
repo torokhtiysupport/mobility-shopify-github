@@ -89,7 +89,7 @@
                         <div class="grid grid--2-col">
                           {%- for icon in icons -%}
                             <div class="grid__item flex align-center product__description-icon-{{ section.id }}" {{ icon.shopify_attributes }}>
-                              {%- render 'icon-picker' with icon: icon.settings.icon -%}
+                              {%- render 'icon-picker' with icon, icon: icon.settings.icon -%}
                               {%- if icon.settings.title != blank -%}
                                 <span>{{ icon.settings.title }}</span>
                               {%- endif -%}  
@@ -1335,4 +1335,13 @@
     ]
   }
 }
-{% endschema %}
+{% endschema %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'icon-picker' with icon: icon.settings.icon -%}"
+  to: "{%- render 'icon-picker' with icon, icon: icon.settings.icon -%}"
+  position: 5252..5316
+{%- endcomment -%}

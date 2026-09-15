@@ -219,11 +219,11 @@
                                         assign block = section.blocks[block_index_number]
                                         capture block_html
                                           if block.type == 'mega_menu_promotion'
-                                            render 'header-megamenu-promotion-block' with block: block, add_classes: 'menu-drawer__menu-item', no_block_attributes: true
+                                            render 'header-megamenu-promotion-block' with block, block: block, add_classes: 'menu-drawer__menu-item', no_block_attributes: true
                                           elsif block.type == 'mega_menu_product_brand'
-                                            render 'header-megamenu-product-brand-block' with block: block, add_classes: 'menu-drawer__menu-item', no_block_attributes: true
+                                            render 'header-megamenu-product-brand-block' with block, block: block, add_classes: 'menu-drawer__menu-item', no_block_attributes: true
                                           elsif block.type == 'mega_menu_product_type'
-                                            render 'header-megamenu-product-type-block' with block: block, add_classes: 'menu-drawer__menu-item', no_block_attributes: true  
+                                            render 'header-megamenu-product-type-block' with block, block: block, add_classes: 'menu-drawer__menu-item', no_block_attributes: true
                                           endif
                                         endcapture
                                         case block.settings.position
@@ -3461,3 +3461,31 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "                                            render 'header-megamenu-promotion-block'
+    with block: block, add_classes: 'menu-drawer__menu-item', no_block_attributes:
+    true"
+  to: "                                            render 'header-megamenu-promotion-block'
+    with block, block: block, add_classes: 'menu-drawer__menu-item', no_block_attributes:
+    true"
+  position: 16438..16613
+- from: "                                            render 'header-megamenu-product-brand-block'
+    with block: block, add_classes: 'menu-drawer__menu-item', no_block_attributes:
+    true"
+  to: "                                            render 'header-megamenu-product-brand-block'
+    with block, block: block, add_classes: 'menu-drawer__menu-item', no_block_attributes:
+    true"
+  position: 16702..16881
+- from: "                                            render 'header-megamenu-product-type-block'
+    with block: block, add_classes: 'menu-drawer__menu-item', no_block_attributes:
+    true  "
+  to: "                                            render 'header-megamenu-product-type-block'
+    with block, block: block, add_classes: 'menu-drawer__menu-item', no_block_attributes:
+    true"
+  position: 16969..17147
+{% endcomment %}
